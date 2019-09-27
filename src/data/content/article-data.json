@@ -1,0 +1,15 @@
+{
+	"twitterHandle": "@nature",
+	"title": "Article title",
+	"description": "Description description description description description description description description description",
+	"headline": "Headline headline",
+	"stand": "Standfirst standfirst standfirst standfirst standfirst  standfirst standfirst standfirst standfirst",
+	"author": "By Author Name",
+	"photographer": "Photography by Photographer Name for <i>Nature</i>",
+	"articleURL": "https://www.nature.com/articles/",
+	"immersiveURL": "https://www.nature.com/immersive/",
+	"doi": "d41586-019-00000-0",
+	"pdfAvailable": false,
+	"altPdfAvailable": false,
+	"altPdfBlurb": ""
+}

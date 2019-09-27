@@ -1,0 +1,78 @@
+:root {
+	/* colours */
+	--link-color: #069;
+	--background-color: #ffffff;
+	--dark-background-color: #262621;
+	--text-color: #333;
+	--text-accent-color: #666666;
+	--text-on-dark-color: var(--background-color);
+	--text-on-dark-accent-color: #cccccc;
+
+	/* Harding is the defalut font, otherwise apply the sans serif font */
+	--sans-serif-font: 'Source Sans Pro',arial,helvetica,sans-serif;
+
+	/*	Dimensions are scaled proportionately with the page width */
+	/*	from a minimum value of 1rem */
+	font-size: calc(1rem + 0.5vw);
+
+	/* Modular scale */
+	--ratio: 1.25;
+	--s-6: calc(var(--s-5) / var(--ratio));
+	--s-5: calc(var(--s-4) / var(--ratio));
+	--s-4: calc(var(--s-3) / var(--ratio));
+	--s-3: calc(var(--s-2) / var(--ratio));
+	--s-2: calc(var(--s-1) / var(--ratio));
+	--s-1: calc(var(--s0) / var(--ratio));
+	--s0: 1rem;
+	--s1: calc(var(--s0) * var(--ratio));
+	--s2: calc(var(--s1) * var(--ratio));
+	--s3: calc(var(--s2) * var(--ratio));
+	--s4: calc(var(--s3) * var(--ratio));
+	--s5: calc(var(--s4) * var(--ratio));
+	--s6: calc(var(--s5) * var(--ratio));
+
+	/* The measure of text blocks should never exceed 60ch */
+	--measure: 60ch;
+}
+
+/* em units for sizing inline elements,  */
+/* rem units for sizing block elements. */
+
+body {
+	font-family: Harding, Palatino, Times, "Times New Roman", serif;
+	color: var(--text-color);
+	background-color: var(--background-color);
+
+	margin: 0;
+	
+	/* TODO: Should I use font smoothing? */
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+}
+
+/* exception based styling */
+* {
+  max-width: var(--measure);
+  box-sizing: border-box;
+}
+
+/* All elements should have a max width of --measure except these */
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-width: none;
+}
+
+a {
+	text-decoration: none;
+
+	color: var(--link-color);
+
+}
+
+a:hover {
+	text-decoration: underline;
+}
