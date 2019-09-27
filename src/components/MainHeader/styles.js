@@ -5,7 +5,7 @@ export const StyledMainHeader = styled.div`
 	color: var(--text-on-dark-color);
 	font-family: var(--sans-serif-font);
 	/* Reduce the font size of everything in this div */
-	font-size: var(--s-1);
+	font-size: var(--s-2);
 
 	a {
 		/* Apply colour to text and svg elements */
@@ -61,14 +61,5 @@ export const StyledListSocial = styled.ul`
 	li {
 		/* Each item should push the item to its left away */
 		margin: 0 0 0 var(--s-3);
-
-		/* Adds a circular border around the link */
-		a {
-			display: inline-block;
-			width: 2em;
-			height: 2em;
-			border: 1px solid var(--text-on-dark-accent-color);
-			border-radius: 50%;
-		}
 	}
 `

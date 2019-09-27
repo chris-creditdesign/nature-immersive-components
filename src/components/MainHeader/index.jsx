@@ -1,6 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StyledMainHeader, StyledList, StyledListSocial } from "./styles"
+import {
+	EmailLogoSVG,
+	FacebookLogoSVG,
+	NatureLogoSVG,
+	PdfLogoSVG,
+	TwitterLogoSVG,
+} from "../LogosSVG/index"
 import generateSocialURLs from "../../utils/generate-social-urls"
 
 const MainHeader = ({
@@ -33,22 +40,7 @@ const MainHeader = ({
 						data-track-label="journal-homepage"
 						data-category="external"
 					>
-						<svg
-							height="2em"
-							viewBox="0 0 200 49"
-							role="img"
-							aria-labelledby="nature-home-page-title"
-							focusable="false"
-						>
-							<title id="nature-home-page-title">
-								Nature
-							</title>
-							<use
-								href="#nature-logo"
-								xlinkHref="#nature-logo"
-								role="presentation"
-							/>
-						</svg>
+						<NatureLogoSVG height={2} />
 					</a>
 				</li>
 
@@ -77,19 +69,7 @@ const MainHeader = ({
 							data-track-label="pdf-version"
 							data-category="external"
 						>
-							<svg
-								className="pdf-icon"
-								height="0.75em"
-								viewBox="0 0 30 30"
-								aria-hidden="true"
-								focusable="false"
-							>
-								<use
-									href="#pdf"
-									xlinkHref="#pdf"
-									role="presentation"
-								/>
-							</svg>
+							<PdfLogoSVG />
 							<span>PDF version</span>
 						</a>
 					</li>
@@ -103,20 +83,7 @@ const MainHeader = ({
 							data-track-label="alt-pdf-version"
 							data-category="external"
 						>
-							<svg
-								className="alt-pdf-icon"
-								width="30px"
-								height="30px"
-								viewBox="0 0 30 30"
-								aria-hidden="true"
-								focusable="false"
-							>
-								<use
-									href="#pdf"
-									xlinkHref="#pdf"
-									role="presentation"
-								/>
-							</svg>
+							<PdfLogoSVG />
 							<span>
 								{altPdfBlurb}
 							</span>
@@ -146,24 +113,11 @@ const MainHeader = ({
 								target="_blank"
 								rel="noreferrer noopener"
 							>
-								<svg
-									height="1.85em"
-									viewBox="0 0 30 30"
-									role="img"
-									aria-labelledby="main-header__social-list__item__facebook__title"
-									focusable="false"
-								>
-									<title id="main-header__social-list__item__facebook__title">
-										Share
-										on
-										Facebook
-									</title>
-									<use
-										href="#facebook"
-										xlinkHref="#facebook"
-										role="presentation"
-									/>
-								</svg>
+								<FacebookLogoSVG
+									height={
+										2
+									}
+								/>
 							</a>
 						</li>
 						<li className="main-header__social-list__item">
@@ -177,24 +131,11 @@ const MainHeader = ({
 								target="_blank"
 								rel="noreferrer noopener"
 							>
-								<svg
-									height="1.85em"
-									viewBox="0 0 30 30"
-									role="img"
-									aria-labelledby="main-header__social-list__item__twitter__title"
-									focusable="false"
-								>
-									<title id="main-header__social-list__item__twitter__title">
-										Share
-										on
-										Twitter
-									</title>
-									<use
-										href="#twitter"
-										xlinkHref="#twitter"
-										role="presentation"
-									/>
-								</svg>
+								<TwitterLogoSVG
+									height={
+										2
+									}
+								/>
 							</a>
 						</li>
 						<li className="main-header__social-list__item">
@@ -205,24 +146,11 @@ const MainHeader = ({
 								data-category="social"
 								rel="noreferrer noopener"
 							>
-								<svg
-									height="1.85em"
-									viewBox="0 0 30 30"
-									role="img"
-									aria-labelledby="main-header__social-list__item__email__title"
-									focusable="false"
-								>
-									<title id="main-header__social-list__item__email__title">
-										Share
-										via
-										E-Mail
-									</title>
-									<use
-										href="#email"
-										xlinkHref="#email"
-										role="presentation"
-									/>
-								</svg>
+								<EmailLogoSVG
+									height={
+										2
+									}
+								/>
 							</a>
 						</li>
 					</StyledListSocial>
