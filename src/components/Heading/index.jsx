@@ -3,6 +3,11 @@ import PropTypes from "prop-types"
 import formatDate from "../../utils/format-date"
 import StyledHeader from "./styles"
 
+/**
+ * Heading
+ *
+ * @param {*} param0
+ */
 const Heading = ({
 	author,
 	headline,
@@ -13,21 +18,14 @@ const Heading = ({
 }) => (
 	<StyledHeader>
 		<h1 dangerouslySetInnerHTML={{ __html: headline }} />
-		<p
-			className="stand"
-			dangerouslySetInnerHTML={{ __html: stand }}
-		/>
+		<p dangerouslySetInnerHTML={{ __html: stand }} />
 
 		{author.length ? (
-			<p
-				className="by-line"
-				dangerouslySetInnerHTML={{ __html: author }}
-			/>
+			<p dangerouslySetInnerHTML={{ __html: author }} />
 		) : null}
 
 		{photographer.length ? (
 			<p
-				className="by-line"
 				dangerouslySetInnerHTML={{
 					__html: photographer,
 				}}
