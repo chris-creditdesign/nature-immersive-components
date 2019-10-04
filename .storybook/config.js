@@ -3,13 +3,13 @@ import { withInfo } from '@storybook/addon-info'
 import requireContext from 'require-context.macro'
 import "../src/css/index.css"
 
-addDecorator(
-  withInfo({
-    header: false, // Global configuration for the info addon across all of your stories.
-	inline: true,
-	source: false,
-  })
-)
+// addDecorator(
+//   withInfo({
+//     header: false, // Global configuration for the info addon across all of your stories.
+// 	inline: true,
+// 	source: false,
+//   })
+// )
 
 addParameters({
 	options: {

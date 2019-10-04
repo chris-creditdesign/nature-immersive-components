@@ -5,7 +5,7 @@ import Heading from "./index"
 const data = {
 	author: "The author",
 	headline:
-		"Harding headline ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+		"Harding headline ipsum dolor sit amet, consectetur adipiscing",
 	photographer: "The photographer",
 	publishedAt: 1568764800,
 	publishedAtString: "2019-09-18",

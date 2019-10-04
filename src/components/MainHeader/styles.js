@@ -1,65 +1,38 @@
 import styled from "@emotion/styled"
+import Cluster from "../Cluster/index"
+import Box from "../Box/index"
 
-export const StyledMainHeader = styled.div`
-	background-color: var(--dark-background-color);
-	color: var(--text-on-dark-color);
-	font-family: var(--sans-serif-font);
-	/* Reduce the font size of everything in this div */
-	font-size: var(--s-2);
+export const StyledCluster = styled(Cluster)`
+	/* Remove the global max width value */
+	/* So that the Header can span the whole page width */
+	& * {
+		max-width: none;
+	}
+
+	ul {
+		list-style: none;
+		max-width: none;
+		padding: 0;
+	}
+
+	ul li {
+		padding: 0;
+	}
+`
+
+export const StyledBox = styled(Box)`
+	background-color: var(--background-color-invert);
+	color: var(--text-color-invert);
 
 	a {
 		/* Apply colour to text and svg elements */
-		color: var(--text-on-dark-color);
-		fill: var(--text-on-dark-color);
+		color: inherit;
+		fill: var(--text-color-invert);
 
 		&:hover {
 			text-decoration: none;
-			color: var(--text-on-dark-accent-color);
-			fill: var(--text-on-dark-accent-color);
+			color: var(--text-color-invert-accent);
+			fill: var(--text-color-invert-accent);
 		}
-	}
-`
-
-export const StyledList = styled.ul`
-	max-width: 100%;
-	margin: 0;
-	/* No padding at the bottom this is provided by the list items */
-	/* so that they will wrap correctly */
-	padding: var(--s-3) var(--s-3) 0 var(--s-3);
-
-	/* Apply flexbox so that the items can be arranged as desired */
-	display: flex;
-	/* vertically center the items */
-	align-items: center;
-	/* Allow the items to wrap onto a new line if the screen is too small to fit */
-	flex-wrap: wrap;
-	justify-content: flex-end;
-
-	/* Homep page logo should push the other items to the right */
-	.home-page {
-		flex-grow: 1;
-	}
-
-	li {
-		max-width: 100%;
-		display: inline;
-		/* To correctly space the items when the rows wrap */
-		padding: 0 0 var(--s-3) 0;
-	}
-
-	/* Add some space between these items and their text */
-	.pdf-icon,
-	.alt-pdf-icon {
-		margin: 0 var(--s-6) 0 0;
-	}
-`
-export const StyledListSocial = styled.ul`
-	/* Remove browser margin and padding */
-	margin: 0;
-	padding: 0;
-
-	li {
-		/* Each item should push the item to its left away */
-		margin: 0 0 0 var(--s-3);
 	}
 `

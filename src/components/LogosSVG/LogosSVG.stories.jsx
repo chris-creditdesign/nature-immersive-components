@@ -1,6 +1,6 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
-import DefSVG, {
+import LogosSVG, {
 	EmailLogoSVG,
 	FacebookLogoSVG,
 	NatureLogoSVG,
@@ -20,7 +20,7 @@ storiesOf("LogosSVG", module)
 					__html: "svg { border: 1px solid red;}",
 				}}
 			/>
-			<DefSVG />
+			<LogosSVG />
 			<div>
 				<NatureLogoSVG />
 			</div>
