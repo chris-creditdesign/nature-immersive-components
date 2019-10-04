@@ -25,8 +25,9 @@
 		"@storybook/addon-actions": "^5.1.9",
 		"@storybook/addon-info": "^5.1.10",
 		"@storybook/addon-links": "^5.1.9",
-		"@storybook/addon-storyshots": "^5.1.9",
+		"@storybook/addon-storyshots": "^5.2.1",
 		"@storybook/react": "^5.1.9",
+		"jest": "^24.9.0",
 		"prop-types": "^15.7.2"
 	},
 	"devDependencies": {
