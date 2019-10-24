@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/components/Menu/js/index.js"],"names":["menu","console","log"],"mappings":";;;;;;;AAAA,IAAMA,IAAI,GAAG,SAAPA,IAAO,GAAM;AAClBC,EAAAA,OAAO,CAACC,GAAR,CAAY,iBAAZ;AACA,SAAO,IAAP;AACA,CAHD;;eAKeF,I","sourcesContent":["const menu = () => {\n\tconsole.log(\"This is a menu!\")\n\treturn true\n}\n\nexport default menu\n"],"file":"index.js"}
