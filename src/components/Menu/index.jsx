@@ -11,7 +11,7 @@ const MainHeader = () => (
 					</a>
 				</div>
 
-				<button type="button" aria-expanded={false} aria-controls="menu-list">
+				<button type="button" aria-expanded aria-controls="menu-list">
 					Menu
 				</button>
 

@@ -1,4 +1,4 @@
-// Export the components from here
+// React Components
 export { default as Head } from "./components/Head/index"
 export { default as Test } from "./components/Test/index"
 export { default as Menu } from "./components/Menu/index"

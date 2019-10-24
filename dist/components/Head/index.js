@@ -69,9 +69,6 @@ var Head = function Head(_ref) {
     dangerouslySetInnerHTML: {
       __html: googleTagManager
     }
-  }), React.createElement("link", {
-    href: "public/css/fonts.css",
-    rel: "stylesheet"
   }));
 };
 

@@ -24,7 +24,7 @@ var MainHeader = function MainHeader() {
     height: 2
   }))), _react.default.createElement("button", {
     type: "button",
-    "aria-expanded": false,
+    "aria-expanded": true,
     "aria-controls": "menu-list"
   }, "Menu"), _react.default.createElement("div", {
     className: "cluster menu-container",
