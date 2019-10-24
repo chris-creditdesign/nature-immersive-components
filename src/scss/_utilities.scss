@@ -1,0 +1,63 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Utilities                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Font size */
+.font-size\:small-3 {
+  font-size: var(--font-size-small-3);
+}
+
+.font-size\:small-2 {
+  font-size: var(--font-size-small-2);
+}
+
+.font-size\:small-1 {
+  font-size: var(--font-size-small-1);
+}
+
+.font-size\:base {
+  font-size: var(--font-size-base);
+}
+
+.font-size\:big-1 {
+  font-size: var(--font-size-big-1);
+}
+
+.font-size\:big-2 {
+  font-size: var(--font-size-big-2);
+}
+
+.font-size\:big-3 {
+  font-size: var(--font-size-big-3);
+}
+
+/* Font */
+.font-family\:sans-serif {
+	font-family: var(--sans-serif-font);
+}
+
+/* Width */
+.max-width\:measure {
+  max-width: var(--measure);
+}
+
+.max-width\:measure\/2 {
+  max-width: calc(var(--measure) / 2);
+}
+
+.max-width\:measure\*2 {
+  max-width: calc(var(--measure) * 2);
+}
+
+.max-width\:none {
+	max-width: none;
+}
+
+.max-width\:none * {
+	max-width: none;
+}
+
+/* margin */
+.margin\:none {
+	margin: 0;
+}

@@ -1,0 +1,19 @@
+.cluster {
+	overflow: hidden;
+
+	& > * {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: var(--justify-content);
+		align-items: center;
+		margin: calc(var(--space) / 2 * -1);
+	}
+
+	& > * > * {
+		margin: calc(var(--space) / 2);
+	}
+
+	.split-after {
+		flex-grow: 1;
+	}	
+};

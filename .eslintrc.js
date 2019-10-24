@@ -25,7 +25,7 @@ module.exports = {
 			"error",
 			{
 				trailingComma: "es5",
-				printWidth: 80,
+				printWidth: 120,
 				tabWidth: 8,
 				useTabs: true,
 				semi: false,

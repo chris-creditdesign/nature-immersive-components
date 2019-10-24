@@ -1,0 +1,10 @@
+body {
+	font-family: var(--serif-font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+
+	margin: 0;
+
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+	-webkit-font-smoothing: subpixel-antialiased;
+}

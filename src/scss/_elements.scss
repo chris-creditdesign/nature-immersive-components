@@ -1,0 +1,34 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Elements                                  */
+/* -------------------------------------------------------------------------- */
+
+/* headers */
+h3 {
+	font-size: var(--font-size-big-1);
+}
+h2 {
+	font-size: var(--font-size-big-2);
+}
+h1 {
+	font-size: var(--font-size-big-3);
+}
+
+/* links */
+a {
+	text-decoration: none;
+	color: var(--link-color);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+*:focus {
+	outline: 3px solid var(--outline);
+}
+
+/* image and video widths */
+figure img,
+figure video {
+	width: 100%;
+}

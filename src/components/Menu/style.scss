@@ -1,0 +1,79 @@
+.menu {
+	background-color: var(--background-color-invert);
+	color: var(--text-color-invert);
+
+	/* Remove the default outline to account for the */
+	/* outline being clipped by the cluster element */
+	*:focus {
+		outline: none;
+	}
+
+	/* Remove the global max width value */
+	/* So that the Header can span the whole page width */
+	& * {
+		max-width: none;
+	}
+
+	ul {
+		list-style: none;
+		max-width: none;
+		padding: 0;
+	}
+
+	ul li {
+		padding: 0;
+	}
+
+	.menu-container {
+		flex-basis: 100%;
+	}
+
+	[hidden] {
+		display: none;
+	}
+
+	a {
+		/* Apply colour to text and svg elements */
+		color: inherit;
+		fill: var(--text-color-invert);
+		transition: color ease var(--time);
+
+		&:hover {
+			text-decoration: none;
+			color: var(--text-color-invert-accent);
+			fill: var(--text-color-invert-accent);
+		}
+
+		&:focus {
+			color: var(--outline);
+			fill: var(--outline);
+			text-decoration: underline;
+		}
+	}
+
+	/* Stops icon clipping on safari */
+	svg {
+		overflow: visible;
+		fill: inherit;
+		transition: fill ease var(--time);
+	}
+
+	button {
+		font-family: var(--serif-font-family);
+		font-size: var(--font-size-base);
+		border: 1px solid var(--text-color-invert);
+		padding: var(--s-2);
+		background-color: none;
+		transition: background-color ease var(--time);
+
+		&:hover {
+			cursor: pointer;
+			background-color: var(--white-1);
+		}
+
+		&:focus {
+			border: 1px solid var(--outline);
+		}
+	}
+
+}

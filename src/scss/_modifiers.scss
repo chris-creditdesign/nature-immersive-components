@@ -1,0 +1,22 @@
+/* -------------------------------- Modifiers ------------------------------- */
+
+/* Background colors */
+.invert {
+	color: var(--text-color-invert);
+	background-color: var(--background-color-invert);
+}
+
+.invert a {
+	color: var(--link-color-invert);
+}
+
+/* .invert * {
+	color: inherit;
+	background-color: inherit;
+} */
+
+/* Borders */
+.border-above {
+	padding-top: var(--s1);
+	border-top: 1px solid var(--text-color);
+}

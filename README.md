@@ -8,3 +8,5 @@ To run jest snapshot tests of all stories
 
 	yarn test
 
+em units for sizing inline elements.
+rem units for sizing block elements.
