@@ -20,18 +20,17 @@
 		padding: 0;
 	}
 
-	ul li {
-		padding: 0;
+	li {
+		// Remove default padding and add extra 
+		// 10px right padding for browsers without custom properties
+		padding: 0 10px 0 0;
+		padding: 0 var(--no-space) 0 0;
 	}
 
 	.menu-container {
 		flex-basis: 100%;
 	}
-
-	[hidden] {
-		display: none;
-	}
-
+	
 	a {
 		/* Apply colour to text and svg elements */
 		color: inherit;
@@ -57,23 +56,4 @@
 		fill: inherit;
 		transition: fill ease var(--time);
 	}
-
-	button {
-		font-family: var(--serif-font-family);
-		font-size: var(--font-size-base);
-		border: 1px solid var(--text-color-invert);
-		padding: var(--s-2);
-		background-color: none;
-		transition: background-color ease var(--time);
-
-		&:hover {
-			cursor: pointer;
-			background-color: var(--white-1);
-		}
-
-		&:focus {
-			border: 1px solid var(--outline);
-		}
-	}
-
 }

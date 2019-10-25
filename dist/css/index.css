@@ -54,6 +54,8 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
   --s6: calc(var(--s5) * var(--ratio));
+  /* Useful to for fallback values */
+  --no-space: 0;
   /* ---------------------------------- Type ---------------------------------- */
   /* Harding is the defalut font, otherwise apply the sans serif font */
   --serif-font-family: Harding, Palatino, Times, "Times New Roman", serif;
@@ -147,6 +149,19 @@ figure img,
 figure video {
   width: 100%; }
 
+button {
+  font-family: var(--serif-font-family);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--text-color-invert);
+  padding: var(--s-2);
+  background-color: none;
+  transition: background-color ease var(--time); }
+  button:hover {
+    cursor: pointer;
+    background-color: var(--white-1); }
+  button:focus {
+    border: 1px solid var(--outline); }
+
 /* -------------------------------------------------------------------------- */
 /*                                  Utilities                                 */
 /* -------------------------------------------------------------------------- */
@@ -196,6 +211,10 @@ figure video {
 .margin\:none {
   margin: 0; }
 
+/* Make sure hidden elements are hidden */
+[hidden] {
+  display: none !important; }
+
 /* -------------------------------- Modifiers ------------------------------- */
 /* Background colors */
 .invert {
@@ -227,6 +246,8 @@ figure video {
     align-items: center;
     margin: calc(var(--space) / 2 * -1); }
   .cluster > * > * {
+    padding-right: 10px;
+    padding-right: var(--no-space);
     margin: calc(var(--space) / 2); }
   .cluster .split-after {
     flex-grow: 1; }

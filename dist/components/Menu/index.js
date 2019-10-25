@@ -7,11 +7,19 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _index = require("../LogosSVG/index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var MainHeader = function MainHeader() {
+var Menu = function Menu(_ref) {
+  var menuLinks = _ref.menuLinks;
+  var renderedLinks = menuLinks.map(function (elem) {
+    return _react.default.createElement("li", null, _react.default.createElement("a", {
+      href: elem.href
+    }, elem.text));
+  });
   return _react.default.createElement("header", {
     className: "box menu"
   }, _react.default.createElement("div", {
@@ -31,20 +39,19 @@ var MainHeader = function MainHeader() {
     id: "menu-list",
     hidden: false,
     style: {
-      "--justify-content": "flex-start"
+      "--justify-content": "flex-start",
+      "--space": "var(--s1)"
     }
-  }, _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: "#"
-  }, "Hello")), _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: "#"
-  }, "Hello")), _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: "#"
-  }, "Hello")), _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: "#"
-  }, "Hello")))))));
+  }, _react.default.createElement("ul", null, renderedLinks)))));
 };
 
-var _default = MainHeader; // {pdfAvailable ? (
+Menu.propTypes = {
+  menuLinks: _propTypes.default.arrayOf(_propTypes.default.shape({
+    text: _propTypes.default.string,
+    href: _propTypes.default.string
+  }))
+};
+var _default = Menu; // {pdfAvailable ? (
 // 	<li>
 // 		<GALink
 // 			eventCategory="main external links"

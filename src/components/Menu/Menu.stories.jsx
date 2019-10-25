@@ -23,39 +23,36 @@ const articleData = {
 	publishedAtString: "",
 }
 
-const { altPdfAvailable, altPdfBlurb, articleURL, doi, headline, pdfAvailable, stand } = articleData
+// const { altPdfAvailable, altPdfBlurb, articleURL, doi, headline, pdfAvailable, stand } = articleData
 
-storiesOf("Menu", module)
-	.add("default", () => (
-		<Menu
-			altPdfAvailable={altPdfAvailable}
-			altPdfBlurb={altPdfBlurb}
-			articleURL={articleURL}
-			doi={doi}
-			headline={headline}
-			pdfAvailable={pdfAvailable}
-			stand={stand}
-		/>
-	))
-	.add("pdf available", () => (
-		<Menu
-			altPdfAvailable={altPdfAvailable}
-			altPdfBlurb={altPdfBlurb}
-			articleURL={articleURL}
-			doi={doi}
-			headline={headline}
-			pdfAvailable
-			stand={stand}
-		/>
-	))
-	.add("alt pdf available", () => (
-		<Menu
-			altPdfAvailable
-			altPdfBlurb="PDF en Español"
-			articleURL={articleURL}
-			doi={doi}
-			headline={headline}
-			pdfAvailable
-			stand={stand}
-		/>
-	))
+const menuLinks = [
+	{ text: "One", href: "#" },
+	{ text: "Two", href: "#" },
+	{ text: "There", href: "#" },
+	{ text: "Four", href: "#" },
+	{ text: "Five", href: "#" },
+]
+
+storiesOf("Menu", module).add("default", () => <Menu menuLinks={menuLinks} />)
+// .add("pdf available", () => (
+// 	<Menu
+// 		altPdfAvailable={altPdfAvailable}
+// 		altPdfBlurb={altPdfBlurb}
+// 		articleURL={articleURL}
+// 		doi={doi}
+// 		headline={headline}
+// 		pdfAvailable
+// 		stand={stand}
+// 	/>
+// ))
+// .add("alt pdf available", () => (
+// 	<Menu
+// 		altPdfAvailable
+// 		altPdfBlurb="PDF en Español"
+// 		articleURL={articleURL}
+// 		doi={doi}
+// 		headline={headline}
+// 		pdfAvailable
+// 		stand={stand}
+// 	/>
+// ))

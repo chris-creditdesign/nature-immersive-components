@@ -56,6 +56,9 @@
 	--s5: calc(var(--s4) * var(--ratio));
 	--s6: calc(var(--s5) * var(--ratio));
 
+	/* Useful to for fallback values */
+	--no-space: 0;
+
 	/* ---------------------------------- Type ---------------------------------- */
 	/* Harding is the defalut font, otherwise apply the sans serif font */
 	--serif-font-family: Harding, Palatino, Times, "Times New Roman", serif;

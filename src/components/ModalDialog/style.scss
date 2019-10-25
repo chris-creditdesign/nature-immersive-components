@@ -1,0 +1,23 @@
+.modal-dialog-container {
+	.button-container {
+		padding: var(--space);
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	[role="alertdialog"],
+	[role="dialog"] {
+		// Fallback values for browsers without custopm properties
+		max-width: 90%;
+		background-color: #ffffff;
+	
+
+		position: absolute;
+		z-index: 999;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: calc(100% - var(--space));
+		width: var(--measure);
+		background-color: var(--background-color-invert);
+	}
+}

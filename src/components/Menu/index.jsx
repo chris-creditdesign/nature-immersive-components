@@ -1,47 +1,52 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { NatureLogoSVG } from "../LogosSVG/index"
 
-const MainHeader = () => (
-	<header className="box menu">
-		<div className="cluster">
-			<div>
-				<div className="split-after">
-					<a href="https://www.nature.com">
-						<NatureLogoSVG height={2} />
-					</a>
-				</div>
+const Menu = ({ menuLinks }) => {
+	const renderedLinks = menuLinks.map(elem => (
+		<li>
+			<a href={elem.href}>{elem.text}</a>
+		</li>
+	))
 
-				<button type="button" aria-expanded aria-controls="menu-list">
-					Menu
-				</button>
+	return (
+		<header className="box menu">
+			<div className="cluster">
+				<div>
+					<div className="split-after">
+						<a href="https://www.nature.com">
+							<NatureLogoSVG height={2} />
+						</a>
+					</div>
 
-				<div
-					className="cluster menu-container"
-					id="menu-list"
-					hidden={false}
-					style={{ "--justify-content": "flex-start" }}
-				>
-					<ul>
-						<li>
-							<a href="#">Hello</a>
-						</li>
-						<li>
-							<a href="#">Hello</a>
-						</li>
-						<li>
-							<a href="#">Hello</a>
-						</li>
-						<li>
-							<a href="#">Hello</a>
-						</li>
-					</ul>
+					<button type="button" aria-expanded aria-controls="menu-list">
+						Menu
+					</button>
+
+					<div
+						className="cluster menu-container"
+						id="menu-list"
+						hidden={false}
+						style={{ "--justify-content": "flex-start", "--space": "var(--s1)" }}
+					>
+						<ul>{renderedLinks}</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-)
+		</header>
+	)
+}
 
-export default MainHeader
+Menu.propTypes = {
+	menuLinks: PropTypes.arrayOf(
+		PropTypes.shape({
+			text: PropTypes.string,
+			href: PropTypes.string,
+		})
+	),
+}
+
+export default Menu
 
 // {pdfAvailable ? (
 // 	<li>

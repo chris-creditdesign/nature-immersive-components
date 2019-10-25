@@ -27,6 +27,12 @@ Object.defineProperty(exports, "Footer", {
     return _index4.default;
   }
 });
+Object.defineProperty(exports, "ModalDialog", {
+  enumerable: true,
+  get: function get() {
+    return _index5.default;
+  }
+});
 
 var _index = _interopRequireDefault(require("./components/Head/index"));
 
@@ -35,6 +41,8 @@ var _index2 = _interopRequireDefault(require("./components/Test/index"));
 var _index3 = _interopRequireDefault(require("./components/Menu/index"));
 
 var _index4 = _interopRequireDefault(require("./components/Footer/index"));
+
+var _index5 = _interopRequireDefault(require("./components/ModalDialog/index"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 //# sourceMappingURL=index.js.map
