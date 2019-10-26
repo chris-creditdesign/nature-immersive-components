@@ -16,7 +16,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Menu = function Menu(_ref) {
   var menuLinks = _ref.menuLinks;
   var renderedLinks = menuLinks.map(function (elem) {
-    return _react.default.createElement("li", null, _react.default.createElement("a", {
+    return _react.default.createElement("li", {
+      key: "".concat(elem.text, "-").concat(elem.href)
+    }, _react.default.createElement("a", {
       href: elem.href
     }, elem.text));
   });
@@ -35,14 +37,12 @@ var Menu = function Menu(_ref) {
     "aria-expanded": true,
     "aria-controls": "menu-list"
   }, "Menu"), _react.default.createElement("div", {
-    className: "cluster menu-container",
+    className: "switcher menu-container"
+  }, _react.default.createElement("ul", {
+    className: "",
     id: "menu-list",
-    hidden: false,
-    style: {
-      "--justify-content": "flex-start",
-      "--space": "var(--s1)"
-    }
-  }, _react.default.createElement("ul", null, renderedLinks)))));
+    hidden: false
+  }, renderedLinks)))));
 };
 
 Menu.propTypes = {

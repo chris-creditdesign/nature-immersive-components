@@ -10,6 +10,7 @@
 		"css-compile-min": "node-sass ./src/scss/index.scss ./dist/css/index.min.css --output-style compressed --source-map true",
 		"eslint": "npx eslint --ext .js,.jsx src/components/**/* --fix",
 		"test": "jest",
+		"prod": "yarn js-compile && yarn css-compile && yarn css-compile-min",
 		"storybook": "start-storybook -s static"
 	},
 	"peerDependencies": {

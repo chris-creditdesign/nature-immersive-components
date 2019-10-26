@@ -38,7 +38,7 @@ button {
 	font-size: var(--font-size-base);
 	border: 1px solid var(--text-color-invert);
 	padding: var(--s-2);
-	background-color: none;
+	background-color: var(--background-color-invert);
 	transition: background-color ease var(--time);
 
 	&:hover {

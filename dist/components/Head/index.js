@@ -12,6 +12,7 @@ var PropTypes = require("prop-types");
 
 var Head = function Head(_ref) {
   var articleURL = _ref.articleURL,
+      children = _ref.children,
       dataLayer = _ref.dataLayer,
       description = _ref.description,
       doi = _ref.doi,
@@ -69,11 +70,12 @@ var Head = function Head(_ref) {
     dangerouslySetInnerHTML: {
       __html: googleTagManager
     }
-  }));
+  }), children);
 };
 
 Head.propTypes = {
   articleURL: PropTypes.string.isRequired,
+  children: PropTypes.node,
   dataLayer: PropTypes.array.isRequired,
   description: PropTypes.string.isRequired,
   doi: PropTypes.string.isRequired,

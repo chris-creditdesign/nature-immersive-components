@@ -2,7 +2,17 @@
 const React = require("react")
 const PropTypes = require("prop-types")
 
-const Head = ({ articleURL, dataLayer, description, doi, googleTagManager, immersiveURL, title, twitterHandle }) => {
+const Head = ({
+	articleURL,
+	children,
+	dataLayer,
+	description,
+	doi,
+	googleTagManager,
+	immersiveURL,
+	title,
+	twitterHandle,
+}) => {
 	const dataLayerScript = `dataLayer =${JSON.stringify(dataLayer)};`
 	const imageURL = `${immersiveURL}${doi}/public/img/${doi}.jpg`
 	return (
@@ -36,12 +46,14 @@ const Head = ({ articleURL, dataLayer, description, doi, googleTagManager, immer
 					__html: googleTagManager,
 				}}
 			/>
+			{children}
 		</head>
 	)
 }
 
 Head.propTypes = {
 	articleURL: PropTypes.string.isRequired,
+	children: PropTypes.node,
 	dataLayer: PropTypes.array.isRequired,
 	description: PropTypes.string.isRequired,
 	doi: PropTypes.string.isRequired,

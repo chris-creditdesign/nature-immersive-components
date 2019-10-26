@@ -11,13 +11,11 @@
 
 	& > * > * {
 		// Fallback 10px right padding for browsers without custom properties
-		padding-right: 10px;
-		padding-right: var(--no-space);
-
+		margin: 0 10px 0 0;
 		margin: calc(var(--space) / 2);
 	}
 
 	.split-after {
-		flex-grow: 1;
-	}	
+	flex-grow: 1;
+	}
 };

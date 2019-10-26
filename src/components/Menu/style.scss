@@ -22,15 +22,17 @@
 
 	li {
 		// Remove default padding and add extra 
-		// 10px right padding for browsers without custom properties
-		padding: 0 10px 0 0;
-		padding: 0 var(--no-space) 0 0;
+		padding: 0;
 	}
 
 	.menu-container {
 		flex-basis: 100%;
 	}
-	
+
+	// .menu-container > :first-child {
+	// 	margin: var(--s-3) 0 0 0;
+	// }
+
 	a {
 		/* Apply colour to text and svg elements */
 		color: inherit;

@@ -14,7 +14,8 @@
 /* ----------------------------- Layout elements ---------------------------- */
 @import "./layout/box";
 @import "./layout/cluster";
-@import "./layout/stack"
+@import "./layout/stack";
+@import "./layout/switcher";
 
 /* -------------------------------------------------------------------------- */
 /*                  Utility classes for testing in Storybook                  */

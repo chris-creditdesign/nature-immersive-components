@@ -4,7 +4,7 @@ import { NatureLogoSVG } from "../LogosSVG/index"
 
 const Menu = ({ menuLinks }) => {
 	const renderedLinks = menuLinks.map(elem => (
-		<li>
+		<li key={`${elem.text}-${elem.href}`}>
 			<a href={elem.href}>{elem.text}</a>
 		</li>
 	))
@@ -23,13 +23,10 @@ const Menu = ({ menuLinks }) => {
 						Menu
 					</button>
 
-					<div
-						className="cluster menu-container"
-						id="menu-list"
-						hidden={false}
-						style={{ "--justify-content": "flex-start", "--space": "var(--s1)" }}
-					>
-						<ul>{renderedLinks}</ul>
+					<div className="switcher menu-container">
+						<ul className="" id="menu-list" hidden={false}>
+							{renderedLinks}
+						</ul>
 					</div>
 				</div>
 			</div>
