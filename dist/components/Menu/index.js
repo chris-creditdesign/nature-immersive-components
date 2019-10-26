@@ -22,7 +22,10 @@ var Menu = function Menu(_ref) {
     return _react.default.createElement("li", {
       key: "".concat(elem.text, "-").concat(elem.href)
     }, _react.default.createElement("a", {
-      href: elem.href
+      href: elem.href,
+      "data-event-category": "menu",
+      "data-event-action": "click",
+      "data-event-label": elem.text
     }, elem.text));
   });
   return _react.default.createElement("header", {
@@ -32,13 +35,19 @@ var Menu = function Menu(_ref) {
   }, _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "split-after"
   }, _react.default.createElement("a", {
-    href: "https://www.nature.com"
+    href: "https://www.nature.com",
+    "data-event-category": "menu",
+    "data-event-action": "click",
+    "data-event-label": "nature.com"
   }, _react.default.createElement(_index.NatureLogoSVG, {
     height: 2
   }))), _react.default.createElement("button", {
     type: "button",
     "aria-expanded": true,
-    "aria-controls": "menu-list"
+    "aria-controls": "menu-list",
+    "data-event-category": "menu",
+    "data-event-action": "click",
+    "data-event-label": "button"
   }, "Menu"), _react.default.createElement("div", {
     className: "switcher menu-container"
   }, _react.default.createElement("ul", {
@@ -46,20 +55,26 @@ var Menu = function Menu(_ref) {
     id: "menu-list",
     hidden: false
   }, renderedLinks, _react.default.createElement("li", {
-    className: "cluster social-links",
-    style: {
-      "--justify-content": "flex-end"
-    }
+    className: "cluster social-links"
   }, _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: facebookURL
+    href: facebookURL,
+    "data-event-category": "menu social",
+    "data-event-action": "click",
+    "data-event-label": "facebook"
   }, _react.default.createElement(_index.FacebookLogoSVG, {
     height: 2
   }))), _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: twitterURL
+    href: twitterURL,
+    "data-event-category": "menu social",
+    "data-event-action": "click",
+    "data-event-label": "twitter"
   }, _react.default.createElement(_index.TwitterLogoSVG, {
     height: 2
   }))), _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: emailURL
+    href: emailURL,
+    "data-event-category": "menu social",
+    "data-event-action": "click",
+    "data-event-label": "email"
   }, _react.default.createElement(_index.EmailLogoSVG, {
     height: 2
   }))))))))));

@@ -266,13 +266,18 @@ button {
   display: flex;
   flex-wrap: wrap;
   --space-between: var(--space);
-  --modifier: calc(var(--measure-big) - (100% - var(--space-between)));
+  --min-width: var(--measure-big);
+  --modifier: calc(var(--min-width) - (100% - var(--space-between)));
   margin: calc((var(--space-between) / 2) * -1); }
 
 .switcher > * > * {
   flex-grow: 1;
-  flex-basis: calc(var(--modifier) * 999);
+  flex-basis: 100%;
   margin: calc(var(--space-between) / 2); }
+
+.switcher > * > :nth-last-child(n+4),
+.switcher > * > :nth-last-child(n+4) ~ * {
+  flex-basis: calc(var(--modifier) * 999); }
 
 /* -------------------------------------------------------------------------- */
 /*                  Utility classes for testing in Storybook                  */

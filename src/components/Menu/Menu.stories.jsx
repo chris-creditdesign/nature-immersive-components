@@ -25,16 +25,20 @@ const articleData = {
 	publishedAtString: "",
 }
 
-const { altPdfAvailable, altPdfBlurb, articleURL, doi, headline, pdfAvailable, stand } = articleData
+const { articleURL, doi, headline, stand } = articleData
 
-const { pdfURL, altPdfURL, facebookURL, twitterURL, emailURL } = generateSocialURLs(doi, articleURL, headline, stand)
+const { facebookURL, twitterURL, emailURL } = generateSocialURLs(doi, articleURL, headline, stand)
 
 const menuLinks = [
-	{ text: "One", href: "#" },
-	{ text: "Two", href: "#" },
-	{ text: "There", href: "#" },
-	{ text: "Four", href: "#" },
-	{ text: "Five", href: "#" },
+	{ text: "View animation", href: "#" },
+	{ text: "Controls", href: "#" },
+	{ text: "Replay intro", href: "#" },
+	{
+		text: "About Nature 150",
+		href: "#",
+	},
+	{ text: "Credits", href: "#" },
+	{ text: "Download data", href: "dat/data.zip" },
 ]
 
 storiesOf("Menu", module)
@@ -49,9 +53,19 @@ storiesOf("Menu", module)
 			menuLinks={[menuLinks[0]]}
 		/>
 	))
-	.add("pdf available", () => (
-		<Menu facebookURL={facebookURL} twitterURL={twitterURL} emailURL={emailURL} menuLinks={menuLinks} />
+	.add("Two links in menu", () => (
+		<Menu
+			facebookURL={facebookURL}
+			twitterURL={twitterURL}
+			emailURL={emailURL}
+			menuLinks={[menuLinks[0], menuLinks[1]]}
+		/>
 	))
-	.add("alt pdf available", () => (
-		<Menu facebookURL={facebookURL} twitterURL={twitterURL} emailURL={emailURL} menuLinks={menuLinks} />
+	.add("Three links in menu", () => (
+		<Menu
+			facebookURL={facebookURL}
+			twitterURL={twitterURL}
+			emailURL={emailURL}
+			menuLinks={[menuLinks[0], menuLinks[1], menuLinks[2]]}
+		/>
 	))

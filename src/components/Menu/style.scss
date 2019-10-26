@@ -31,7 +31,10 @@
 
 	.menu-container > :first-child {
 		margin-top: var(--s-6);
-		align-items: center;
+	}
+
+	.menu-container > * > * {
+		text-align: center;
 	}
 
 	.social-links {
@@ -40,6 +43,7 @@
 
 	.social-links > * {
 		flex-wrap: nowrap;
+		justify-content: center;
 	}
 
 	a {
