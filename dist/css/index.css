@@ -279,6 +279,14 @@ button {
 .switcher > * > :nth-last-child(n+4) ~ * {
   flex-basis: calc(var(--modifier) * 999); }
 
+.center {
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--measure);
+  padding-left: var(--space);
+  padding-right: var(--space); }
+
 /* -------------------------------------------------------------------------- */
 /*                  Utility classes for testing in Storybook                  */
 /* -------------------------------------------------------------------------- */
