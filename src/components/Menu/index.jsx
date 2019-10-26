@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { NatureLogoSVG } from "../LogosSVG/index"
+import { NatureLogoSVG, FacebookLogoSVG, TwitterLogoSVG, EmailLogoSVG } from "../LogosSVG/index"
 
-const Menu = ({ menuLinks }) => {
+const Menu = ({ menuLinks, facebookURL, twitterURL, emailURL }) => {
 	const renderedLinks = menuLinks.map(elem => (
 		<li key={`${elem.text}-${elem.href}`}>
 			<a href={elem.href}>{elem.text}</a>
@@ -26,6 +26,28 @@ const Menu = ({ menuLinks }) => {
 					<div className="switcher menu-container">
 						<ul className="" id="menu-list" hidden={false}>
 							{renderedLinks}
+							<li
+								className="cluster social-links"
+								style={{ "--justify-content": "flex-end" }}
+							>
+								<ul>
+									<li>
+										<a href={facebookURL}>
+											<FacebookLogoSVG height={2} />
+										</a>
+									</li>
+									<li>
+										<a href={twitterURL}>
+											<TwitterLogoSVG height={2} />
+										</a>
+									</li>
+									<li>
+										<a href={emailURL}>
+											<EmailLogoSVG height={2} />
+										</a>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -41,95 +63,9 @@ Menu.propTypes = {
 			href: PropTypes.string,
 		})
 	),
+	facebookURL: PropTypes.string.isRequired,
+	twitterURL: PropTypes.string.isRequired,
+	emailURL: PropTypes.string.isRequired,
 }
 
 export default Menu
-
-// {pdfAvailable ? (
-// 	<li>
-// 		<GALink
-// 			eventCategory="main external links"
-// 			eventLabel="pdf download"
-// 			href={
-// 				pdfURL
-// 			}
-// 		>
-// 			PDF
-// 			version
-// 		</GALink>
-// 	</li>
-// ) : null}
-
-// {altPdfAvailable ? (
-// 	<li>
-// 		<GALink
-// 			eventCategory="main external links"
-// 			eventLabel="alt pdf download"
-// 			href={
-// 				altPdfURL
-// 			}
-// 		>
-// 			{
-// 				altPdfBlurb
-// 			}
-// 		</GALink>
-// 	</li>
-// ) : null}
-
-// <Cluster
-// 	elem="li"
-// 	elemWrapper="ul"
-// 	ariaLabel="Social sharing"
-// >
-// 	<li>
-// 		<GALink
-// 			eventCategory="main social links"
-// 			eventLabel="facebook"
-// 			target="_blank"
-// 			rel="noreferrer noopener"
-// 			href={
-// 				facebookURL
-// 			}
-// 		>
-// 			<FacebookLogoSVG
-// 				height={
-// 					2
-// 				}
-// 			/>
-// 		</GALink>
-// 	</li>
-// 	<li>
-// 		<GALink
-// 			eventCategory="main social links"
-// 			eventLabel="twitter"
-// 			target="_blank"
-// 			rel="noreferrer noopener"
-// 			href={
-// 				twitterURL
-// 			}
-// 		>
-// 			<TwitterLogoSVG
-// 				height={
-// 					2
-// 				}
-// 			/>
-// 		</GALink>
-// 	</li>
-// 	<li>
-// 		<GALink
-// 			eventCategory="main social links"
-// 			eventLabel="email"
-// 			target="_blank"
-// 			rel="noreferrer noopener"
-// 			href={
-// 				emailURL
-// 			}
-// 		>
-// 			<EmailLogoSVG
-// 				height={
-// 					2
-// 				}
-// 			/>
-// 		</GALink>
-// 	</li>
-// </Cluster>

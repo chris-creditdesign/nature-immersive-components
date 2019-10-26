@@ -266,11 +266,12 @@ button {
   display: flex;
   flex-wrap: wrap;
   --space-between: var(--space);
+  --modifier: calc(var(--measure-big) - (100% - var(--space-between)));
   margin: calc((var(--space-between) / 2) * -1); }
 
 .switcher > * > * {
   flex-grow: 1;
-  flex-basis: calc((var(--measure-big) - (100% - var(--space-between))) * 999);
+  flex-basis: calc(var(--modifier) * 999);
   margin: calc(var(--space-between) / 2); }
 
 /* -------------------------------------------------------------------------- */

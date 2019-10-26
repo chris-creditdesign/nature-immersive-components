@@ -14,7 +14,10 @@ var _index = require("../LogosSVG/index");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Menu = function Menu(_ref) {
-  var menuLinks = _ref.menuLinks;
+  var menuLinks = _ref.menuLinks,
+      facebookURL = _ref.facebookURL,
+      twitterURL = _ref.twitterURL,
+      emailURL = _ref.emailURL;
   var renderedLinks = menuLinks.map(function (elem) {
     return _react.default.createElement("li", {
       key: "".concat(elem.text, "-").concat(elem.href)
@@ -42,101 +45,35 @@ var Menu = function Menu(_ref) {
     className: "",
     id: "menu-list",
     hidden: false
-  }, renderedLinks)))));
+  }, renderedLinks, _react.default.createElement("li", {
+    className: "cluster social-links",
+    style: {
+      "--justify-content": "flex-end"
+    }
+  }, _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement("a", {
+    href: facebookURL
+  }, _react.default.createElement(_index.FacebookLogoSVG, {
+    height: 2
+  }))), _react.default.createElement("li", null, _react.default.createElement("a", {
+    href: twitterURL
+  }, _react.default.createElement(_index.TwitterLogoSVG, {
+    height: 2
+  }))), _react.default.createElement("li", null, _react.default.createElement("a", {
+    href: emailURL
+  }, _react.default.createElement(_index.EmailLogoSVG, {
+    height: 2
+  }))))))))));
 };
 
 Menu.propTypes = {
   menuLinks: _propTypes.default.arrayOf(_propTypes.default.shape({
     text: _propTypes.default.string,
     href: _propTypes.default.string
-  }))
+  })),
+  facebookURL: _propTypes.default.string.isRequired,
+  twitterURL: _propTypes.default.string.isRequired,
+  emailURL: _propTypes.default.string.isRequired
 };
-var _default = Menu; // {pdfAvailable ? (
-// 	<li>
-// 		<GALink
-// 			eventCategory="main external links"
-// 			eventLabel="pdf download"
-// 			href={
-// 				pdfURL
-// 			}
-// 		>
-// 			PDF
-// 			version
-// 		</GALink>
-// 	</li>
-// ) : null}
-// {altPdfAvailable ? (
-// 	<li>
-// 		<GALink
-// 			eventCategory="main external links"
-// 			eventLabel="alt pdf download"
-// 			href={
-// 				altPdfURL
-// 			}
-// 		>
-// 			{
-// 				altPdfBlurb
-// 			}
-// 		</GALink>
-// 	</li>
-// ) : null}
-// <Cluster
-// 	elem="li"
-// 	elemWrapper="ul"
-// 	ariaLabel="Social sharing"
-// >
-// 	<li>
-// 		<GALink
-// 			eventCategory="main social links"
-// 			eventLabel="facebook"
-// 			target="_blank"
-// 			rel="noreferrer noopener"
-// 			href={
-// 				facebookURL
-// 			}
-// 		>
-// 			<FacebookLogoSVG
-// 				height={
-// 					2
-// 				}
-// 			/>
-// 		</GALink>
-// 	</li>
-// 	<li>
-// 		<GALink
-// 			eventCategory="main social links"
-// 			eventLabel="twitter"
-// 			target="_blank"
-// 			rel="noreferrer noopener"
-// 			href={
-// 				twitterURL
-// 			}
-// 		>
-// 			<TwitterLogoSVG
-// 				height={
-// 					2
-// 				}
-// 			/>
-// 		</GALink>
-// 	</li>
-// 	<li>
-// 		<GALink
-// 			eventCategory="main social links"
-// 			eventLabel="email"
-// 			target="_blank"
-// 			rel="noreferrer noopener"
-// 			href={
-// 				emailURL
-// 			}
-// 		>
-// 			<EmailLogoSVG
-// 				height={
-// 					2
-// 				}
-// 			/>
-// 		</GALink>
-// 	</li>
-// </Cluster>
-
+var _default = Menu;
 exports.default = _default;
 //# sourceMappingURL=index.js.map

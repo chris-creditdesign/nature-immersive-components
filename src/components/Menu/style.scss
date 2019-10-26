@@ -29,15 +29,25 @@
 		flex-basis: 100%;
 	}
 
-	// .menu-container > :first-child {
-	// 	margin: var(--s-3) 0 0 0;
-	// }
+	.menu-container > :first-child {
+		margin-top: var(--s-6);
+		align-items: center;
+	}
+
+	.social-links {
+		flex-grow: 2;
+	}
+
+	.social-links > * {
+		flex-wrap: nowrap;
+	}
 
 	a {
 		/* Apply colour to text and svg elements */
 		color: inherit;
 		fill: var(--text-color-invert);
 		transition: color ease var(--time);
+		cursor: pointer;
 
 		&:hover {
 			text-decoration: none;

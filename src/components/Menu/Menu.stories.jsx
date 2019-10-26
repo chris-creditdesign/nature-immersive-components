@@ -4,6 +4,8 @@ import { storiesOf } from "@storybook/react"
 import Menu from "./index"
 import css from "./style.scss"
 
+import generateSocialURLs from "../../utils/generate-social-urls"
+
 const articleData = {
 	twitterHandle: "@nature",
 	title: "150 years of Nature",
@@ -23,7 +25,9 @@ const articleData = {
 	publishedAtString: "",
 }
 
-// const { altPdfAvailable, altPdfBlurb, articleURL, doi, headline, pdfAvailable, stand } = articleData
+const { altPdfAvailable, altPdfBlurb, articleURL, doi, headline, pdfAvailable, stand } = articleData
+
+const { pdfURL, altPdfURL, facebookURL, twitterURL, emailURL } = generateSocialURLs(doi, articleURL, headline, stand)
 
 const menuLinks = [
 	{ text: "One", href: "#" },
@@ -33,26 +37,21 @@ const menuLinks = [
 	{ text: "Five", href: "#" },
 ]
 
-storiesOf("Menu", module).add("default", () => <Menu menuLinks={menuLinks} />)
-// .add("pdf available", () => (
-// 	<Menu
-// 		altPdfAvailable={altPdfAvailable}
-// 		altPdfBlurb={altPdfBlurb}
-// 		articleURL={articleURL}
-// 		doi={doi}
-// 		headline={headline}
-// 		pdfAvailable
-// 		stand={stand}
-// 	/>
-// ))
-// .add("alt pdf available", () => (
-// 	<Menu
-// 		altPdfAvailable
-// 		altPdfBlurb="PDF en Español"
-// 		articleURL={articleURL}
-// 		doi={doi}
-// 		headline={headline}
-// 		pdfAvailable
-// 		stand={stand}
-// 	/>
-// ))
+storiesOf("Menu", module)
+	.add("default", () => (
+		<Menu facebookURL={facebookURL} twitterURL={twitterURL} emailURL={emailURL} menuLinks={menuLinks} />
+	))
+	.add("One link in menu", () => (
+		<Menu
+			facebookURL={facebookURL}
+			twitterURL={twitterURL}
+			emailURL={emailURL}
+			menuLinks={[menuLinks[0]]}
+		/>
+	))
+	.add("pdf available", () => (
+		<Menu facebookURL={facebookURL} twitterURL={twitterURL} emailURL={emailURL} menuLinks={menuLinks} />
+	))
+	.add("alt pdf available", () => (
+		<Menu facebookURL={facebookURL} twitterURL={twitterURL} emailURL={emailURL} menuLinks={menuLinks} />
+	))
