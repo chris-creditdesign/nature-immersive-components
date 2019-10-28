@@ -144,10 +144,12 @@ a:hover {
 *:focus {
   outline: 3px solid var(--outline); }
 
-/* image and video widths */
-figure img,
-figure video {
-  width: 100%; }
+figure {
+  margin: 0; }
+  figure figcaption {
+    box-sizing: content-box;
+    padding-left: var(--caption-space);
+    padding-right: var(--caption-space); }
 
 button {
   font-family: var(--serif-font-family);

@@ -1,7 +1,8 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
 import Heading from "./index"
-import css from "./style.scss"
+
+import "./style.scss"
 
 const data = {
 	author: "The author",

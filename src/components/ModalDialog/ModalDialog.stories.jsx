@@ -2,7 +2,7 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 
 import ModalDialog from "./index"
-import css from "./style.scss"
+import "./style.scss"
 
 storiesOf("ModalDialog", module).add("default", () => (
 	<ModalDialog title="Graphic Legend">

@@ -2,7 +2,7 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 
 import Menu from "./index"
-import css from "./style.scss"
+import "./style.scss"
 
 import generateSocialURLs from "../../utils/generate-social-urls"
 
