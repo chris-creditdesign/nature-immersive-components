@@ -33,10 +33,16 @@ Object.defineProperty(exports, "Image", {
     return _index5.default;
   }
 });
-Object.defineProperty(exports, "ModalDialog", {
+Object.defineProperty(exports, "LayoutGrid", {
   enumerable: true,
   get: function get() {
     return _index6.default;
+  }
+});
+Object.defineProperty(exports, "ModalDialog", {
+  enumerable: true,
+  get: function get() {
+    return _index7.default;
   }
 });
 
@@ -50,7 +56,9 @@ var _index4 = _interopRequireDefault(require("./components/Footer/index"));
 
 var _index5 = _interopRequireDefault(require("./components/Image/index"));
 
-var _index6 = _interopRequireDefault(require("./components/ModalDialog/index"));
+var _index6 = _interopRequireDefault(require("./components/LayoutGrid/index"));
+
+var _index7 = _interopRequireDefault(require("./components/ModalDialog/index"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 //# sourceMappingURL=index.js.map

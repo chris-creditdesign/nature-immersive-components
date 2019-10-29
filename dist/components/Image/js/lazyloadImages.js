@@ -89,7 +89,7 @@ var lazyloadImages = function lazyloadImages() {
     images.forEach(function (image) {
       return enhanceImages(image);
     });
-  } else if (window.IntersectionObserver) {
+  } else if ("IntersectionObserver" in window) {
     // 2.
     var observers = [];
     var observerOptions = {

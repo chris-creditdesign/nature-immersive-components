@@ -82,7 +82,7 @@ const lazyloadImages = (root = null, rootMargin = "600px 0px 600px 0px") => {
 	if ("loading" in HTMLImageElement.prototype) {
 		// 1.
 		images.forEach(image => enhanceImages(image))
-	} else if (window.IntersectionObserver) {
+	} else if ("IntersectionObserver" in window) {
 		// 2.
 		const observers = []
 

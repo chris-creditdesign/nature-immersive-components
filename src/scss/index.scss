@@ -17,24 +17,23 @@
 @import "./layout/stack";
 @import "./layout/switcher";
 @import "./layout/center";
+@import "./layout/grid";
 
 /* -------------------------------------------------------------------------- */
 /*                  Utility classes for testing in Storybook                  */
 /* -------------------------------------------------------------------------- */
-// .box {
-// 	border: 5px solid red;
-// }
+.test-container {
+	border: 5px solid red;
+	fill: lightblue;
+}
 
-// .box {
-// 	fill: lightblue;
-// }
+.test-content {
+	background-color: lightblue;
+	min-height: 100px;
+	margin: 20px;
+}
 
-// .content {
-// 	background-color: lightblue;
-// 	min-height: 100px;
-// }
-
-// .content.horizontal {
-// 	width: 150px;
-// 	display: inline-block;
-// }
+.test-content.horizontal {
+	width: 150px;
+	display: inline-block;
+}

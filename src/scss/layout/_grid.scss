@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+  grid-gap: var(--space);
+  grid-template-columns: 100%;
+}
+
+.grid.aboveMin {
+  grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr));
+}
+
+// Native css but causes a clash with scss's min function...
+// TODO: find another way bundle CSS
+// @supports (width: min(20rem, 100%)) {
+//   .grid {
+//     grid-template-columns: repeat(auto-fit, minmax(min(var(--min-width), 100%), 1fr));
+//   }
+// }
