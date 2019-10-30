@@ -21,11 +21,7 @@ const Heading = ({
 		author.length || photographer.length || publishedAt
 
 	return (
-		<LayoutCenter
-			className="heading"
-			elem="header"
-			centerSpace="var(--s2)"
-		>
+		<LayoutCenter className="heading" centerSpace="var(--s2)">
 			<LayoutStack stackSpace="var(--s2)">
 				<h1
 					dangerouslySetInnerHTML={{

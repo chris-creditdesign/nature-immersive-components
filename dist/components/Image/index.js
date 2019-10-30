@@ -42,12 +42,13 @@ var Image = function Image(_ref) {
 
 Image.defaultProps = {
   className: "",
+  caption: "",
   captionSpace: "none"
 };
 Image.propTypes = {
   className: _propTypes.default.string,
   altText: _propTypes.default.string.isRequired,
-  caption: _propTypes.default.string.isRequired,
+  caption: _propTypes.default.string,
   srcURL: _propTypes.default.string.isRequired,
   captionSpace: _propTypes.default.string,
   width: _propTypes.default.number.isRequired,

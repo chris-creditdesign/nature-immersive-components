@@ -35,7 +35,7 @@ var LayoutGrid = function LayoutGrid(_ref) {
 LayoutGrid.defaultProps = {
   className: "",
   gridSpace: null,
-  minWidth: null,
+  minWidth: "15rem",
   elem: "div"
 };
 LayoutGrid.propTypes = {

@@ -46,7 +46,7 @@ var SideImageBox = function SideImageBox(_ref) {
     width: width,
     height: height
   }), _react.default.createElement(_Stack.default, {
-    space: stackSpace,
+    stackSpace: stackSpace,
     headline: headline,
     href: href,
     text: text,
@@ -58,11 +58,12 @@ SideImageBox.defaultProps = {
   footnote: null,
   boxSpace: null,
   gridSpace: null,
-  stackSpace: null
+  stackSpace: null,
+  caption: ""
 };
 SideImageBox.propTypes = {
   altText: _propTypes.default.string.isRequired,
-  caption: _propTypes.default.string.isRequired,
+  caption: _propTypes.default.string,
   footnote: _propTypes.default.string,
   headline: _propTypes.default.string.isRequired,
   href: _propTypes.default.string.isRequired,

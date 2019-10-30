@@ -110,7 +110,7 @@ storiesOf("Section", module)
 	))
 	.add("With grid of boxes", () => (
 		<Section headline="Collection">
-			<LayoutGrid className="aboveMin" space="var(--s-1)">
+			<LayoutGrid className="aboveMin" gridSpace="var(--s-1)">
 				<StackBox
 					altText="This is the image alt text"
 					caption="This is the image caption"

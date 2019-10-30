@@ -33,7 +33,6 @@ var Heading = function Heading(_ref) {
   var authorOrPhotographerOrDate = author.length || photographer.length || publishedAt;
   return _react.default.createElement(_LayoutCenter.default, {
     className: "heading",
-    elem: "header",
     centerSpace: "var(--s2)"
   }, _react.default.createElement(_LayoutStack.default, {
     stackSpace: "var(--s2)"

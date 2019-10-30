@@ -23,7 +23,7 @@ const LayoutGrid = ({ children, className, gridSpace, minWidth, elem }) =>
 LayoutGrid.defaultProps = {
 	className: "",
 	gridSpace: null,
-	minWidth: null,
+	minWidth: "15rem",
 	elem: "div",
 }
 

@@ -32,13 +32,14 @@ const Image = ({
 
 Image.defaultProps = {
 	className: "",
+	caption: "",
 	captionSpace: "none",
 }
 
 Image.propTypes = {
 	className: PropTypes.string,
 	altText: PropTypes.string.isRequired,
-	caption: PropTypes.string.isRequired,
+	caption: PropTypes.string,
 	srcURL: PropTypes.string.isRequired,
 	captionSpace: PropTypes.string,
 	width: PropTypes.number.isRequired,

@@ -31,7 +31,7 @@ const SideImageBox = ({
 			/>
 
 			<Stack
-				space={stackSpace}
+				stackSpace={stackSpace}
 				headline={headline}
 				href={href}
 				text={text}
@@ -46,11 +46,12 @@ SideImageBox.defaultProps = {
 	boxSpace: null,
 	gridSpace: null,
 	stackSpace: null,
+	caption: "",
 }
 
 SideImageBox.propTypes = {
 	altText: PropTypes.string.isRequired,
-	caption: PropTypes.string.isRequired,
+	caption: PropTypes.string,
 	footnote: PropTypes.string,
 	headline: PropTypes.string.isRequired,
 	href: PropTypes.string.isRequired,

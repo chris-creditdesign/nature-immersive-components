@@ -16,8 +16,9 @@ const SideImage = ({
 	srcURL,
 	text,
 	width,
+	stackSpace,
 }) => (
-	<LayoutGrid gridSpace={gridSpace} className="aboveMin">
+	<LayoutGrid gridSpace={gridSpace}>
 		<Image
 			altText={altText}
 			caption={caption}
@@ -31,6 +32,7 @@ const SideImage = ({
 			href={href}
 			text={text}
 			footnote={footnote}
+			stackSpace={stackSpace}
 		/>
 	</LayoutGrid>
 )
@@ -38,11 +40,13 @@ const SideImage = ({
 SideImage.defaultProps = {
 	footnote: null,
 	gridSpace: null,
+	stackSpace: null,
+	caption: "",
 }
 
 SideImage.propTypes = {
 	altText: PropTypes.string.isRequired,
-	caption: PropTypes.string.isRequired,
+	caption: PropTypes.string,
 	footnote: PropTypes.string,
 	headline: PropTypes.string.isRequired,
 	href: PropTypes.string.isRequired,
@@ -51,6 +55,7 @@ SideImage.propTypes = {
 	width: PropTypes.number.isRequired,
 	height: PropTypes.number.isRequired,
 	gridSpace: PropTypes.string,
+	stackSpace: PropTypes.string,
 }
 
 export default SideImage

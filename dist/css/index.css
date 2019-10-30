@@ -85,8 +85,7 @@
   --measure: 60ch;
   --measure-big: calc(var(--measure) * var(--ratio));
   --measure-small: calc(var(--measure) / var(--ratio));
-  --center-measure: var(--measure);
-  --grid-min-width: 15rem; }
+  --center-measure: var(--measure); }
 
 :root {
   --link-color: var(--orange-2);

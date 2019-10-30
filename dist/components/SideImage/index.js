@@ -28,10 +28,10 @@ var SideImage = function SideImage(_ref) {
       href = _ref.href,
       srcURL = _ref.srcURL,
       text = _ref.text,
-      width = _ref.width;
+      width = _ref.width,
+      stackSpace = _ref.stackSpace;
   return _react.default.createElement(_LayoutGrid.default, {
-    gridSpace: gridSpace,
-    className: "aboveMin"
+    gridSpace: gridSpace
   }, _react.default.createElement(_Image.default, {
     altText: altText,
     caption: caption,
@@ -42,17 +42,20 @@ var SideImage = function SideImage(_ref) {
     headline: headline,
     href: href,
     text: text,
-    footnote: footnote
+    footnote: footnote,
+    stackSpace: stackSpace
   }));
 };
 
 SideImage.defaultProps = {
   footnote: null,
-  gridSpace: null
+  gridSpace: null,
+  stackSpace: null,
+  caption: ""
 };
 SideImage.propTypes = {
   altText: _propTypes.default.string.isRequired,
-  caption: _propTypes.default.string.isRequired,
+  caption: _propTypes.default.string,
   footnote: _propTypes.default.string,
   headline: _propTypes.default.string.isRequired,
   href: _propTypes.default.string.isRequired,
@@ -60,7 +63,8 @@ SideImage.propTypes = {
   text: _propTypes.default.string.isRequired,
   width: _propTypes.default.number.isRequired,
   height: _propTypes.default.number.isRequired,
-  gridSpace: _propTypes.default.string
+  gridSpace: _propTypes.default.string,
+  stackSpace: _propTypes.default.string
 };
 var _default = SideImage;
 exports.default = _default;
