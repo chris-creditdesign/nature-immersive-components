@@ -4,6 +4,8 @@
 
 // @import './fonts.scss';
 @import "./custom_properties";
+@import "./space";
+@import "./measure";
 @import "./color_invert";
 @import "./body";
 @import "./exception_based_styling";
@@ -30,7 +32,6 @@
 .test-content {
 	background-color: lightblue;
 	min-height: 100px;
-	margin: 20px;
 }
 
 .test-content.horizontal {

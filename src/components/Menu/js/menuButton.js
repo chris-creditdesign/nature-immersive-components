@@ -7,7 +7,8 @@ const menuButton = () => {
 	menu.hidden = true
 
 	btn.addEventListener("click", function() {
-		const expanded = this.getAttribute("aria-expanded") === "true" || false
+		const expanded =
+			this.getAttribute("aria-expanded") === "true" || false
 		this.setAttribute("aria-expanded", !expanded)
 		menu.hidden = !menu.hidden
 	})

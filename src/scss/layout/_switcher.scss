@@ -1,7 +1,7 @@
 .switcher > * {
   display: flex;
   flex-wrap: wrap;
-  --space-between: var(--space);
+  --space-between: var(--switcher-space);
   --min-width: var(--measure-big);
   --modifier: calc(var(--min-width) - (100% - var(--space-between)));
   margin: calc((var(--space-between) / 2) * -1);

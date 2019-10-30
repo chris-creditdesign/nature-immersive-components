@@ -73,19 +73,6 @@
 	--font-size-big-3: var(--s3);
 	--font-size-big-4: var(--s4);
 
-	/* ---------------------------------- Width --------------------------------- */
-	/* The measure of text blocks should never exceed 60ch */
-	--measure: 60ch;
-	--measure-big: calc(var(--measure) * var(--ratio));
-	--measure-small: calc(var(--measure) / var(--ratio));
-
-	/* --------------------------------- Spacing -------------------------------- */
-	--space: var(--s-1);
-
 	/* ----------------------------- Transition time ---------------------------- */
 	--time: 200ms;
-
-	/* --------------------------------- Cluster -------------------------------- */
-	--justify-content: space-between;
-
 }

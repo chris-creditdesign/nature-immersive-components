@@ -3,7 +3,11 @@ import PropTypes from "prop-types"
 
 const ModalDialog = ({ children, title, labelId, dialogId }) => (
 	<div className="modal-dialog-container">
-		<div className="button-container" aria-expanded aria-controls={dialogId}>
+		<div
+			className="button-container"
+			aria-expanded
+			aria-controls={dialogId}
+		>
 			<button type="button">Graphic Legend</button>
 		</div>
 		<div

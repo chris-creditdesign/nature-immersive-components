@@ -1,4 +1,4 @@
-import React from "react"
+import { createElement } from "react"
 import PropTypes from "prop-types"
 
 /**
@@ -6,20 +6,25 @@ import PropTypes from "prop-types"
  *
  * Layout component used to arrange contents into a grid, surprisingly.
  */
-const LayoutGrid = ({ children, className, space, minWidth }) => (
-	<div
-		className={`grid js-grid ${className}`}
-		style={{ "--space": space, "--min-width": minWidth }}
-		data-min={minWidth}
-	>
-		{children}
-	</div>
-)
+const LayoutGrid = ({ children, className, gridSpace, minWidth, elem }) =>
+	createElement(
+		elem,
+		{
+			className: `grid js-grid ${className}`,
+			style: {
+				"--grid-space": gridSpace,
+				"--grid-min-width": minWidth,
+			},
+			"data-min": minWidth,
+		},
+		children
+	)
 
 LayoutGrid.defaultProps = {
 	className: "",
-	space: "var(--space)",
-	minWidth: "20rem",
+	gridSpace: null,
+	minWidth: null,
+	elem: "div",
 }
 
 LayoutGrid.propTypes = {
@@ -27,9 +32,11 @@ LayoutGrid.propTypes = {
 	/** CSS class to add custom styles */
 	className: PropTypes.string,
 	/** Size of the the grid-gap */
-	space: PropTypes.string,
+	gridSpace: PropTypes.string,
 	/** Minimum width of columns */
 	minWidth: PropTypes.string,
+	/** Type of element to create */
+	elem: PropTypes.string,
 }
 
 export default LayoutGrid

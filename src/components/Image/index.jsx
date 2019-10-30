@@ -1,8 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Image = ({ altText, caption, srcURL, className, captionSpace, width, height }) => (
-	<figure className={className} style={{ "--caption-space": captionSpace }}>
+const Image = ({
+	altText,
+	caption,
+	srcURL,
+	className,
+	captionSpace,
+	width,
+	height,
+}) => (
+	<figure
+		className={className}
+		style={{ "--caption-space": captionSpace }}
+	>
 		<picture>
 			<img
 				src={srcURL}

@@ -14,7 +14,7 @@ var _LayoutStack = _interopRequireDefault(require("../LayoutStack"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* eslint-disable react/no-danger */
-var LayoutBoxStack = function LayoutBoxStack(_ref) {
+var LayoutStackBox = function LayoutStackBox(_ref) {
   var altText = _ref.altText,
       caption = _ref.caption,
       footnote = _ref.footnote,
@@ -39,7 +39,7 @@ var LayoutBoxStack = function LayoutBoxStack(_ref) {
   }));
 };
 
-LayoutBoxStack.defaultProps = {
+LayoutStackBox.defaultProps = {
   altText: null,
   caption: null,
   footnote: null,
@@ -47,7 +47,7 @@ LayoutBoxStack.defaultProps = {
   width: 0,
   height: 0
 };
-LayoutBoxStack.propTypes = {
+LayoutStackBox.propTypes = {
   altText: _propTypes.default.string,
   caption: _propTypes.default.string,
   footnote: _propTypes.default.string,
@@ -58,6 +58,6 @@ LayoutBoxStack.propTypes = {
   width: _propTypes.default.number,
   height: _propTypes.default.number
 };
-var _default = LayoutBoxStack;
+var _default = LayoutStackBox;
 exports.default = _default;
 //# sourceMappingURL=index.js.map

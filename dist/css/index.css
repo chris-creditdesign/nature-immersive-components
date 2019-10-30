@@ -68,17 +68,25 @@
   --font-size-big-2: var(--s2);
   --font-size-big-3: var(--s3);
   --font-size-big-4: var(--s4);
-  /* ---------------------------------- Width --------------------------------- */
-  /* The measure of text blocks should never exceed 60ch */
+  /* ----------------------------- Transition time ---------------------------- */
+  --time: 200ms; }
+
+/* --------------------------------- Spacing -------------------------------- */
+:root {
+  --space: var(--s-1);
+  --grid-space: var(--s-1);
+  --box-space: var(--s-1);
+  --stack-space: var(--s-1);
+  --cluster-space: var(--s-1);
+  --switcher-space: var(--s-1);
+  --center-space: var(--s-1); }
+
+:root {
   --measure: 60ch;
   --measure-big: calc(var(--measure) * var(--ratio));
   --measure-small: calc(var(--measure) / var(--ratio));
-  /* --------------------------------- Spacing -------------------------------- */
-  --space: var(--s-1);
-  /* ----------------------------- Transition time ---------------------------- */
-  --time: 200ms;
-  /* --------------------------------- Cluster -------------------------------- */
-  --justify-content: space-between; }
+  --center-measure: var(--measure);
+  --grid-min-width: 15rem; }
 
 :root {
   --link-color: var(--orange-2);
@@ -237,19 +245,20 @@ button {
 
 /* ----------------------------- Layout elements ---------------------------- */
 .box {
-  padding: var(--space); }
+  padding: var(--box-space); }
 
 .cluster {
+  --cluster-justify-content: flex-start;
   overflow: hidden; }
   .cluster > * {
     display: flex;
     flex-wrap: wrap;
-    justify-content: var(--justify-content);
+    justify-content: var(--cluster-justify-content);
     align-items: center;
-    margin: calc(var(--space) / 2 * -1); }
+    margin: calc(var(--cluster-space) / 2 * -1); }
   .cluster > * > * {
     margin: 0 10px 0 0;
-    margin: calc(var(--space) / 2); }
+    margin: calc(var(--cluster-space) / 2); }
   .cluster .split-after {
     flex-grow: 1; }
 
@@ -260,14 +269,14 @@ button {
   .stack > * {
     margin: 0; }
   .stack > * + * {
-    margin-top: var(--space); }
+    margin-top: var(--stack-space); }
   .stack .split-before {
     margin-top: auto; }
 
 .switcher > * {
   display: flex;
   flex-wrap: wrap;
-  --space-between: var(--space);
+  --space-between: var(--switcher-space);
   --min-width: var(--measure-big);
   --modifier: calc(var(--min-width) - (100% - var(--space-between)));
   margin: calc((var(--space-between) / 2) * -1); }
@@ -285,17 +294,17 @@ button {
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--measure);
-  padding-left: var(--space);
-  padding-right: var(--space); }
+  max-width: var(--center-measure);
+  padding-left: var(--center-space);
+  padding-right: var(--center-space); }
 
 .grid {
   display: grid;
-  grid-gap: var(--space);
+  grid-gap: var(--grid-space);
   grid-template-columns: 100%; }
 
 .grid.aboveMin {
-  grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), 1fr)); }
 
 /* -------------------------------------------------------------------------- */
 /*                  Utility classes for testing in Storybook                  */
@@ -306,8 +315,7 @@ button {
 
 .test-content {
   background-color: lightblue;
-  min-height: 100px;
-  margin: 20px; }
+  min-height: 100px; }
 
 .test-content.horizontal {
   width: 150px;

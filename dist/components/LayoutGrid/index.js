@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require("react");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -19,13 +19,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var LayoutGrid = function LayoutGrid(_ref) {
   var children = _ref.children,
       className = _ref.className,
-      space = _ref.space,
-      minWidth = _ref.minWidth;
-  return _react.default.createElement("div", {
+      gridSpace = _ref.gridSpace,
+      minWidth = _ref.minWidth,
+      elem = _ref.elem;
+  return (0, _react.createElement)(elem, {
     className: "grid js-grid ".concat(className),
     style: {
-      "--space": space,
-      "--min-width": minWidth
+      "--grid-space": gridSpace,
+      "--grid-min-width": minWidth
     },
     "data-min": minWidth
   }, children);
@@ -33,8 +34,9 @@ var LayoutGrid = function LayoutGrid(_ref) {
 
 LayoutGrid.defaultProps = {
   className: "",
-  space: "var(--space)",
-  minWidth: "20rem"
+  gridSpace: null,
+  minWidth: null,
+  elem: "div"
 };
 LayoutGrid.propTypes = {
   children: _propTypes.default.node.isRequired,
@@ -43,10 +45,13 @@ LayoutGrid.propTypes = {
   className: _propTypes.default.string,
 
   /** Size of the the grid-gap */
-  space: _propTypes.default.string,
+  gridSpace: _propTypes.default.string,
 
   /** Minimum width of columns */
-  minWidth: _propTypes.default.string
+  minWidth: _propTypes.default.string,
+
+  /** Type of element to create */
+  elem: _propTypes.default.string
 };
 var _default = LayoutGrid;
 exports.default = _default;

@@ -2,17 +2,31 @@
 import React from "react"
 import PropTypes from "prop-types"
 import formatDate from "../../utils/format-date"
+import LayoutCenter from "../LayoutCenter"
+import LayoutStack from "../LayoutStack"
 
 /**
  * ## Heading
  *
  */
-const Heading = ({ author, headline, photographer, publishedAt, publishedAtString, stand }) => {
-	const authorOrPhotographerOrDate = author.length || photographer.length || publishedAt
+const Heading = ({
+	author,
+	headline,
+	photographer,
+	publishedAt,
+	publishedAtString,
+	stand,
+}) => {
+	const authorOrPhotographerOrDate =
+		author.length || photographer.length || publishedAt
 
 	return (
-		<section className="center heading" style={{ "--measure": "none", "--space": "var(--s2)" }}>
-			<div className="stack" style={{ "--space": "var(--s2)" }}>
+		<LayoutCenter
+			className="heading"
+			elem="header"
+			centerSpace="var(--s2)"
+		>
+			<LayoutStack stackSpace="var(--s2)">
 				<h1
 					dangerouslySetInnerHTML={{
 						__html: headline,
@@ -28,7 +42,7 @@ const Heading = ({ author, headline, photographer, publishedAt, publishedAtStrin
 
 				{authorOrPhotographerOrDate ? (
 					<div>
-						<div className="stack" style={{ "--space": "var(--s-3)" }}>
+						<LayoutStack stackSpace="var(--s-3)">
 							{author.length ? (
 								<p
 									className="font-weight:bold"
@@ -50,16 +64,21 @@ const Heading = ({ author, headline, photographer, publishedAt, publishedAtStrin
 							{publishedAt ? (
 								<time
 									itemProp="datePublished"
-									dateTime={publishedAtString || null}
+									dateTime={
+										publishedAtString ||
+										null
+									}
 								>
-									{formatDate(publishedAt)}
+									{formatDate(
+										publishedAt
+									)}
 								</time>
 							) : null}
-						</div>
+						</LayoutStack>
 					</div>
 				) : null}
-			</div>
-		</section>
+			</LayoutStack>
+		</LayoutCenter>
 	)
 }
 

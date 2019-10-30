@@ -1,11 +1,24 @@
 /* eslint-disable react/no-danger */
 import React from "react"
 import PropTypes from "prop-types"
-import LayoutStack from "../LayoutStack"
+import LayoutBox from "../LayoutBox"
+import Stack from "../Stack"
 
-const LayoutBoxStack = ({ altText, caption, footnote, headline, href, srcURL, text, width, height }) => (
-	<div className="box invert layout-stack-box">
-		<LayoutStack
+const StackBox = ({
+	altText,
+	caption,
+	footnote,
+	headline,
+	href,
+	srcURL,
+	text,
+	width,
+	height,
+	boxSpace,
+	stackSpace,
+}) => (
+	<LayoutBox className="invert" boxSpace={boxSpace}>
+		<Stack
 			altText={altText}
 			caption={caption}
 			footnote={footnote}
@@ -15,20 +28,23 @@ const LayoutBoxStack = ({ altText, caption, footnote, headline, href, srcURL, te
 			text={text}
 			width={width}
 			height={height}
+			stackSpace={stackSpace}
 		/>
-	</div>
+	</LayoutBox>
 )
 
-LayoutBoxStack.defaultProps = {
+StackBox.defaultProps = {
 	altText: null,
 	caption: null,
 	footnote: null,
 	srcURL: null,
 	width: 0,
 	height: 0,
+	boxSpace: null,
+	stackSpace: null,
 }
 
-LayoutBoxStack.propTypes = {
+StackBox.propTypes = {
 	altText: PropTypes.string,
 	caption: PropTypes.string,
 	footnote: PropTypes.string,
@@ -38,6 +54,8 @@ LayoutBoxStack.propTypes = {
 	text: PropTypes.string.isRequired,
 	width: PropTypes.number,
 	height: PropTypes.number,
+	boxSpace: PropTypes.string,
+	stackSpace: PropTypes.string,
 }
 
-export default LayoutBoxStack
+export default StackBox

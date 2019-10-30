@@ -1,6 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { NatureLogoSVG, FacebookLogoSVG, TwitterLogoSVG, EmailLogoSVG } from "../LogosSVG/index"
+import {
+	NatureLogoSVG,
+	FacebookLogoSVG,
+	TwitterLogoSVG,
+	EmailLogoSVG,
+} from "../LogosSVG/index"
 
 const Menu = ({ menuLinks, facebookURL, twitterURL, emailURL }) => {
 	const renderedLinks = menuLinks.map(elem => (
@@ -27,7 +32,9 @@ const Menu = ({ menuLinks, facebookURL, twitterURL, emailURL }) => {
 							data-event-action="click"
 							data-event-label="nature.com"
 						>
-							<NatureLogoSVG height={2} />
+							<NatureLogoSVG
+								height={2}
+							/>
 						</a>
 					</div>
 
@@ -43,38 +50,60 @@ const Menu = ({ menuLinks, facebookURL, twitterURL, emailURL }) => {
 					</button>
 
 					<div className="switcher menu-container">
-						<ul className="" id="menu-list" hidden={false}>
+						<ul
+							className=""
+							id="menu-list"
+							hidden={false}
+						>
 							{renderedLinks}
 							<li className="cluster social-links">
 								<ul>
 									<li>
 										<a
-											href={facebookURL}
+											href={
+												facebookURL
+											}
 											data-event-category="menu social"
 											data-event-action="click"
 											data-event-label="facebook"
 										>
-											<FacebookLogoSVG height={2} />
+											<FacebookLogoSVG
+												height={
+													2
+												}
+											/>
 										</a>
 									</li>
 									<li>
 										<a
-											href={twitterURL}
+											href={
+												twitterURL
+											}
 											data-event-category="menu social"
 											data-event-action="click"
 											data-event-label="twitter"
 										>
-											<TwitterLogoSVG height={2} />
+											<TwitterLogoSVG
+												height={
+													2
+												}
+											/>
 										</a>
 									</li>
 									<li>
 										<a
-											href={emailURL}
+											href={
+												emailURL
+											}
 											data-event-category="menu social"
 											data-event-action="click"
 											data-event-label="email"
 										>
-											<EmailLogoSVG height={2} />
+											<EmailLogoSVG
+												height={
+													2
+												}
+											/>
 										</a>
 									</li>
 								</ul>

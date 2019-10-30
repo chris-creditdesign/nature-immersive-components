@@ -1,0 +1,10 @@
+:root {
+	// The measure of text blocks should never exceed 60ch
+	--measure: 60ch;
+	--measure-big: calc(var(--measure) * var(--ratio));
+	--measure-small: calc(var(--measure) / var(--ratio));
+
+	--center-measure: var(--measure);
+
+	--grid-min-width: 15rem;
+}

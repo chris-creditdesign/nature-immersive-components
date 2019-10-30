@@ -11,6 +11,10 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _formatDate = _interopRequireDefault(require("../../utils/format-date"));
 
+var _LayoutCenter = _interopRequireDefault(require("../LayoutCenter"));
+
+var _LayoutStack = _interopRequireDefault(require("../LayoutStack"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* eslint-disable react/no-danger */
@@ -27,17 +31,12 @@ var Heading = function Heading(_ref) {
       publishedAtString = _ref.publishedAtString,
       stand = _ref.stand;
   var authorOrPhotographerOrDate = author.length || photographer.length || publishedAt;
-  return _react.default.createElement("section", {
-    className: "center heading",
-    style: {
-      "--measure": "none",
-      "--space": "var(--s2)"
-    }
-  }, _react.default.createElement("div", {
-    className: "stack",
-    style: {
-      "--space": "var(--s2)"
-    }
+  return _react.default.createElement(_LayoutCenter.default, {
+    className: "heading",
+    elem: "header",
+    centerSpace: "var(--s2)"
+  }, _react.default.createElement(_LayoutStack.default, {
+    stackSpace: "var(--s2)"
   }, _react.default.createElement("h1", {
     dangerouslySetInnerHTML: {
       __html: headline
@@ -46,11 +45,8 @@ var Heading = function Heading(_ref) {
     dangerouslySetInnerHTML: {
       __html: stand
     }
-  }) : null, authorOrPhotographerOrDate ? _react.default.createElement("div", null, _react.default.createElement("div", {
-    className: "stack",
-    style: {
-      "--space": "var(--s-3)"
-    }
+  }) : null, authorOrPhotographerOrDate ? _react.default.createElement("div", null, _react.default.createElement(_LayoutStack.default, {
+    stackSpace: "var(--s-3)"
   }, author.length ? _react.default.createElement("p", {
     className: "font-weight:bold",
     dangerouslySetInnerHTML: {

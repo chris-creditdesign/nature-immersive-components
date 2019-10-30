@@ -1,0 +1,39 @@
+import React from "react"
+import PropTypes from "prop-types"
+
+import LayoutCenter from "../LayoutCenter"
+import LayoutStack from "../LayoutStack"
+
+const Section = ({
+	headline,
+	children,
+	centerMeasure,
+	centerSpace,
+	stackSpace,
+}) => (
+	<LayoutCenter centerSpace={centerSpace} centerMeasure={centerMeasure}>
+		<LayoutStack stackSpace={stackSpace}>
+			{headline ? (
+				<h2 className="border-above">{headline}</h2>
+			) : null}
+			{children}
+		</LayoutStack>
+	</LayoutCenter>
+)
+
+Section.defaultProps = {
+	headline: null,
+	centerMeasure: null,
+	centerSpace: null,
+	stackSpace: null,
+}
+
+Section.propTypes = {
+	headline: PropTypes.string,
+	centerMeasure: PropTypes.string,
+	children: PropTypes.node.isRequired,
+	centerSpace: PropTypes.string,
+	stackSpace: PropTypes.string,
+}
+
+export default Section

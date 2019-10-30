@@ -19,7 +19,8 @@ storiesOf("LogosSVG", module)
 		<div>
 			<style
 				dangerouslySetInnerHTML={{
-					__html: "svg { border: 1px solid red; fill: #ffffff; }",
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; }",
 				}}
 			/>
 			{sizes.map(size => (
@@ -33,7 +34,8 @@ storiesOf("LogosSVG", module)
 		<div>
 			<style
 				dangerouslySetInnerHTML={{
-					__html: "svg { border: 1px solid red; fill: #ffffff; }",
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; }",
 				}}
 			/>
 			{sizes.map(size => (
@@ -47,12 +49,15 @@ storiesOf("LogosSVG", module)
 		<div>
 			<style
 				dangerouslySetInnerHTML={{
-					__html: "svg { border: 1px solid red; fill: #ffffff; }",
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; }",
 				}}
 			/>
 			{sizes.map(size => (
 				<div key={size}>
-					<FacebookLogoSVG height={size * ratio} />
+					<FacebookLogoSVG
+						height={size * ratio}
+					/>
 				</div>
 			))}
 		</div>
@@ -61,7 +66,8 @@ storiesOf("LogosSVG", module)
 		<div>
 			<style
 				dangerouslySetInnerHTML={{
-					__html: "svg { border: 1px solid red; fill: #ffffff; }",
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; }",
 				}}
 			/>
 			{sizes.map(size => (
@@ -75,7 +81,8 @@ storiesOf("LogosSVG", module)
 		<div>
 			<style
 				dangerouslySetInnerHTML={{
-					__html: "svg { border: 1px solid red; fill: #ffffff; }",
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; }",
 				}}
 			/>
 			{sizes.map(size => (
@@ -89,12 +96,15 @@ storiesOf("LogosSVG", module)
 		<div>
 			<style
 				dangerouslySetInnerHTML={{
-					__html: "svg { border: 1px solid red; fill: #ffffff; }",
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; }",
 				}}
 			/>
 			{sizes.map(size => (
 				<div key={size}>
-					<SpringerNatureLogoSVG height={size * ratio} />
+					<SpringerNatureLogoSVG
+						height={size * ratio}
+					/>
 				</div>
 			))}
 		</div>
@@ -103,12 +113,15 @@ storiesOf("LogosSVG", module)
 		<div>
 			<style
 				dangerouslySetInnerHTML={{
-					__html: "svg { border: 1px solid red; fill: #ffffff; }",
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; }",
 				}}
 			/>
 			{sizes.map(size => (
 				<div key={size}>
-					<NatureBriefingLogoSVG height={size * ratio} />
+					<NatureBriefingLogoSVG
+						height={size * ratio}
+					/>
 				</div>
 			))}
 		</div>

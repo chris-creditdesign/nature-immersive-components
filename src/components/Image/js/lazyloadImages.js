@@ -55,7 +55,10 @@ const enhanceImages = img => {
 const intersectionCallback = entries => {
 	entries.forEach(entry => {
 		// 1.
-		if (entry.isIntersecting && !entry.target.classList.contains("js-loaded")) {
+		if (
+			entry.isIntersecting &&
+			!entry.target.classList.contains("js-loaded")
+		) {
 			enhanceImages(entry.target)
 		}
 	})
@@ -92,7 +95,10 @@ const lazyloadImages = (root = null, rootMargin = "600px 0px 600px 0px") => {
 		}
 
 		imagesArray.forEach((image, index) => {
-			observers[index] = new IntersectionObserver(intersectionCallback, observerOptions)
+			observers[index] = new IntersectionObserver(
+				intersectionCallback,
+				observerOptions
+			)
 			observers[index].observe(image)
 		})
 	} else {

@@ -27,7 +27,12 @@ const articleData = {
 
 const { articleURL, doi, headline, stand } = articleData
 
-const { facebookURL, twitterURL, emailURL } = generateSocialURLs(doi, articleURL, headline, stand)
+const { facebookURL, twitterURL, emailURL } = generateSocialURLs(
+	doi,
+	articleURL,
+	headline,
+	stand
+)
 
 const menuLinks = [
 	{ text: "View animation", href: "#" },
@@ -43,7 +48,12 @@ const menuLinks = [
 
 storiesOf("Menu", module)
 	.add("default", () => (
-		<Menu facebookURL={facebookURL} twitterURL={twitterURL} emailURL={emailURL} menuLinks={menuLinks} />
+		<Menu
+			facebookURL={facebookURL}
+			twitterURL={twitterURL}
+			emailURL={emailURL}
+			menuLinks={menuLinks}
+		/>
 	))
 	.add("One link in menu", () => (
 		<Menu

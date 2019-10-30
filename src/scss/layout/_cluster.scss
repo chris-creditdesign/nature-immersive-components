@@ -1,18 +1,19 @@
 .cluster {
+	--cluster-justify-content: flex-start;
 	overflow: hidden;
 
 	& > * {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: var(--justify-content);
+		justify-content: var(--cluster-justify-content);
 		align-items: center;
-		margin: calc(var(--space) / 2 * -1);
+		margin: calc(var(--cluster-space) / 2 * -1);
 	}
 
 	& > * > * {
 		// Fallback 10px right padding for browsers without custom properties
 		margin: 0 10px 0 0;
-		margin: calc(var(--space) / 2);
+		margin: calc(var(--cluster-space) / 2);
 	}
 
 	.split-after {
