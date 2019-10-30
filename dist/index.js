@@ -3,62 +3,134 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Head", {
-  enumerable: true,
-  get: function get() {
-    return _index.default;
-  }
-});
-Object.defineProperty(exports, "Test", {
-  enumerable: true,
-  get: function get() {
-    return _index2.default;
-  }
-});
-Object.defineProperty(exports, "Menu", {
-  enumerable: true,
-  get: function get() {
-    return _index3.default;
-  }
-});
 Object.defineProperty(exports, "Footer", {
   enumerable: true,
   get: function get() {
-    return _index4.default;
+    return _Footer.default;
+  }
+});
+Object.defineProperty(exports, "Head", {
+  enumerable: true,
+  get: function get() {
+    return _Head.default;
+  }
+});
+Object.defineProperty(exports, "Heading", {
+  enumerable: true,
+  get: function get() {
+    return _Heading.default;
   }
 });
 Object.defineProperty(exports, "Image", {
   enumerable: true,
   get: function get() {
-    return _index5.default;
+    return _Image.default;
+  }
+});
+Object.defineProperty(exports, "LayoutBox", {
+  enumerable: true,
+  get: function get() {
+    return _LayoutBox.default;
+  }
+});
+Object.defineProperty(exports, "LayoutCenter", {
+  enumerable: true,
+  get: function get() {
+    return _LayoutCenter.default;
+  }
+});
+Object.defineProperty(exports, "LayoutCluster", {
+  enumerable: true,
+  get: function get() {
+    return _LayoutCluster.default;
   }
 });
 Object.defineProperty(exports, "LayoutGrid", {
   enumerable: true,
   get: function get() {
-    return _index6.default;
+    return _LayoutGrid.default;
+  }
+});
+Object.defineProperty(exports, "LayoutStack", {
+  enumerable: true,
+  get: function get() {
+    return _LayoutStack.default;
+  }
+});
+Object.defineProperty(exports, "Menu", {
+  enumerable: true,
+  get: function get() {
+    return _Menu.default;
   }
 });
 Object.defineProperty(exports, "ModalDialog", {
   enumerable: true,
   get: function get() {
-    return _index7.default;
+    return _ModalDialog.default;
+  }
+});
+Object.defineProperty(exports, "Section", {
+  enumerable: true,
+  get: function get() {
+    return _Section.default;
+  }
+});
+Object.defineProperty(exports, "SideImage", {
+  enumerable: true,
+  get: function get() {
+    return _SideImage.default;
+  }
+});
+Object.defineProperty(exports, "SideImageBox", {
+  enumerable: true,
+  get: function get() {
+    return _SideImageBox.default;
+  }
+});
+Object.defineProperty(exports, "Stack", {
+  enumerable: true,
+  get: function get() {
+    return _Stack.default;
+  }
+});
+Object.defineProperty(exports, "StackBox", {
+  enumerable: true,
+  get: function get() {
+    return _StackBox.default;
   }
 });
 
-var _index = _interopRequireDefault(require("./components/Head/index"));
+var _Footer = _interopRequireDefault(require("./components/Footer"));
 
-var _index2 = _interopRequireDefault(require("./components/Test/index"));
+var _Head = _interopRequireDefault(require("./components/Head"));
 
-var _index3 = _interopRequireDefault(require("./components/Menu/index"));
+var _Heading = _interopRequireDefault(require("./components/Heading"));
 
-var _index4 = _interopRequireDefault(require("./components/Footer/index"));
+var _Image = _interopRequireDefault(require("./components/Image"));
 
-var _index5 = _interopRequireDefault(require("./components/Image/index"));
+var _LayoutBox = _interopRequireDefault(require("./components/LayoutBox"));
 
-var _index6 = _interopRequireDefault(require("./components/LayoutGrid/index"));
+var _LayoutCenter = _interopRequireDefault(require("./components/LayoutCenter"));
 
-var _index7 = _interopRequireDefault(require("./components/ModalDialog/index"));
+var _LayoutCluster = _interopRequireDefault(require("./components/LayoutCluster"));
+
+var _LayoutGrid = _interopRequireDefault(require("./components/LayoutGrid"));
+
+var _LayoutStack = _interopRequireDefault(require("./components/LayoutStack"));
+
+var _Menu = _interopRequireDefault(require("./components/Menu"));
+
+var _ModalDialog = _interopRequireDefault(require("./components/ModalDialog"));
+
+var _Section = _interopRequireDefault(require("./components/Section"));
+
+var _SideImage = _interopRequireDefault(require("./components/SideImage"));
+
+var _SideImageBox = _interopRequireDefault(require("./components/SideImageBox"));
+
+var _Stack = _interopRequireDefault(require("./components/Stack"));
+
+var _StackBox = _interopRequireDefault(require("./components/StackBox"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 //# sourceMappingURL=index.js.map
