@@ -99,6 +99,12 @@ Object.defineProperty(exports, "StackBox", {
     return _StackBox.default;
   }
 });
+Object.defineProperty(exports, "LayoutCover", {
+  enumerable: true,
+  get: function get() {
+    return _LayoutCover.default;
+  }
+});
 
 var _Footer = _interopRequireDefault(require("./components/Footer"));
 
@@ -131,6 +137,8 @@ var _SideImageBox = _interopRequireDefault(require("./components/SideImageBox"))
 var _Stack = _interopRequireDefault(require("./components/Stack"));
 
 var _StackBox = _interopRequireDefault(require("./components/StackBox"));
+
+var _LayoutCover = _interopRequireDefault(require("./components/LayoutCover"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 //# sourceMappingURL=index.js.map

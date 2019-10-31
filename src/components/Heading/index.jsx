@@ -16,13 +16,17 @@ const Heading = ({
 	publishedAt,
 	publishedAtString,
 	stand,
+	className,
 }) => {
 	const authorOrPhotographerOrDate =
 		author.length || photographer.length || publishedAt
 
 	return (
-		<LayoutCenter className="heading" centerSpace="var(--s2)">
-			<LayoutStack stackSpace="var(--s2)">
+		<LayoutCenter
+			className={`heading ${className}`}
+			centerSpace="var(--s2)"
+		>
+			<LayoutStack stackSpace="var(--s1)">
 				<h1
 					dangerouslySetInnerHTML={{
 						__html: headline,
@@ -84,6 +88,7 @@ Heading.defaultProps = {
 	publishedAt: 0,
 	publishedAtString: "",
 	stand: "",
+	className: "",
 }
 
 Heading.propTypes = {
@@ -93,6 +98,7 @@ Heading.propTypes = {
 	publishedAt: PropTypes.number,
 	publishedAtString: PropTypes.string,
 	stand: PropTypes.string,
+	className: PropTypes.string,
 }
 
 export default Heading

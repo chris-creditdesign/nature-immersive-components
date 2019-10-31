@@ -29,13 +29,14 @@ var Heading = function Heading(_ref) {
       photographer = _ref.photographer,
       publishedAt = _ref.publishedAt,
       publishedAtString = _ref.publishedAtString,
-      stand = _ref.stand;
+      stand = _ref.stand,
+      className = _ref.className;
   var authorOrPhotographerOrDate = author.length || photographer.length || publishedAt;
   return _react.default.createElement(_LayoutCenter.default, {
-    className: "heading",
+    className: "heading ".concat(className),
     centerSpace: "var(--s2)"
   }, _react.default.createElement(_LayoutStack.default, {
-    stackSpace: "var(--s2)"
+    stackSpace: "var(--s1)"
   }, _react.default.createElement("h1", {
     dangerouslySetInnerHTML: {
       __html: headline
@@ -67,7 +68,8 @@ Heading.defaultProps = {
   photographer: "",
   publishedAt: 0,
   publishedAtString: "",
-  stand: ""
+  stand: "",
+  className: ""
 };
 Heading.propTypes = {
   author: _propTypes.default.string,
@@ -75,7 +77,8 @@ Heading.propTypes = {
   photographer: _propTypes.default.string,
   publishedAt: _propTypes.default.number,
   publishedAtString: _propTypes.default.string,
-  stand: _propTypes.default.string
+  stand: _propTypes.default.string,
+  className: _propTypes.default.string
 };
 var _default = Heading;
 exports.default = _default;
