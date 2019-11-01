@@ -27,16 +27,22 @@ const loadYouTube = () => {
 	// 3.
 	const tag = document.createElement("script")
 	tag.src = "https://www.youtube.com/iframe_api"
-	const [firstScriptTag] = document.getElementsByTagName("script")
+	const firstScriptTag = document.getElementsByTagName("script")[0]
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
 	// 4.
 	const videosAsObjects = Array.from(
 		document.getElementsByClassName("js-load-youtube"),
-		video => ({
-			...video.dataset,
-			container: video,
-		})
+		video => {
+			const { videoId, ratio, autoPlay, id } = video.dataset
+			return {
+				videoId,
+				ratio,
+				autoPlay,
+				id,
+				container: video,
+			}
+		}
 	)
 
 	// 5.
@@ -53,7 +59,9 @@ const loadYouTube = () => {
 			return player
 		})
 
-		players.push(...youtubePlayers)
+		youtubePlayers.forEach(player => players.push(player))
+
+		// players.push(...youtubePlayers)
 	}
 
 	// 6.
