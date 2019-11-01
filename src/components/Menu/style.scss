@@ -25,28 +25,8 @@
 		padding: 0;
 	}
 
-	.menu-container {
-		flex-basis: 100%;
-	}
-
-	.menu-container > :first-child {
-		margin-top: var(--s-6);
-	}
-
-	.menu-container > * > * {
-		text-align: center;
-	}
-
-	.social-links {
-		flex-grow: 2;
-	}
-
-	.social-links > * {
-		flex-wrap: nowrap;
-		justify-content: center;
-	}
-
 	a {
+		display: block;
 		/* Apply colour to text and svg elements */
 		color: inherit;
 		fill: var(--text-color-invert);
@@ -68,6 +48,7 @@
 
 	/* Stops icon clipping on safari */
 	svg {
+		display: block;
 		overflow: visible;
 		fill: inherit;
 		transition: fill ease var(--time);

@@ -125,7 +125,6 @@ const FacebookLogoSVG = ({ height, title, titleId }) => (
 	<svg
 		height={`${height}em`}
 		viewBox="0 0 30 30"
-		aria-hidden="true"
 		focusable="false"
 		role="img"
 		aria-labelledby={titleId}
@@ -152,7 +151,6 @@ const TwitterLogoSVG = ({ height, title, titleId }) => (
 	<svg
 		height={`${height}em`}
 		viewBox="0 0 30 30"
-		aria-hidden="true"
 		focusable="false"
 		role="img"
 		aria-labelledby={titleId}
@@ -179,7 +177,6 @@ const EmailLogoSVG = ({ height, title, titleId }) => (
 	<svg
 		height={`${height}em`}
 		viewBox="0 0 30 30"
-		aria-hidden="true"
 		focusable="false"
 		role="img"
 		aria-labelledby={titleId}

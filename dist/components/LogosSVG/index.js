@@ -171,7 +171,6 @@ var FacebookLogoSVG = function FacebookLogoSVG(_ref5) {
   return _react.default.createElement("svg", {
     height: "".concat(height, "em"),
     viewBox: "0 0 30 30",
-    "aria-hidden": "true",
     focusable: "false",
     role: "img",
     "aria-labelledby": titleId
@@ -203,7 +202,6 @@ var TwitterLogoSVG = function TwitterLogoSVG(_ref6) {
   return _react.default.createElement("svg", {
     height: "".concat(height, "em"),
     viewBox: "0 0 30 30",
-    "aria-hidden": "true",
     focusable: "false",
     role: "img",
     "aria-labelledby": titleId
@@ -235,7 +233,6 @@ var EmailLogoSVG = function EmailLogoSVG(_ref7) {
   return _react.default.createElement("svg", {
     height: "".concat(height, "em"),
     viewBox: "0 0 30 30",
-    "aria-hidden": "true",
     focusable: "false",
     role: "img",
     "aria-labelledby": titleId

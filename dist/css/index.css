@@ -160,6 +160,11 @@ figure {
     padding-left: var(--caption-space);
     padding-right: var(--caption-space); }
 
+figure > img,
+figure > video,
+.youtube > iframe {
+  width: 100%; }
+
 button {
   font-family: var(--serif-font-family);
   font-size: var(--font-size-base);
@@ -260,8 +265,9 @@ button {
   .cluster > * > * {
     margin: 0 10px 0 0;
     margin: calc(var(--cluster-space) / 2); }
-  .cluster .split-after {
-    flex-grow: 1; }
+
+.cluster__split-after {
+  flex-grow: 1; }
 
 .stack {
   display: flex;

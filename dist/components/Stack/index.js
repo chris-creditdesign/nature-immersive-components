@@ -38,6 +38,7 @@ var Stack = function Stack(_ref) {
     height: height
   }) : null, _react.default.createElement("h3", null, _react.default.createElement("a", {
     href: href,
+    "data-track": "click",
     "data-event-category": "body links",
     "data-event-action": "click",
     "data-event-label": headline

@@ -16,7 +16,8 @@
 		margin: calc(var(--cluster-space) / 2);
 	}
 
-	.split-after {
-		flex-grow: 1;
-	}
 };
+
+.cluster__split-after {
+	flex-grow: 1;
+}

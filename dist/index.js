@@ -105,6 +105,12 @@ Object.defineProperty(exports, "LayoutCover", {
     return _LayoutCover.default;
   }
 });
+Object.defineProperty(exports, "YouTube", {
+  enumerable: true,
+  get: function get() {
+    return _YouTube.default;
+  }
+});
 
 var _Footer = _interopRequireDefault(require("./components/Footer"));
 
@@ -139,6 +145,8 @@ var _Stack = _interopRequireDefault(require("./components/Stack"));
 var _StackBox = _interopRequireDefault(require("./components/StackBox"));
 
 var _LayoutCover = _interopRequireDefault(require("./components/LayoutCover"));
+
+var _YouTube = _interopRequireDefault(require("./components/YouTube"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 //# sourceMappingURL=index.js.map

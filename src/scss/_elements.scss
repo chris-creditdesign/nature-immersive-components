@@ -37,6 +37,12 @@ figure {
 	}
 }
 
+figure > img,
+figure > video,
+.youtube > iframe {
+	width: 100%;
+}
+
 button {
 	font-family: var(--serif-font-family);
 	font-size: var(--font-size-base);

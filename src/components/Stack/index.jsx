@@ -30,6 +30,7 @@ const Stack = ({
 		<h3>
 			<a
 				href={href}
+				data-track="click"
 				data-event-category="body links"
 				data-event-action="click"
 				data-event-label={headline}
