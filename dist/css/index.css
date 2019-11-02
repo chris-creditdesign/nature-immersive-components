@@ -244,6 +244,11 @@ button {
 	color: inherit;
 	background-color: inherit;
 } */
+.box__link {
+  outline: none; }
+  .box__link:focus {
+    background-color: var(--outline); }
+
 /* Borders */
 .border-above {
   padding-top: var(--s1);

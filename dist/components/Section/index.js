@@ -17,11 +17,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Section = function Section(_ref) {
   var headline = _ref.headline,
+      className = _ref.className,
       children = _ref.children,
       centerMeasure = _ref.centerMeasure,
       centerSpace = _ref.centerSpace,
       stackSpace = _ref.stackSpace;
   return _react.default.createElement(_LayoutCenter.default, {
+    elem: "section",
+    className: className,
     centerSpace: centerSpace,
     centerMeasure: centerMeasure
   }, _react.default.createElement(_LayoutStack.default, {
@@ -33,12 +36,14 @@ var Section = function Section(_ref) {
 
 Section.defaultProps = {
   headline: null,
+  className: null,
   centerMeasure: null,
   centerSpace: null,
   stackSpace: null
 };
 Section.propTypes = {
   headline: _propTypes.default.string,
+  className: _propTypes.default.string,
   centerMeasure: _propTypes.default.string,
   children: _propTypes.default.node.isRequired,
   centerSpace: _propTypes.default.string,

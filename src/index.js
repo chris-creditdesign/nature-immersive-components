@@ -1,4 +1,5 @@
 // React Components
+export { default as Briefing } from "./components/Briefing"
 export { default as Footer } from "./components/Footer"
 export { default as Head } from "./components/Head"
 export { default as Heading } from "./components/Heading"

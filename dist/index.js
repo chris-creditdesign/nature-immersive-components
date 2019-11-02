@@ -3,6 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "Briefing", {
+  enumerable: true,
+  get: function get() {
+    return _Briefing.default;
+  }
+});
 Object.defineProperty(exports, "Footer", {
   enumerable: true,
   get: function get() {
@@ -111,6 +117,8 @@ Object.defineProperty(exports, "YouTube", {
     return _YouTube.default;
   }
 });
+
+var _Briefing = _interopRequireDefault(require("./components/Briefing"));
 
 var _Footer = _interopRequireDefault(require("./components/Footer"));
 

@@ -6,12 +6,18 @@ import LayoutStack from "../LayoutStack"
 
 const Section = ({
 	headline,
+	className,
 	children,
 	centerMeasure,
 	centerSpace,
 	stackSpace,
 }) => (
-	<LayoutCenter centerSpace={centerSpace} centerMeasure={centerMeasure}>
+	<LayoutCenter
+		elem="section"
+		className={className}
+		centerSpace={centerSpace}
+		centerMeasure={centerMeasure}
+	>
 		<LayoutStack stackSpace={stackSpace}>
 			{headline ? (
 				<h2 className="border-above">{headline}</h2>
@@ -23,6 +29,7 @@ const Section = ({
 
 Section.defaultProps = {
 	headline: null,
+	className: null,
 	centerMeasure: null,
 	centerSpace: null,
 	stackSpace: null,
@@ -30,6 +37,7 @@ Section.defaultProps = {
 
 Section.propTypes = {
 	headline: PropTypes.string,
+	className: PropTypes.string,
 	centerMeasure: PropTypes.string,
 	children: PropTypes.node.isRequired,
 	centerSpace: PropTypes.string,

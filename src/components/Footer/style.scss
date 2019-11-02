@@ -1,4 +1,6 @@
 .footer {
+	margin-top: var(--s4);
+
 	/* Make sure the SVG logo is aligned left */
 	& > * {
 		align-items: flex-start;
