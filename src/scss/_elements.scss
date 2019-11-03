@@ -44,19 +44,21 @@ figure > video,
 }
 
 button {
-	font-family: var(--serif-font-family);
+	// font-family: var(--serif-font-family);
 	font-size: var(--font-size-base);
-	border: 1px solid var(--text-color-invert);
-	padding: var(--s-2);
-	background-color: var(--background-color-invert);
-	transition: background-color ease var(--time);
+	border: none;
+	background: none;
+	// border: 1px solid var(--text-color-invert);
+	// padding: var(--s-2);
+	// background-color: var(--background-color-invert);
+	// transition: background-color ease var(--time);
 
-	&:hover {
-		cursor: pointer;
-		background-color: var(--white-1);
-	}
+	// &:hover {
+	// 	cursor: pointer;
+	// 	background-color: var(--white-1);
+	// }
 
-	&:focus {
-		border: 1px solid var(--outline);
-	}
+	// &:focus {
+	// 	border: 1px solid var(--outline);
+	// }
 }

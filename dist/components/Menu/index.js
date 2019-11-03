@@ -13,6 +13,8 @@ var _LayoutBox = _interopRequireDefault(require("../LayoutBox"));
 
 var _LayoutCluster = _interopRequireDefault(require("../LayoutCluster"));
 
+var _LayoutSwitcher = _interopRequireDefault(require("../LayoutSwitcher"));
+
 var _index = require("../LogosSVG/index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -20,7 +22,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Menu = function Menu(_ref) {
   var facebookURL = _ref.facebookURL,
       twitterURL = _ref.twitterURL,
-      emailURL = _ref.emailURL;
+      emailURL = _ref.emailURL,
+      menuLinks = _ref.menuLinks,
+      btnId = _ref.btnId,
+      btnTitle = _ref.btnTitle;
+  var renderedLinks = menuLinks.map(function (elem) {
+    return _react.default.createElement("li", {
+      key: "".concat(elem.text, "-").concat(elem.href)
+    }, _react.default.createElement("a", {
+      href: elem.href,
+      "data-event-category": "menu",
+      "data-event-action": "click",
+      "data-event-label": elem.text
+    }, elem.text));
+  });
   return _react.default.createElement(_LayoutBox.default, {
     className: "menu invert",
     elem: "header",
@@ -61,13 +76,39 @@ var Menu = function Menu(_ref) {
     "data-event-label": "email"
   }, _react.default.createElement(_index.EmailLogoSVG, {
     height: 2
-  }))))));
+  })))), _react.default.createElement("button", {
+    type: "button",
+    "aria-expanded": true,
+    "aria-controls": btnId,
+    "data-event-category": "menu",
+    "data-event-action": "click",
+    "data-event-label": "button",
+    className: "js-menu-button font-family:sans-serif"
+  }, _react.default.createElement(_index.VeggieBurgerLogoSVG, {
+    title: btnTitle,
+    height: 1.6
+  }))), _react.default.createElement(_LayoutSwitcher.default, {
+    className: "js-nav-menu",
+    innerWrapperElem: "ul",
+    id: btnId,
+    switcherMinWidth: "var(--measure-big)"
+  }, renderedLinks));
 };
 
+Menu.defaultProps = {
+  btnId: "menu-list",
+  btnTitle: "Show navigation menu"
+};
 Menu.propTypes = {
   facebookURL: _propTypes.default.string.isRequired,
   twitterURL: _propTypes.default.string.isRequired,
-  emailURL: _propTypes.default.string.isRequired
+  emailURL: _propTypes.default.string.isRequired,
+  menuLinks: _propTypes.default.arrayOf(_propTypes.default.shape({
+    text: _propTypes.default.string,
+    href: _propTypes.default.string
+  })),
+  btnId: _propTypes.default.string,
+  btnTitle: _propTypes.default.string
 };
 var _default = Menu;
 exports.default = _default;

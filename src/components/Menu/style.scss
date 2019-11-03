@@ -1,7 +1,11 @@
 .menu {
+	// Push the navigation menu down
+	& > :last-child {
+		margin-top: var(--s0);
+	}
 
-	/* Remove the default outline to account for the */
-	/* outline being clipped by the cluster element */
+	// Remove the default outline to account for the
+	// outline being clipped by the cluster element
 	*:focus {
 		outline: none;
 	}
@@ -12,8 +16,10 @@
 		max-width: none;
 	}
 
-	a {
+	a, button {
+		// Make the links/button the exact size of the svg
 		display: block;
+		max-width: max-content;
 		/* Apply colour to text and svg elements */
 		color: inherit;
 		fill: var(--text-color-invert);

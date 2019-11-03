@@ -38,44 +38,16 @@ const menuLinks = [
 	{ text: "View animation", href: "#" },
 	{ text: "Controls", href: "#" },
 	{ text: "Replay intro", href: "#" },
-	{
-		text: "About Nature 150",
-		href: "#",
-	},
+	{ text: "About Nature 150", href: "#" },
 	{ text: "Credits", href: "#" },
 	{ text: "Download data", href: "dat/data.zip" },
 ]
 
-storiesOf("Menu", module)
-	.add("default", () => (
-		<Menu
-			facebookURL={facebookURL}
-			twitterURL={twitterURL}
-			emailURL={emailURL}
-			menuLinks={menuLinks}
-		/>
-	))
-	.add("One link in menu", () => (
-		<Menu
-			facebookURL={facebookURL}
-			twitterURL={twitterURL}
-			emailURL={emailURL}
-			menuLinks={[menuLinks[0]]}
-		/>
-	))
-	.add("Two links in menu", () => (
-		<Menu
-			facebookURL={facebookURL}
-			twitterURL={twitterURL}
-			emailURL={emailURL}
-			menuLinks={[menuLinks[0], menuLinks[1]]}
-		/>
-	))
-	.add("Three links in menu", () => (
-		<Menu
-			facebookURL={facebookURL}
-			twitterURL={twitterURL}
-			emailURL={emailURL}
-			menuLinks={[menuLinks[0], menuLinks[1], menuLinks[2]]}
-		/>
-	))
+storiesOf("Menu", module).add("default", () => (
+	<Menu
+		facebookURL={facebookURL}
+		twitterURL={twitterURL}
+		emailURL={emailURL}
+		menuLinks={menuLinks}
+	/>
+))
