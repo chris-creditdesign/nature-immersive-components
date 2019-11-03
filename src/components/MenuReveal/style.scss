@@ -1,0 +1,33 @@
+.menu--reveal > :last-child {
+	margin-top: var(--s0);
+
+}
+
+.menu--reveal {
+	max-width: none;
+
+	button {
+		position: relative;
+		padding: var(--s-2) var(--s-2) var(--s-2) var(--s1);
+		
+		&:before {
+			content: "";
+			display: inline-block;
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 15 10' %3E%3Cpolygon fill='%23333333' points='0,0 7.5,0 15,0 7.5,10 '/%3E%3C/svg%3E");
+			background-position: 0px 0px, center;
+			position: absolute;
+			top: var(--s-1);
+			left: var(--s-2);
+			width: 15px;
+			height: 10px;
+			transition: transform 0.3s ease;
+			transform: rotate(0deg);
+		}
+
+		&[aria-expanded="true"]:before {
+			transform: rotate(180deg);
+		}
+
+	}
+	
+}

@@ -1,6 +1,4 @@
 .menu {
-	background-color: var(--background-color-invert);
-	color: var(--text-color-invert);
 
 	/* Remove the default outline to account for the */
 	/* outline being clipped by the cluster element */
@@ -12,17 +10,6 @@
 	/* So that the Header can span the whole page width */
 	& * {
 		max-width: none;
-	}
-
-	ul {
-		list-style: none;
-		max-width: none;
-		padding: 0;
-	}
-
-	li {
-		// Remove default padding and add extra 
-		padding: 0;
 	}
 
 	a {
@@ -54,3 +41,4 @@
 		transition: fill ease var(--time);
 	}
 }
+

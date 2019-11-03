@@ -22,7 +22,7 @@ var Menu = function Menu(_ref) {
       twitterURL = _ref.twitterURL,
       emailURL = _ref.emailURL;
   return _react.default.createElement(_LayoutBox.default, {
-    className: "menu",
+    className: "menu invert",
     elem: "header",
     role: "banner"
   }, _react.default.createElement(_LayoutCluster.default, null, _react.default.createElement("div", {

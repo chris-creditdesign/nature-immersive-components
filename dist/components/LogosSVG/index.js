@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TwitterLogoSVG = exports.SpringerNatureLogoSVG = exports.PdfLogoSVG = exports.NatureLogoSVG = exports.NatureBriefingLogoSVG = exports.FacebookLogoSVG = exports.EmailLogoSVG = void 0;
+exports.VeggieBurgerLogoSVG = exports.TwitterLogoSVG = exports.SpringerNatureLogoSVG = exports.PdfLogoSVG = exports.NatureLogoSVG = exports.NatureBriefingLogoSVG = exports.FacebookLogoSVG = exports.EmailLogoSVG = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -252,6 +252,45 @@ EmailLogoSVG.defaultProps = {
   titleId: "email-title"
 };
 EmailLogoSVG.propTypes = {
+  height: _propTypes.default.number,
+  title: _propTypes.default.string,
+  titleId: _propTypes.default.string
+};
+
+var VeggieBurgerLogoSVG = function VeggieBurgerLogoSVG(_ref8) {
+  var height = _ref8.height,
+      title = _ref8.title,
+      titleId = _ref8.titleId;
+  return _react.default.createElement("svg", {
+    height: "".concat(height, "em"),
+    viewBox: "0 0 30 30",
+    focusable: "false",
+    role: "img",
+    "aria-labelledby": titleId
+  }, _react.default.createElement("title", {
+    id: titleId
+  }, title), _react.default.createElement("g", {
+    id: "closed"
+  }, _react.default.createElement("path", {
+    d: "M27,6H3C1.34,6,0,4.66,0,3v0c0-1.66,1.34-3,3-3h24c1.66,0,3,1.34,3,3v0C30,4.66,28.66,6,27,6z"
+  }), _react.default.createElement("path", {
+    d: "M27,30H3c-1.66,0-3-1.34-3-3v0c0-1.66,1.34-3,3-3h24c1.66,0,3,1.34,3,3v0C30,28.66,28.66,30,27,30z"
+  }), _react.default.createElement("path", {
+    d: "M27,17.5H3c-1.66,0-3-1.34-3-3v0c0-1.66,1.34-3,3-3h24c1.66,0,3,1.34,3,3v0C30,16.16,28.66,17.5,27,17.5z"
+  })), _react.default.createElement("g", {
+    id: "open"
+  }, _react.default.createElement("path", {
+    d: "M19.24,14.5l8.51-8.51c1.17-1.17,1.17-3.07,0-4.24s-3.07-1.17-4.24,0L15,10.26L6.49,1.75c-1.17-1.17-3.07-1.17-4.24,0 s-1.17,3.07,0,4.24l8.51,8.51l-8.51,8.51c-1.17,1.17-1.17,3.07,0,4.24s3.07,1.17,4.24,0L15,18.74l8.51,8.51 c1.17,1.17,3.07,1.17,4.24,0s1.17-3.07,0-4.24L19.24,14.5z"
+  })));
+};
+
+exports.VeggieBurgerLogoSVG = VeggieBurgerLogoSVG;
+VeggieBurgerLogoSVG.defaultProps = {
+  height: 1,
+  title: "Show navigation menu",
+  titleId: "veggie-burger-title"
+};
+VeggieBurgerLogoSVG.propTypes = {
   height: _propTypes.default.number,
   title: _propTypes.default.string,
   titleId: _propTypes.default.string

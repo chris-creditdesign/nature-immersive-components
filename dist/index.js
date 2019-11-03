@@ -69,6 +69,12 @@ Object.defineProperty(exports, "Menu", {
     return _Menu.default;
   }
 });
+Object.defineProperty(exports, "MenuReveal", {
+  enumerable: true,
+  get: function get() {
+    return _MenuReveal.default;
+  }
+});
 Object.defineProperty(exports, "ModalDialog", {
   enumerable: true,
   get: function get() {
@@ -139,6 +145,8 @@ var _LayoutGrid = _interopRequireDefault(require("./components/LayoutGrid"));
 var _LayoutStack = _interopRequireDefault(require("./components/LayoutStack"));
 
 var _Menu = _interopRequireDefault(require("./components/Menu"));
+
+var _MenuReveal = _interopRequireDefault(require("./components/MenuReveal"));
 
 var _ModalDialog = _interopRequireDefault(require("./components/ModalDialog"));
 

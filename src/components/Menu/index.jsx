@@ -7,10 +7,11 @@ import {
 	FacebookLogoSVG,
 	TwitterLogoSVG,
 	EmailLogoSVG,
+	VeggieBurgerLogoSVG,
 } from "../LogosSVG/index"
 
 const Menu = ({ facebookURL, twitterURL, emailURL }) => (
-	<LayoutBox className="menu" elem="header" role="banner">
+	<LayoutBox className="menu invert" elem="header" role="banner">
 		<LayoutCluster>
 			<div className="cluster__split-after">
 				<a

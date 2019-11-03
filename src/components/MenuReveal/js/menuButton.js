@@ -1,6 +1,7 @@
 const menuButton = () => {
-	const btn = document.querySelector(".menu button")
-	const menu = btn.nextElementSibling
+	const btn = document.querySelector(".js-menu-button")
+	// TODO: Find a better way to do this
+	const menu = btn.parentElement.parentElement.nextElementSibling
 
 	// Set the initial state for the button and menu once js has loaded
 	btn.setAttribute("aria-expanded", false)

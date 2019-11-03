@@ -9,6 +9,7 @@ import {
 	PdfLogoSVG,
 	SpringerNatureLogoSVG,
 	TwitterLogoSVG,
+	VeggieBurgerLogoSVG,
 } from "./index"
 
 const sizes = [1, 2, 3, 4, 5]
@@ -120,6 +121,40 @@ storiesOf("LogosSVG", module)
 			{sizes.map(size => (
 				<div key={size}>
 					<NatureBriefingLogoSVG
+						height={size * ratio}
+					/>
+				</div>
+			))}
+		</div>
+	))
+	.add("VeggieBurgerLogoSVG open", () => (
+		<div>
+			<style
+				dangerouslySetInnerHTML={{
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; } svg #closed { display: none; }",
+				}}
+			/>
+			{sizes.map(size => (
+				<div key={size}>
+					<VeggieBurgerLogoSVG
+						height={size * ratio}
+					/>
+				</div>
+			))}
+		</div>
+	))
+	.add("VeggieBurgerLogoSVG closed", () => (
+		<div>
+			<style
+				dangerouslySetInnerHTML={{
+					__html:
+						"svg { border: 1px solid red; fill: #ffffff; } svg #open { display: none; }",
+				}}
+			/>
+			{sizes.map(size => (
+				<div key={size}>
+					<VeggieBurgerLogoSVG
 						height={size * ratio}
 					/>
 				</div>

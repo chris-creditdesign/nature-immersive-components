@@ -87,7 +87,8 @@
   --measure: 60ch;
   --measure-big: calc(var(--measure) * var(--ratio));
   --measure-small: calc(var(--measure) / var(--ratio));
-  --center-measure: var(--measure); }
+  --center-measure: var(--measure);
+  --switcher-min-width: var(--measure); }
 
 :root {
   --link-color: var(--orange-2);
@@ -274,6 +275,14 @@ button {
 .cluster__split-after {
   flex-grow: 1; }
 
+.cluster ul {
+  list-style: none;
+  max-width: none;
+  padding: 0; }
+
+.clusetr li {
+  padding: 0; }
+
 .stack {
   display: flex;
   flex-direction: column;
@@ -289,18 +298,25 @@ button {
   display: flex;
   flex-wrap: wrap;
   --space-between: var(--switcher-space);
-  --min-width: var(--measure-big);
-  --modifier: calc(var(--min-width) - (100% - var(--space-between)));
+  --modifier: calc(var(--switcher-min-width) - (100% - var(--space-between)));
   margin: calc((var(--space-between) / 2) * -1); }
 
 .switcher > * > * {
   flex-grow: 1;
-  flex-basis: 100%;
+  flex-basis: calc(var(--modifier) * 999);
   margin: calc(var(--space-between) / 2); }
 
-.switcher > * > :nth-last-child(n+4),
-.switcher > * > :nth-last-child(n+4) ~ * {
-  flex-basis: calc(var(--modifier) * 999); }
+.switcher > * > :nth-last-child(n+8),
+.switcher > * > :nth-last-child(n+8) ~ * {
+  flex-basis: 100%; }
+
+.switcher ul {
+  list-style: none;
+  max-width: none;
+  padding: 0; }
+
+.switcher li {
+  padding: 0; }
 
 .center {
   box-sizing: content-box;
