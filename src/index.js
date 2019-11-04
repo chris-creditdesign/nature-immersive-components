@@ -3,7 +3,6 @@ export { default as Briefing } from "./components/Briefing"
 export { default as Footer } from "./components/Footer"
 export { default as Head } from "./components/Head"
 export { default as Heading } from "./components/Heading"
-export { default as Image } from "./components/Image"
 export { default as LayoutBox } from "./components/LayoutBox"
 export { default as LayoutCenter } from "./components/LayoutCenter"
 export { default as LayoutCluster } from "./components/LayoutCluster"
@@ -22,3 +21,6 @@ export { default as YouTube } from "./components/YouTube"
 export {
 	default as CoverBackgroundImage,
 } from "./components/CoverBackgroundImage"
+export {
+	default as CoverBackgroundVideo,
+} from "./components/CoverBackgroundVideo"

@@ -27,12 +27,6 @@ Object.defineProperty(exports, "Heading", {
     return _Heading.default;
   }
 });
-Object.defineProperty(exports, "Image", {
-  enumerable: true,
-  get: function get() {
-    return _Image.default;
-  }
-});
 Object.defineProperty(exports, "LayoutBox", {
   enumerable: true,
   get: function get() {
@@ -129,6 +123,12 @@ Object.defineProperty(exports, "CoverBackgroundImage", {
     return _CoverBackgroundImage.default;
   }
 });
+Object.defineProperty(exports, "CoverBackgroundVideo", {
+  enumerable: true,
+  get: function get() {
+    return _CoverBackgroundVideo.default;
+  }
+});
 
 var _Briefing = _interopRequireDefault(require("./components/Briefing"));
 
@@ -137,8 +137,6 @@ var _Footer = _interopRequireDefault(require("./components/Footer"));
 var _Head = _interopRequireDefault(require("./components/Head"));
 
 var _Heading = _interopRequireDefault(require("./components/Heading"));
-
-var _Image = _interopRequireDefault(require("./components/Image"));
 
 var _LayoutBox = _interopRequireDefault(require("./components/LayoutBox"));
 
@@ -171,6 +169,8 @@ var _LayoutCover = _interopRequireDefault(require("./components/LayoutCover"));
 var _YouTube = _interopRequireDefault(require("./components/YouTube"));
 
 var _CoverBackgroundImage = _interopRequireDefault(require("./components/CoverBackgroundImage"));
+
+var _CoverBackgroundVideo = _interopRequireDefault(require("./components/CoverBackgroundVideo"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 //# sourceMappingURL=index.js.map
