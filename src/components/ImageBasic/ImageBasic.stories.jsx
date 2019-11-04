@@ -1,7 +1,7 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
 
-import Image from "./index"
+import ImageBasic from "./index"
 
 const imageData = {
 	altText: "This is the image alt text",
@@ -11,9 +11,9 @@ const imageData = {
 	height: 800,
 }
 
-storiesOf("Image", module)
+storiesOf("ImageBasic", module)
 	.add("default", () => (
-		<Image
+		<ImageBasic
 			altText={imageData.altText}
 			caption={imageData.caption}
 			srcURL={imageData.srcURL}
@@ -22,7 +22,7 @@ storiesOf("Image", module)
 		/>
 	))
 	.add("with space around caption", () => (
-		<Image
+		<ImageBasic
 			altText={imageData.altText}
 			caption={imageData.caption}
 			srcURL={imageData.srcURL}

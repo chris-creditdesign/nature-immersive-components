@@ -78,13 +78,16 @@ const intersectionCallback = entries => {
  * @param {*} root
  * @param {*} rootMargin
  */
-const lazyloadImages = (root = null, rootMargin = "600px 0px 600px 0px") => {
-	const images = document.querySelectorAll('img[loading="lazy"]')
+const lazyloadImageLarge = (
+	root = null,
+	rootMargin = "600px 0px 600px 0px"
+) => {
+	const images = document.getElementsByClassName("js-lazyload-img-large")
 	const imagesArray = Array.from(images)
 
 	if ("loading" in HTMLImageElement.prototype) {
 		// 1.
-		images.forEach(image => enhanceImages(image))
+		imagesArray.forEach(image => enhanceImages(image))
 	} else if ("IntersectionObserver" in window) {
 		// 2.
 		const observers = []
@@ -107,4 +110,4 @@ const lazyloadImages = (root = null, rootMargin = "600px 0px 600px 0px") => {
 	}
 }
 
-export default lazyloadImages
+export default lazyloadImageLarge

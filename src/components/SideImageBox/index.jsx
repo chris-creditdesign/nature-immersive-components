@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Stack from "../Stack"
 import LayoutGrid from "../LayoutGrid"
 import LayoutBox from "../LayoutBox"
-import Image from "../Image"
+import ImageBasic from "../ImageBasic"
 
 const SideImageBox = ({
 	altText,
@@ -22,7 +22,7 @@ const SideImageBox = ({
 }) => (
 	<LayoutBox className="invert" boxSpace={boxSpace}>
 		<LayoutGrid gridSpace={gridSpace} className="aboveMin">
-			<Image
+			<ImageBasic
 				altText={altText}
 				caption={caption}
 				srcURL={srcURL}

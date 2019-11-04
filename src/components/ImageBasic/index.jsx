@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Image = ({
+const ImageBasic = ({
 	altText,
 	caption,
 	srcURL,
@@ -11,18 +11,17 @@ const Image = ({
 	height,
 }) => (
 	<figure
-		className={className}
+		className={`js-lazyload-img-basic ${className}`}
 		style={{ "--caption-space": captionSpace }}
 	>
-		<picture>
-			<img
-				src={srcURL}
-				alt={altText}
-				intrinsicsize={`${width} x ${height}`}
-				style={{ width: "100%" }}
-				loading="lazy"
-			/>
-		</picture>
+		<img
+			src={srcURL}
+			alt={altText}
+			intrinsicsize={`${width} x ${height}`}
+			style={{ width: "100%" }}
+			loading="lazy"
+		/>
+
 		<figcaption
 			className="font-size:small-1 font-family:sans-serif"
 			dangerouslySetInnerHTML={{ __html: caption }}
@@ -30,13 +29,13 @@ const Image = ({
 	</figure>
 )
 
-Image.defaultProps = {
+ImageBasic.defaultProps = {
 	className: "",
 	caption: "",
 	captionSpace: "none",
 }
 
-Image.propTypes = {
+ImageBasic.propTypes = {
 	className: PropTypes.string,
 	altText: PropTypes.string.isRequired,
 	caption: PropTypes.string,
@@ -46,4 +45,4 @@ Image.propTypes = {
 	height: PropTypes.number.isRequired,
 }
 
-export default Image
+export default ImageBasic

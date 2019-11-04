@@ -13,7 +13,7 @@ var _Stack = _interopRequireDefault(require("../Stack"));
 
 var _LayoutGrid = _interopRequireDefault(require("../LayoutGrid"));
 
-var _Image = _interopRequireDefault(require("../Image"));
+var _ImageBasic = _interopRequireDefault(require("../ImageBasic"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,7 +32,7 @@ var SideImage = function SideImage(_ref) {
       stackSpace = _ref.stackSpace;
   return _react.default.createElement(_LayoutGrid.default, {
     gridSpace: gridSpace
-  }, _react.default.createElement(_Image.default, {
+  }, _react.default.createElement(_ImageBasic.default, {
     altText: altText,
     caption: caption,
     srcURL: srcURL,

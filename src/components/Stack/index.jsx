@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from "react"
 import PropTypes from "prop-types"
-import Image from "../Image"
+import ImageBasic from "../ImageBasic"
 import LayoutStack from "../LayoutStack"
 
 const Stack = ({
@@ -18,7 +18,7 @@ const Stack = ({
 }) => (
 	<LayoutStack className="content-stack" stackSpace={stackSpace}>
 		{srcURL ? (
-			<Image
+			<ImageBasic
 				altText={altText}
 				caption={caption}
 				srcURL={srcURL}

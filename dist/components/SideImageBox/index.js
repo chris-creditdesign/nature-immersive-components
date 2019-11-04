@@ -15,7 +15,7 @@ var _LayoutGrid = _interopRequireDefault(require("../LayoutGrid"));
 
 var _LayoutBox = _interopRequireDefault(require("../LayoutBox"));
 
-var _Image = _interopRequireDefault(require("../Image"));
+var _ImageBasic = _interopRequireDefault(require("../ImageBasic"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39,7 +39,7 @@ var SideImageBox = function SideImageBox(_ref) {
   }, _react.default.createElement(_LayoutGrid.default, {
     gridSpace: gridSpace,
     className: "aboveMin"
-  }, _react.default.createElement(_Image.default, {
+  }, _react.default.createElement(_ImageBasic.default, {
     altText: altText,
     caption: caption,
     srcURL: srcURL,

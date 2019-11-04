@@ -3,7 +3,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Stack from "../Stack"
 import LayoutGrid from "../LayoutGrid"
-import Image from "../Image"
+import ImageBasic from "../ImageBasic"
 
 const SideImage = ({
 	altText,
@@ -19,7 +19,7 @@ const SideImage = ({
 	stackSpace,
 }) => (
 	<LayoutGrid gridSpace={gridSpace}>
-		<Image
+		<ImageBasic
 			altText={altText}
 			caption={caption}
 			srcURL={srcURL}

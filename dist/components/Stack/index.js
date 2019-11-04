@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Image = _interopRequireDefault(require("../Image"));
+var _ImageBasic = _interopRequireDefault(require("../ImageBasic"));
 
 var _LayoutStack = _interopRequireDefault(require("../LayoutStack"));
 
@@ -30,7 +30,7 @@ var Stack = function Stack(_ref) {
   return _react.default.createElement(_LayoutStack.default, {
     className: "content-stack",
     stackSpace: stackSpace
-  }, srcURL ? _react.default.createElement(_Image.default, {
+  }, srcURL ? _react.default.createElement(_ImageBasic.default, {
     altText: altText,
     caption: caption,
     srcURL: srcURL,
