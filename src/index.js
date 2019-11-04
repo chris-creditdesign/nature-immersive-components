@@ -19,3 +19,6 @@ export { default as Stack } from "./components/Stack"
 export { default as StackBox } from "./components/StackBox"
 export { default as LayoutCover } from "./components/LayoutCover"
 export { default as YouTube } from "./components/YouTube"
+export {
+	default as CoverBackgroundImage,
+} from "./components/CoverBackgroundImage"

@@ -123,6 +123,12 @@ Object.defineProperty(exports, "YouTube", {
     return _YouTube.default;
   }
 });
+Object.defineProperty(exports, "CoverBackgroundImage", {
+  enumerable: true,
+  get: function get() {
+    return _CoverBackgroundImage.default;
+  }
+});
 
 var _Briefing = _interopRequireDefault(require("./components/Briefing"));
 
@@ -163,6 +169,8 @@ var _StackBox = _interopRequireDefault(require("./components/StackBox"));
 var _LayoutCover = _interopRequireDefault(require("./components/LayoutCover"));
 
 var _YouTube = _interopRequireDefault(require("./components/YouTube"));
+
+var _CoverBackgroundImage = _interopRequireDefault(require("./components/CoverBackgroundImage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 //# sourceMappingURL=index.js.map
