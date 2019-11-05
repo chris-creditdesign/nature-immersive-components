@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _createVideo = _interopRequireDefault(require("./createVideo"));
 
+var _autoPlayVideo = _interopRequireDefault(require("./autoPlayVideo"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
@@ -32,13 +34,24 @@ var enhanceVideos = function enhanceVideos(elem) {
   var alt = img.alt;
   var video = (0, _createVideo.default)(source, alt); // Add the new video element to the page - replacing the figure
 
-  elem.replaceChild(video, img); // Add an event listener so the video can be played or paused
+  elem.replaceChild(video, img); // Attempt to auto play the video
+
+  (0, _autoPlayVideo.default)(video);
+  /**
+   * Update the button to show 'play' or 'pause' with the
+   * associated icon.
+   */
+
+  var updateButtonStatus = function updateButtonStatus() {
+    btn.innerText = video.paused ? "Play video" : "Pause video";
+  }; // Add an event listener so the video can be played or paused
   // by clicking on the button
+
 
   btn.addEventListener("click", function () {
     // If the video.paused is true call the play method and visa-versa
     video[video.paused ? "play" : "pause"]();
-    btn.innerText = video.paused ? "Play video" : "Pause video";
+    updateButtonStatus();
   }); // 4.
 
   elem.classList.add("js-loaded");

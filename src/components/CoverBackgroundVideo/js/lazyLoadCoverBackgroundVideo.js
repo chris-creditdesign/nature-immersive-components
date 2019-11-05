@@ -1,4 +1,5 @@
 import createVideo from "./createVideo"
+import autoPlayVideo from "./autoPlayVideo"
 
 /**
  * ## enhanceImages
@@ -28,12 +29,23 @@ const enhanceVideos = elem => {
 	// Add the new video element to the page - replacing the figure
 	elem.replaceChild(video, img)
 
+	// Attempt to auto play the video
+	autoPlayVideo(video)
+
+	/**
+	 * Update the button to show 'play' or 'pause' with the
+	 * associated icon.
+	 */
+	const updateButtonStatus = () => {
+		btn.innerText = video.paused ? "Play video" : "Pause video"
+	}
+
 	// Add an event listener so the video can be played or paused
 	// by clicking on the button
 	btn.addEventListener("click", () => {
 		// If the video.paused is true call the play method and visa-versa
 		video[video.paused ? "play" : "pause"]()
-		btn.innerText = video.paused ? "Play video" : "Pause video"
+		updateButtonStatus()
 	})
 
 	// 4.
