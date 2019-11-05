@@ -9,6 +9,7 @@ import ImageBasic from "../ImageBasic"
 const SideImageBox = ({
 	altText,
 	caption,
+	className,
 	footnote,
 	headline,
 	href,
@@ -20,7 +21,7 @@ const SideImageBox = ({
 	gridSpace,
 	stackSpace,
 }) => (
-	<LayoutBox className="invert" boxSpace={boxSpace}>
+	<LayoutBox className={`invert ${className}`} boxSpace={boxSpace}>
 		<LayoutGrid gridSpace={gridSpace} className="aboveMin">
 			<ImageBasic
 				altText={altText}
@@ -47,11 +48,13 @@ SideImageBox.defaultProps = {
 	gridSpace: null,
 	stackSpace: null,
 	caption: "",
+	className: "",
 }
 
 SideImageBox.propTypes = {
 	altText: PropTypes.string.isRequired,
 	caption: PropTypes.string,
+	className: PropTypes.string,
 	footnote: PropTypes.string,
 	headline: PropTypes.string.isRequired,
 	href: PropTypes.string.isRequired,

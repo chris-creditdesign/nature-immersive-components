@@ -19,6 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Stack = function Stack(_ref) {
   var altText = _ref.altText,
       caption = _ref.caption,
+      className = _ref.className,
       footnote = _ref.footnote,
       headline = _ref.headline,
       href = _ref.href,
@@ -28,7 +29,7 @@ var Stack = function Stack(_ref) {
       height = _ref.height,
       stackSpace = _ref.stackSpace;
   return _react.default.createElement(_LayoutStack.default, {
-    className: "content-stack",
+    className: "content-stack ".concat(className),
     stackSpace: stackSpace
   }, srcURL ? _react.default.createElement(_ImageBasic.default, {
     altText: altText,
@@ -60,6 +61,7 @@ var Stack = function Stack(_ref) {
 Stack.defaultProps = {
   altText: null,
   caption: null,
+  className: "",
   footnote: null,
   srcURL: null,
   width: 0,
@@ -69,6 +71,7 @@ Stack.defaultProps = {
 Stack.propTypes = {
   altText: _propTypes.default.string,
   caption: _propTypes.default.string,
+  className: _propTypes.default.string,
   footnote: _propTypes.default.string,
   headline: _propTypes.default.string.isRequired,
   href: _propTypes.default.string.isRequired,

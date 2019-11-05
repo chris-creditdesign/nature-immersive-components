@@ -28,9 +28,6 @@ var ImageBasic = function ImageBasic(_ref) {
     src: srcURL,
     alt: altText,
     intrinsicsize: "".concat(width, " x ").concat(height),
-    style: {
-      width: "100%"
-    },
     loading: "lazy"
   }), _react.default.createElement("figcaption", {
     className: "font-size:small-1 font-family:sans-serif",

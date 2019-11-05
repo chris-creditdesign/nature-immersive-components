@@ -18,7 +18,6 @@ const ImageBasic = ({
 			src={srcURL}
 			alt={altText}
 			intrinsicsize={`${width} x ${height}`}
-			style={{ width: "100%" }}
 			loading="lazy"
 		/>
 

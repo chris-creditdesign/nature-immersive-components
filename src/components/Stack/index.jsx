@@ -7,6 +7,7 @@ import LayoutStack from "../LayoutStack"
 const Stack = ({
 	altText,
 	caption,
+	className,
 	footnote,
 	headline,
 	href,
@@ -16,7 +17,10 @@ const Stack = ({
 	height,
 	stackSpace,
 }) => (
-	<LayoutStack className="content-stack" stackSpace={stackSpace}>
+	<LayoutStack
+		className={`content-stack ${className}`}
+		stackSpace={stackSpace}
+	>
 		{srcURL ? (
 			<ImageBasic
 				altText={altText}
@@ -60,6 +64,7 @@ const Stack = ({
 Stack.defaultProps = {
 	altText: null,
 	caption: null,
+	className: "",
 	footnote: null,
 	srcURL: null,
 	width: 0,
@@ -70,6 +75,7 @@ Stack.defaultProps = {
 Stack.propTypes = {
 	altText: PropTypes.string,
 	caption: PropTypes.string,
+	className: PropTypes.string,
 	footnote: PropTypes.string,
 	headline: PropTypes.string.isRequired,
 	href: PropTypes.string.isRequired,

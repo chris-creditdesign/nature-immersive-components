@@ -23,6 +23,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var SideImageBox = function SideImageBox(_ref) {
   var altText = _ref.altText,
       caption = _ref.caption,
+      className = _ref.className,
       footnote = _ref.footnote,
       headline = _ref.headline,
       href = _ref.href,
@@ -34,7 +35,7 @@ var SideImageBox = function SideImageBox(_ref) {
       gridSpace = _ref.gridSpace,
       stackSpace = _ref.stackSpace;
   return _react.default.createElement(_LayoutBox.default, {
-    className: "invert",
+    className: "invert ".concat(className),
     boxSpace: boxSpace
   }, _react.default.createElement(_LayoutGrid.default, {
     gridSpace: gridSpace,
@@ -59,11 +60,13 @@ SideImageBox.defaultProps = {
   boxSpace: null,
   gridSpace: null,
   stackSpace: null,
-  caption: ""
+  caption: "",
+  className: ""
 };
 SideImageBox.propTypes = {
   altText: _propTypes.default.string.isRequired,
   caption: _propTypes.default.string,
+  className: _propTypes.default.string,
   footnote: _propTypes.default.string,
   headline: _propTypes.default.string.isRequired,
   href: _propTypes.default.string.isRequired,
