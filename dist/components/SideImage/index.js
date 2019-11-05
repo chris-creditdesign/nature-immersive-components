@@ -21,6 +21,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var SideImage = function SideImage(_ref) {
   var altText = _ref.altText,
       caption = _ref.caption,
+      className = _ref.className,
       footnote = _ref.footnote,
       gridSpace = _ref.gridSpace,
       headline = _ref.headline,
@@ -31,6 +32,7 @@ var SideImage = function SideImage(_ref) {
       width = _ref.width,
       stackSpace = _ref.stackSpace;
   return _react.default.createElement(_LayoutGrid.default, {
+    className: className,
     gridSpace: gridSpace
   }, _react.default.createElement(_ImageBasic.default, {
     altText: altText,
@@ -51,11 +53,13 @@ SideImage.defaultProps = {
   footnote: null,
   gridSpace: null,
   stackSpace: null,
+  className: "",
   caption: ""
 };
 SideImage.propTypes = {
   altText: _propTypes.default.string.isRequired,
   caption: _propTypes.default.string,
+  className: _propTypes.default.string,
   footnote: _propTypes.default.string,
   headline: _propTypes.default.string.isRequired,
   href: _propTypes.default.string.isRequired,

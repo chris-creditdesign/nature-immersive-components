@@ -8,6 +8,7 @@ import ImageBasic from "../ImageBasic"
 const SideImage = ({
 	altText,
 	caption,
+	className,
 	footnote,
 	gridSpace,
 	headline,
@@ -18,7 +19,7 @@ const SideImage = ({
 	width,
 	stackSpace,
 }) => (
-	<LayoutGrid gridSpace={gridSpace}>
+	<LayoutGrid className={className} gridSpace={gridSpace}>
 		<ImageBasic
 			altText={altText}
 			caption={caption}
@@ -41,12 +42,14 @@ SideImage.defaultProps = {
 	footnote: null,
 	gridSpace: null,
 	stackSpace: null,
+	className: "",
 	caption: "",
 }
 
 SideImage.propTypes = {
 	altText: PropTypes.string.isRequired,
 	caption: PropTypes.string,
+	className: PropTypes.string,
 	footnote: PropTypes.string,
 	headline: PropTypes.string.isRequired,
 	href: PropTypes.string.isRequired,
