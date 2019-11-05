@@ -39,12 +39,20 @@
 		}
 	}
 
+	button {
+		// Remove the default padding from the button
+		padding: 0;
+	}
+
 	/* Stops icon clipping on safari */
 	svg {
 		display: block;
 		overflow: visible;
 		fill: inherit;
 		transition: fill ease var(--time);
+		// To stop the svgs being clipped by the overflow:hidden
+		// behaviour of the cluster element
+		padding-bottom: 1px;
 	}
 }
 

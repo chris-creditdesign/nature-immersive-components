@@ -49,9 +49,10 @@ var Menu = function Menu(_ref) {
     "data-event-action": "click",
     "data-event-label": "nature.com"
   }, _react.default.createElement(_index.NatureLogoSVG, {
-    height: 2
+    height: 1.6
   }))), _react.default.createElement(_LayoutCluster.default, {
-    innerWrapperElem: "ul"
+    innerWrapperElem: "ul",
+    clusterSpace: "var(--s-2)"
   }, _react.default.createElement("li", null, _react.default.createElement("a", {
     href: facebookURL,
     "data-track": "click",
@@ -59,7 +60,7 @@ var Menu = function Menu(_ref) {
     "data-event-action": "click",
     "data-event-label": "facebook"
   }, _react.default.createElement(_index.FacebookLogoSVG, {
-    height: 2
+    height: 1.6
   }))), _react.default.createElement("li", null, _react.default.createElement("a", {
     href: twitterURL,
     "data-track": "click",
@@ -67,7 +68,7 @@ var Menu = function Menu(_ref) {
     "data-event-action": "click",
     "data-event-label": "twitter"
   }, _react.default.createElement(_index.TwitterLogoSVG, {
-    height: 2
+    height: 1.6
   }))), _react.default.createElement("li", null, _react.default.createElement("a", {
     href: emailURL,
     "data-track": "click",
@@ -75,7 +76,7 @@ var Menu = function Menu(_ref) {
     "data-event-action": "click",
     "data-event-label": "email"
   }, _react.default.createElement(_index.EmailLogoSVG, {
-    height: 2
+    height: 1.6
   })))), _react.default.createElement("button", {
     type: "button",
     "aria-expanded": true,

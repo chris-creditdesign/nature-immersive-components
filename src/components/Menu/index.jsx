@@ -42,11 +42,14 @@ const Menu = ({
 						data-event-action="click"
 						data-event-label="nature.com"
 					>
-						<NatureLogoSVG height={2} />
+						<NatureLogoSVG height={1.6} />
 					</a>
 				</div>
 
-				<LayoutCluster innerWrapperElem="ul">
+				<LayoutCluster
+					innerWrapperElem="ul"
+					clusterSpace="var(--s-2)"
+				>
 					<li>
 						<a
 							href={facebookURL}
@@ -56,7 +59,7 @@ const Menu = ({
 							data-event-label="facebook"
 						>
 							<FacebookLogoSVG
-								height={2}
+								height={1.6}
 							/>
 						</a>
 					</li>
@@ -69,7 +72,7 @@ const Menu = ({
 							data-event-label="twitter"
 						>
 							<TwitterLogoSVG
-								height={2}
+								height={1.6}
 							/>
 						</a>
 					</li>
@@ -82,7 +85,7 @@ const Menu = ({
 							data-event-label="email"
 						>
 							<EmailLogoSVG
-								height={2}
+								height={1.6}
 							/>
 						</a>
 					</li>
