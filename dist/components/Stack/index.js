@@ -41,8 +41,11 @@ var Stack = function Stack(_ref) {
     "data-track": "click",
     "data-event-category": "body links",
     "data-event-action": "click",
-    "data-event-label": headline
-  }, headline)), _react.default.createElement("p", {
+    "data-event-label": headline,
+    dangerouslySetInnerHTML: {
+      __html: headline
+    }
+  })), _react.default.createElement("p", {
     dangerouslySetInnerHTML: {
       __html: text
     }

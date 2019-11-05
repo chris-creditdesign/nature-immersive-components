@@ -34,9 +34,10 @@ const Stack = ({
 				data-event-category="body links"
 				data-event-action="click"
 				data-event-label={headline}
-			>
-				{headline}
-			</a>
+				dangerouslySetInnerHTML={{
+					__html: headline,
+				}}
+			/>
 		</h3>
 
 		<p
