@@ -12,13 +12,20 @@ var menuButton = function menuButton() {
   var menu = document.querySelector(".js-nav-menu"); // Set the initial state for the button and menu once js has loaded
 
   btn.setAttribute("aria-expanded", false);
-  btnOpen.toggleAttribute("hidden", true);
+  btnOpen.setAttribute("hidden", true);
   menu.hidden = true;
   btn.addEventListener("click", function () {
     var expanded = btn.getAttribute("aria-expanded") === "true" || false;
     btn.setAttribute("aria-expanded", !expanded);
-    btnOpen.toggleAttribute("hidden", expanded);
-    btnClosed.toggleAttribute("hidden", !expanded);
+
+    if (expanded) {
+      btnClosed.removeAttribute("hidden");
+      btnOpen.setAttribute("hidden", true);
+    } else {
+      btnClosed.setAttribute("hidden", true);
+      btnOpen.removeAttribute("hidden");
+    }
+
     menu.hidden = !menu.hidden;
   });
 };
