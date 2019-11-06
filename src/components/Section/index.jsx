@@ -29,7 +29,7 @@ const Section = ({
 
 Section.defaultProps = {
 	headline: null,
-	className: null,
+	className: "",
 	centerMeasure: null,
 	centerSpace: null,
 	stackSpace: null,

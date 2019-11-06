@@ -36,7 +36,7 @@ var CoverBackgroundImage = function CoverBackgroundImage(_ref) {
   }, _react.default.createElement("button", {
     className: "box box__link invert font-family:sans-serif font-size:small-1",
     type: "button"
-  }, "Pause video")));
+  }, "Play video")));
 };
 
 CoverBackgroundImage.defaultProps = {

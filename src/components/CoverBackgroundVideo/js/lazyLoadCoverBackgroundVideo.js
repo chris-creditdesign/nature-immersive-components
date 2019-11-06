@@ -48,6 +48,8 @@ const enhanceVideos = elem => {
 		updateButtonStatus()
 	})
 
+	updateButtonStatus()
+
 	// 4.
 	elem.classList.add("js-loaded")
 }

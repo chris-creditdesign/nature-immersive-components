@@ -52,7 +52,8 @@ var enhanceVideos = function enhanceVideos(elem) {
     // If the video.paused is true call the play method and visa-versa
     video[video.paused ? "play" : "pause"]();
     updateButtonStatus();
-  }); // 4.
+  });
+  updateButtonStatus(); // 4.
 
   elem.classList.add("js-loaded");
 };

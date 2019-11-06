@@ -36,7 +36,7 @@ var Section = function Section(_ref) {
 
 Section.defaultProps = {
   headline: null,
-  className: null,
+  className: "",
   centerMeasure: null,
   centerSpace: null,
   stackSpace: null

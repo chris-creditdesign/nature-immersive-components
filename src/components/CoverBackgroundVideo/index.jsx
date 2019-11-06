@@ -25,7 +25,7 @@ const CoverBackgroundImage = ({
 				className="box box__link invert font-family:sans-serif font-size:small-1"
 				type="button"
 			>
-				Pause video
+				Play video
 			</button>
 		</LayoutCluster>
 	</LayoutCover>
