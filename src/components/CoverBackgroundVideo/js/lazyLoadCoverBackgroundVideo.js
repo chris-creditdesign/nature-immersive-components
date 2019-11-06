@@ -21,7 +21,7 @@ const enhanceVideos = elem => {
 	const btn = elem.querySelector("button")
 
 	// Get the source url but remove the img extension ie .png or .jpg
-	const source = img.src.slice(0, -4)
+	const source = img.src.replace(/-small/, "").slice(0, -4)
 	const { alt } = img
 
 	const video = createVideo(source, alt)

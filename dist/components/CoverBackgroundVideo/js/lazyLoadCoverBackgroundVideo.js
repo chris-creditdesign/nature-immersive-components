@@ -30,7 +30,7 @@ var enhanceVideos = function enhanceVideos(elem) {
   var img = elem.querySelector("img");
   var btn = elem.querySelector("button"); // Get the source url but remove the img extension ie .png or .jpg
 
-  var source = img.src.slice(0, -4);
+  var source = img.src.replace(/-small/, "").slice(0, -4);
   var alt = img.alt;
   var video = (0, _createVideo.default)(source, alt); // Add the new video element to the page - replacing the figure
 
