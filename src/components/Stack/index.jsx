@@ -33,6 +33,7 @@ const Stack = ({
 
 		<h3>
 			<a
+				className="u-faux-block-link"
 				href={href}
 				data-track="click"
 				data-event-category="body links"

@@ -40,13 +40,18 @@ var SideImageBox = function SideImageBox(_ref) {
   }, _react.default.createElement(_LayoutGrid.default, {
     gridSpace: gridSpace,
     className: "aboveMin"
+  }, _react.default.createElement("a", {
+    href: href,
+    "data-track": "click",
+    "data-event-category": "body links",
+    "data-event-action": "click"
   }, _react.default.createElement(_ImageBasic.default, {
     altText: altText,
     caption: caption,
     srcURL: srcURL,
     width: width,
     height: height
-  }), _react.default.createElement(_Stack.default, {
+  })), _react.default.createElement(_Stack.default, {
     stackSpace: stackSpace,
     headline: headline,
     href: href,

@@ -20,13 +20,20 @@ const SideImage = ({
 	stackSpace,
 }) => (
 	<LayoutGrid className={className} gridSpace={gridSpace}>
-		<ImageBasic
-			altText={altText}
-			caption={caption}
-			srcURL={srcURL}
-			width={width}
-			height={height}
-		/>
+		<a
+			href={href}
+			data-track="click"
+			data-event-category="body links"
+			data-event-action="click"
+		>
+			<ImageBasic
+				altText={altText}
+				caption={caption}
+				srcURL={srcURL}
+				width={width}
+				height={height}
+			/>
+		</a>
 
 		<Stack
 			headline={headline}

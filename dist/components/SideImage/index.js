@@ -34,13 +34,18 @@ var SideImage = function SideImage(_ref) {
   return _react.default.createElement(_LayoutGrid.default, {
     className: className,
     gridSpace: gridSpace
+  }, _react.default.createElement("a", {
+    href: href,
+    "data-track": "click",
+    "data-event-category": "body links",
+    "data-event-action": "click"
   }, _react.default.createElement(_ImageBasic.default, {
     altText: altText,
     caption: caption,
     srcURL: srcURL,
     width: width,
     height: height
-  }), _react.default.createElement(_Stack.default, {
+  })), _react.default.createElement(_Stack.default, {
     headline: headline,
     href: href,
     text: text,
