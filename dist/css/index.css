@@ -251,6 +251,14 @@ sub {
   .box__link:focus {
     background-color: var(--outline); }
 
+.box--border {
+  color: var(--text-color);
+  text-transform: uppercase;
+  outline: none;
+  border: 3px solid var(--text-color); }
+  .box--border:focus {
+    border-color: var(--outline); }
+
 /* Borders */
 .border-above {
   padding-top: var(--s1);

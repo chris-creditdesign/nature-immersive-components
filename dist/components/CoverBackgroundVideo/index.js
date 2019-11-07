@@ -34,7 +34,7 @@ var CoverBackgroundImage = function CoverBackgroundImage(_ref) {
   }), children, _react.default.createElement(_LayoutCluster.default, {
     clusterJustifyContent: "flex-end"
   }, _react.default.createElement("button", {
-    className: "box box__link invert font-family:sans-serif font-size:small-1",
+    className: "box box--border font-family:sans-serif font-size:small-1",
     type: "button"
   }, "Play video")));
 };

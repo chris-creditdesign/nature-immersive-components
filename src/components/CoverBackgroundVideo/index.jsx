@@ -22,7 +22,7 @@ const CoverBackgroundImage = ({
 		{children}
 		<LayoutCluster clusterJustifyContent="flex-end">
 			<button
-				className="box box__link invert font-family:sans-serif font-size:small-1"
+				className="box box--border font-family:sans-serif font-size:small-1"
 				type="button"
 			>
 				Play video
