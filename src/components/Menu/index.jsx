@@ -8,17 +8,9 @@ import {
 	FacebookLogoSVG,
 	TwitterLogoSVG,
 	EmailLogoSVG,
-	VeggieBurgerLogoSVG,
 } from "../LogosSVG/index"
 
-const Menu = ({
-	facebookURL,
-	twitterURL,
-	emailURL,
-	menuLinks,
-	btnId,
-	btnTitle,
-}) => {
+const Menu = ({ facebookURL, twitterURL, emailURL, menuLinks }) => {
 	const renderedLinks = menuLinks.map(elem => (
 		<li key={`${elem.text}-${elem.href}`}>
 			<a
@@ -90,36 +82,18 @@ const Menu = ({
 						</a>
 					</li>
 				</LayoutCluster>
-				<button
-					type="button"
-					aria-expanded
-					aria-controls={btnId}
-					data-event-category="menu"
-					data-event-action="click"
-					data-event-label="button"
-					className="js-menu-button font-family:sans-serif"
-				>
-					<VeggieBurgerLogoSVG
-						title={btnTitle}
-						height={1.6}
-					/>
-				</button>
+				<div className="js-menu-button" />
 			</LayoutCluster>
 			<LayoutSwitcher
 				className="js-nav-menu"
 				innerWrapperElem="ul"
-				id={btnId}
+				id="menu-list"
 				switcherMinWidth="var(--measure-big)"
 			>
 				{renderedLinks}
 			</LayoutSwitcher>
 		</LayoutBox>
 	)
-}
-
-Menu.defaultProps = {
-	btnId: "menu-list",
-	btnTitle: "Show navigation menu",
 }
 
 Menu.propTypes = {
@@ -132,8 +106,6 @@ Menu.propTypes = {
 			href: PropTypes.string,
 		})
 	),
-	btnId: PropTypes.string,
-	btnTitle: PropTypes.string,
 }
 
 export default Menu
