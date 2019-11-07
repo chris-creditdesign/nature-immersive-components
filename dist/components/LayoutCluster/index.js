@@ -22,8 +22,11 @@ var LayoutCluster = function LayoutCluster(_ref) {
       clusterJustifyContent = _ref.clusterJustifyContent,
       clusterSpace = _ref.clusterSpace,
       elem = _ref.elem,
+      innerWrapperElemClassName = _ref.innerWrapperElemClassName,
       innerWrapperElem = _ref.innerWrapperElem;
-  var innerWrapper = (0, _react.createElement)(innerWrapperElem, {}, children);
+  var innerWrapper = (0, _react.createElement)(innerWrapperElem, {
+    className: innerWrapperElemClassName
+  }, children);
   return (0, _react.createElement)(elem, {
     className: "cluster ".concat(className),
     style: {
@@ -38,10 +41,11 @@ LayoutCluster.defaultProps = {
   clusterJustifyContent: null,
   clusterSpace: null,
   elem: "div",
-  innerWrapperElem: "div"
+  innerWrapperElem: "div",
+  innerWrapperElemClassName: ""
 };
 LayoutCluster.propTypes = {
-  children: _propTypes.default.node.isRequired,
+  children: _propTypes.default.node,
 
   /** CSS class to add custom styles */
   className: _propTypes.default.string,
@@ -56,7 +60,12 @@ LayoutCluster.propTypes = {
   elem: _propTypes.default.string,
 
   /** Type of element to create, to sit inside the cluster */
-  innerWrapperElem: _propTypes.default.string
+  innerWrapperElem: _propTypes.default.string,
+
+  /** Optional classname to be added to innerWarrperEleme - probably
+   * so it can be targeted with js
+   */
+  innerWrapperElemClassName: _propTypes.default.string
 };
 var _default = LayoutCluster;
 exports.default = _default;

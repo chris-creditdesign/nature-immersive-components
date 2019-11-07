@@ -5,12 +5,12 @@ import LayoutCover from "../LayoutCover"
 import LayoutCluster from "../LayoutCluster"
 
 const CoverBackgroundImage = ({
-	children,
-	src,
 	alt,
-	elem,
-	coverSpace,
+	children,
 	coverHeight,
+	coverSpace,
+	elem,
+	src,
 }) => (
 	<LayoutCover
 		className="cover--with-background js-lazyload-cover-background-video"
@@ -20,14 +20,10 @@ const CoverBackgroundImage = ({
 	>
 		<img className="cover__background" src={src} alt={alt} />
 		{children}
-		<LayoutCluster clusterJustifyContent="flex-end">
-			<button
-				className="box box--border font-family:sans-serif font-size:small-1"
-				type="button"
-			>
-				Play video
-			</button>
-		</LayoutCluster>
+		<LayoutCluster
+			clusterJustifyContent="flex-end"
+			innerWrapperElemClassName="js-button-container"
+		></LayoutCluster>
 	</LayoutCover>
 )
 

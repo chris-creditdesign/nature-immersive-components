@@ -15,6 +15,8 @@ storiesOf("SideImage", module)
 			text={
 				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, corrupti aut. Natus, ducimus. Qui beatae, id quasi neque veniam sequi doloremque, officia voluptatibus expedita optio repudiandae quos ad! Aut, rerum. <a href="https://www.nature.com/news">Click here to read more</a>'
 			}
+			width={1200}
+			height={800}
 		/>
 	))
 	.add("Width extra space", () => (

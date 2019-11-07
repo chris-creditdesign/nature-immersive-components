@@ -49,3 +49,12 @@ storiesOf("Layout components/LayoutCluster", module)
 			<div className="test-content horizontal" />
 		</LayoutCluster>
 	))
+	.add("With class name on inner elem", () => (
+		<LayoutCluster innerWrapperElemClassName="just-a-test">
+			<div className="test-content horizontal" />
+			<div className="test-content horizontal" />
+			<div className="test-content horizontal" />
+			<div className="test-content horizontal" />
+			<div className="test-content horizontal" />
+		</LayoutCluster>
+	))

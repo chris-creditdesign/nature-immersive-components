@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 /**
+ * ## setSourceAttributes
+ *
  * Applies the correct attributes to a video source element.
  * Returns the source element with tha attributes applied.
  *

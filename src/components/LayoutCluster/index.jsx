@@ -12,9 +12,14 @@ const LayoutCluster = ({
 	clusterJustifyContent,
 	clusterSpace,
 	elem,
+	innerWrapperElemClassName,
 	innerWrapperElem,
 }) => {
-	const innerWrapper = createElement(innerWrapperElem, {}, children)
+	const innerWrapper = createElement(
+		innerWrapperElem,
+		{ className: innerWrapperElemClassName },
+		children
+	)
 
 	return createElement(
 		elem,
@@ -35,10 +40,11 @@ LayoutCluster.defaultProps = {
 	clusterSpace: null,
 	elem: "div",
 	innerWrapperElem: "div",
+	innerWrapperElemClassName: "",
 }
 
 LayoutCluster.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	/** CSS class to add custom styles */
 	className: PropTypes.string,
 	/** Flexbox justify content property */
@@ -49,6 +55,10 @@ LayoutCluster.propTypes = {
 	elem: PropTypes.string,
 	/** Type of element to create, to sit inside the cluster */
 	innerWrapperElem: PropTypes.string,
+	/** Optional classname to be added to innerWarrperEleme - probably
+	 * so it can be targeted with js
+	 */
+	innerWrapperElemClassName: PropTypes.string,
 }
 
 export default LayoutCluster

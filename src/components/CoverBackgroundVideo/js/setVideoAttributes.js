@@ -1,4 +1,6 @@
 /**
+ * ## setVideoAttributes
+ *
  * Apply the correct attributes to the background video.
  * Returns the video element with the correct attributes applied.
  *

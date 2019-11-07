@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 /**
+ * ## autoPlayFullScreenVideo
+ *
  * Attempt to play the full screen video element.
  * Catch an error if this is not possible
  *

@@ -1,4 +1,6 @@
 /**
+ * ## setSourceAttributes
+ *
  * Applies the correct attributes to a video source element.
  * Returns the source element with tha attributes applied.
  *

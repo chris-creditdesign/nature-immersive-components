@@ -16,12 +16,12 @@ var _LayoutCluster = _interopRequireDefault(require("../LayoutCluster"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CoverBackgroundImage = function CoverBackgroundImage(_ref) {
-  var children = _ref.children,
-      src = _ref.src,
-      alt = _ref.alt,
-      elem = _ref.elem,
+  var alt = _ref.alt,
+      children = _ref.children,
+      coverHeight = _ref.coverHeight,
       coverSpace = _ref.coverSpace,
-      coverHeight = _ref.coverHeight;
+      elem = _ref.elem,
+      src = _ref.src;
   return _react.default.createElement(_LayoutCover.default, {
     className: "cover--with-background js-lazyload-cover-background-video",
     elem: elem,
@@ -32,11 +32,9 @@ var CoverBackgroundImage = function CoverBackgroundImage(_ref) {
     src: src,
     alt: alt
   }), children, _react.default.createElement(_LayoutCluster.default, {
-    clusterJustifyContent: "flex-end"
-  }, _react.default.createElement("button", {
-    className: "box box--border font-family:sans-serif font-size:small-1",
-    type: "button"
-  }, "Play video")));
+    clusterJustifyContent: "flex-end",
+    innerWrapperElemClassName: "js-button-container"
+  }));
 };
 
 CoverBackgroundImage.defaultProps = {
