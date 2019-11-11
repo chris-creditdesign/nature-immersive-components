@@ -5,50 +5,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-/**
- * ## enhanceImages
- *
- * Add high res-image URL, srcset and an adjacent `source` element
- * to display high-res image.
- *
- * 1. Stop is image has already been 'enhanced'.
- * 2. Stop if the src URL does not contain '-small'.
- * 3. Create the normal URL and add it to the image
- * 4. Add the `js-loaded` class so that img cannot be 'enhanced' again.
- *
- * @param {*} img The `img` element to be enhanced
- */
-var enhanceImages = function enhanceImages(fig) {
-  var img = fig.querySelector("img"); // 1.
+var _enhanceImages = _interopRequireDefault(require("./enhanceImages"));
 
-  if (fig.classList.contains("js-loaded")) return; // 2.
+var _intersectionCallback = _interopRequireDefault(require("./intersectionCallback"));
 
-  if (!img.src.includes("-small")) return; // 3.
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  var URL = img.src.replace(/-small/, "");
-  img.setAttribute("src", URL); // 4.
-
-  img.classList.add("js-loaded");
-};
-/**
- * ## intersectionCallback
- *
- * When the images enter the screen, call `enhanceImages` on each of them.
- *
- * 1. Only call `enchanceImages` if the entry is on screen AND the class
- *    `js-loaded` is not present.
- * @param {array} entries Array of dom elements
- */
-
-
-var intersectionCallback = function intersectionCallback(entries) {
-  entries.forEach(function (entry) {
-    // 1.
-    if (entry.isIntersecting && !entry.target.classList.contains("js-loaded")) {
-      enhanceImages(entry.target);
-    }
-  });
-};
 /**
  * ## lazyloadImages
  *
@@ -63,8 +25,6 @@ var intersectionCallback = function intersectionCallback(entries) {
  * @param {*} root
  * @param {*} rootMargin
  */
-
-
 var lazyloadImageBasic = function lazyloadImageBasic() {
   var root = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
   var rootMargin = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "600px 0px 600px 0px";
@@ -74,7 +34,7 @@ var lazyloadImageBasic = function lazyloadImageBasic() {
   if ("loading" in HTMLImageElement.prototype) {
     // 1.
     imagesArray.forEach(function (image) {
-      return enhanceImages(image);
+      return (0, _enhanceImages.default)(image);
     });
   } else if ("IntersectionObserver" in window) {
     // 2.
@@ -86,13 +46,13 @@ var lazyloadImageBasic = function lazyloadImageBasic() {
 
     };
     imagesArray.forEach(function (image, index) {
-      observers[index] = new IntersectionObserver(intersectionCallback, observerOptions);
+      observers[index] = new IntersectionObserver(_intersectionCallback.default, observerOptions);
       observers[index].observe(image);
     });
   } else {
     // 5.
     imagesArray.forEach(function (image) {
-      return enhanceImages(image);
+      return (0, _enhanceImages.default)(image);
     });
   }
 };

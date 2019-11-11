@@ -50,7 +50,7 @@ const SideImageBox = ({
 )
 
 SideImageBox.defaultProps = {
-	footnote: null,
+	footnote: "",
 	boxSpace: null,
 	gridSpace: null,
 	stackSpace: null,

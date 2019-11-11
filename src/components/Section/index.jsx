@@ -19,7 +19,7 @@ const Section = ({
 		centerMeasure={centerMeasure}
 	>
 		<LayoutStack stackSpace={stackSpace}>
-			{headline ? (
+			{headline.length ? (
 				<h2 className="border-above">{headline}</h2>
 			) : null}
 			{children}
@@ -28,7 +28,7 @@ const Section = ({
 )
 
 Section.defaultProps = {
-	headline: null,
+	headline: "",
 	className: "",
 	centerMeasure: null,
 	centerSpace: null,

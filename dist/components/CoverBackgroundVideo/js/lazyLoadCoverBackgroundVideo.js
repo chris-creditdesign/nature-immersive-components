@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * ## lazyLoadCoverBackgroundVideo
  *
- * Call `enhanceImages` for elem with the class `js-lazyload-cover-background-video` on the page.
+ * Call `enhanceVideos` for elem with the class `js-lazyload-cover-background-video` on the page.
  *
  * 1. Create an array of all the videos
  * 2. If IntersectionObsverver is available, enhance each of the videos as they

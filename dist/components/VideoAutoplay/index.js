@@ -11,24 +11,20 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ImageBasic = function ImageBasic(_ref) {
+var VideoAutoplay = function VideoAutoplay(_ref) {
   var altText = _ref.altText,
       caption = _ref.caption,
       srcURL = _ref.srcURL,
       className = _ref.className,
-      captionSpace = _ref.captionSpace,
-      width = _ref.width,
-      height = _ref.height;
+      captionSpace = _ref.captionSpace;
   return _react.default.createElement("figure", {
-    className: "js-lazyload-img-basic ".concat(className),
+    className: "js-lazyload-video-autoplay ".concat(className),
     style: {
       "--caption-space": captionSpace
     }
   }, _react.default.createElement("img", {
     src: srcURL,
-    alt: altText,
-    intrinsicsize: "".concat(width, " x ").concat(height),
-    loading: "lazy"
+    alt: altText
   }), caption.length ? _react.default.createElement("figcaption", {
     className: "font-size:small-1 font-family:sans-serif",
     dangerouslySetInnerHTML: {
@@ -37,20 +33,18 @@ var ImageBasic = function ImageBasic(_ref) {
   }) : null);
 };
 
-ImageBasic.defaultProps = {
+VideoAutoplay.defaultProps = {
   className: "",
   caption: "",
   captionSpace: "none"
 };
-ImageBasic.propTypes = {
+VideoAutoplay.propTypes = {
   className: _propTypes.default.string,
   altText: _propTypes.default.string.isRequired,
   caption: _propTypes.default.string,
   srcURL: _propTypes.default.string.isRequired,
-  captionSpace: _propTypes.default.string,
-  width: _propTypes.default.number.isRequired,
-  height: _propTypes.default.number.isRequired
+  captionSpace: _propTypes.default.string
 };
-var _default = ImageBasic;
+var _default = VideoAutoplay;
 exports.default = _default;
 //# sourceMappingURL=index.js.map

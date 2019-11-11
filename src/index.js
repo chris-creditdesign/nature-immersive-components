@@ -1,5 +1,11 @@
 // React Components
 export { default as Briefing } from "./components/Briefing"
+export {
+	default as CoverBackgroundImage,
+} from "./components/CoverBackgroundImage"
+export {
+	default as CoverBackgroundVideo,
+} from "./components/CoverBackgroundVideo"
 export { default as Footer } from "./components/Footer"
 export { default as Head } from "./components/Head"
 export { default as Heading } from "./components/Heading"
@@ -16,11 +22,6 @@ export { default as SideImage } from "./components/SideImage"
 export { default as SideImageBox } from "./components/SideImageBox"
 export { default as Stack } from "./components/Stack"
 export { default as StackBox } from "./components/StackBox"
+export { default as VideoAutoplay } from "./components/VideoAutoplay"
 export { default as LayoutCover } from "./components/LayoutCover"
 export { default as YouTube } from "./components/YouTube"
-export {
-	default as CoverBackgroundImage,
-} from "./components/CoverBackgroundImage"
-export {
-	default as CoverBackgroundVideo,
-} from "./components/CoverBackgroundVideo"

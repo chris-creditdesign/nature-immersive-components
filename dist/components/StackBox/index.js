@@ -46,10 +46,10 @@ var StackBox = function StackBox(_ref) {
 };
 
 StackBox.defaultProps = {
-  altText: null,
-  caption: null,
-  footnote: null,
-  srcURL: null,
+  altText: "",
+  caption: "",
+  footnote: "",
+  srcURL: "",
   width: 0,
   height: 0,
   boxSpace: null,

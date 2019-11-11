@@ -9,6 +9,18 @@ Object.defineProperty(exports, "Briefing", {
     return _Briefing.default;
   }
 });
+Object.defineProperty(exports, "CoverBackgroundImage", {
+  enumerable: true,
+  get: function get() {
+    return _CoverBackgroundImage.default;
+  }
+});
+Object.defineProperty(exports, "CoverBackgroundVideo", {
+  enumerable: true,
+  get: function get() {
+    return _CoverBackgroundVideo.default;
+  }
+});
 Object.defineProperty(exports, "Footer", {
   enumerable: true,
   get: function get() {
@@ -105,6 +117,12 @@ Object.defineProperty(exports, "StackBox", {
     return _StackBox.default;
   }
 });
+Object.defineProperty(exports, "VideoAutoplay", {
+  enumerable: true,
+  get: function get() {
+    return _VideoAutoplay.default;
+  }
+});
 Object.defineProperty(exports, "LayoutCover", {
   enumerable: true,
   get: function get() {
@@ -117,20 +135,12 @@ Object.defineProperty(exports, "YouTube", {
     return _YouTube.default;
   }
 });
-Object.defineProperty(exports, "CoverBackgroundImage", {
-  enumerable: true,
-  get: function get() {
-    return _CoverBackgroundImage.default;
-  }
-});
-Object.defineProperty(exports, "CoverBackgroundVideo", {
-  enumerable: true,
-  get: function get() {
-    return _CoverBackgroundVideo.default;
-  }
-});
 
 var _Briefing = _interopRequireDefault(require("./components/Briefing"));
+
+var _CoverBackgroundImage = _interopRequireDefault(require("./components/CoverBackgroundImage"));
+
+var _CoverBackgroundVideo = _interopRequireDefault(require("./components/CoverBackgroundVideo"));
 
 var _Footer = _interopRequireDefault(require("./components/Footer"));
 
@@ -164,13 +174,11 @@ var _Stack = _interopRequireDefault(require("./components/Stack"));
 
 var _StackBox = _interopRequireDefault(require("./components/StackBox"));
 
+var _VideoAutoplay = _interopRequireDefault(require("./components/VideoAutoplay"));
+
 var _LayoutCover = _interopRequireDefault(require("./components/LayoutCover"));
 
 var _YouTube = _interopRequireDefault(require("./components/YouTube"));
-
-var _CoverBackgroundImage = _interopRequireDefault(require("./components/CoverBackgroundImage"));
-
-var _CoverBackgroundVideo = _interopRequireDefault(require("./components/CoverBackgroundVideo"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 //# sourceMappingURL=index.js.map

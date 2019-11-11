@@ -31,7 +31,7 @@ var Stack = function Stack(_ref) {
   return _react.default.createElement(_LayoutStack.default, {
     className: "content-stack ".concat(className),
     stackSpace: stackSpace
-  }, srcURL ? _react.default.createElement(_ImageBasic.default, {
+  }, srcURL.length ? _react.default.createElement(_ImageBasic.default, {
     altText: altText,
     caption: caption,
     srcURL: srcURL,
@@ -51,7 +51,7 @@ var Stack = function Stack(_ref) {
     dangerouslySetInnerHTML: {
       __html: text
     }
-  }), footnote ? _react.default.createElement("p", {
+  }), footnote.length ? _react.default.createElement("p", {
     className: "font-size:small-1 font-family:sans-serif",
     dangerouslySetInnerHTML: {
       __html: footnote
@@ -60,11 +60,11 @@ var Stack = function Stack(_ref) {
 };
 
 Stack.defaultProps = {
-  altText: null,
-  caption: null,
+  altText: "",
+  caption: "",
   className: "",
-  footnote: null,
-  srcURL: null,
+  footnote: "",
+  srcURL: "",
   width: 0,
   height: 0,
   stackSpace: null

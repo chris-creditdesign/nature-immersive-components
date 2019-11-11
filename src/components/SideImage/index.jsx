@@ -46,7 +46,7 @@ const SideImage = ({
 )
 
 SideImage.defaultProps = {
-	footnote: null,
+	footnote: "",
 	gridSpace: null,
 	stackSpace: null,
 	className: "",

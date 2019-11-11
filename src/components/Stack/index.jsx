@@ -21,7 +21,7 @@ const Stack = ({
 		className={`content-stack ${className}`}
 		stackSpace={stackSpace}
 	>
-		{srcURL ? (
+		{srcURL.length ? (
 			<ImageBasic
 				altText={altText}
 				caption={caption}
@@ -51,7 +51,7 @@ const Stack = ({
 			}}
 		/>
 
-		{footnote ? (
+		{footnote.length ? (
 			<p
 				className="font-size:small-1 font-family:sans-serif"
 				dangerouslySetInnerHTML={{
@@ -63,11 +63,11 @@ const Stack = ({
 )
 
 Stack.defaultProps = {
-	altText: null,
-	caption: null,
+	altText: "",
+	caption: "",
 	className: "",
-	footnote: null,
-	srcURL: null,
+	footnote: "",
+	srcURL: "",
 	width: 0,
 	height: 0,
 	stackSpace: null,

@@ -29,13 +29,13 @@ var Section = function Section(_ref) {
     centerMeasure: centerMeasure
   }, _react.default.createElement(_LayoutStack.default, {
     stackSpace: stackSpace
-  }, headline ? _react.default.createElement("h2", {
+  }, headline.length ? _react.default.createElement("h2", {
     className: "border-above"
   }, headline) : null, children));
 };
 
 Section.defaultProps = {
-  headline: null,
+  headline: "",
   className: "",
   centerMeasure: null,
   centerSpace: null,

@@ -1,25 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const ImageBasic = ({
+const VideoAutoplay = ({
 	altText,
 	caption,
 	srcURL,
 	className,
 	captionSpace,
-	width,
-	height,
 }) => (
 	<figure
-		className={`js-lazyload-img-basic ${className}`}
+		className={`js-lazyload-video-autoplay ${className}`}
 		style={{ "--caption-space": captionSpace }}
 	>
-		<img
-			src={srcURL}
-			alt={altText}
-			intrinsicsize={`${width} x ${height}`}
-			loading="lazy"
-		/>
+		<img src={srcURL} alt={altText} />
 
 		{caption.length ? (
 			<figcaption
@@ -30,20 +23,18 @@ const ImageBasic = ({
 	</figure>
 )
 
-ImageBasic.defaultProps = {
+VideoAutoplay.defaultProps = {
 	className: "",
 	caption: "",
 	captionSpace: "none",
 }
 
-ImageBasic.propTypes = {
+VideoAutoplay.propTypes = {
 	className: PropTypes.string,
 	altText: PropTypes.string.isRequired,
 	caption: PropTypes.string,
 	srcURL: PropTypes.string.isRequired,
 	captionSpace: PropTypes.string,
-	width: PropTypes.number.isRequired,
-	height: PropTypes.number.isRequired,
 }
 
-export default ImageBasic
+export default VideoAutoplay

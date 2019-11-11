@@ -55,7 +55,7 @@ var SideImage = function SideImage(_ref) {
 };
 
 SideImage.defaultProps = {
-  footnote: null,
+  footnote: "",
   gridSpace: null,
   stackSpace: null,
   className: "",

@@ -61,7 +61,7 @@ var SideImageBox = function SideImageBox(_ref) {
 };
 
 SideImageBox.defaultProps = {
-  footnote: null,
+  footnote: "",
   boxSpace: null,
   gridSpace: null,
   stackSpace: null,
