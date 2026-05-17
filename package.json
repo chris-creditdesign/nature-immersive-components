@@ -1,73 +1,83 @@
 {
-	"name": "nature-immersive-components",
-	"files": [
-		"dist/*"
-	],
-	"main": "dist/index.js",
-	"scripts": {
-		"js-compile": "babel ./src --out-dir ./dist --ignore './src/*.test.js','./src/components/**/*.stories.jsx' --source-maps",
-		"css-compile": "sass ./src/scss/index.scss ./dist/css/index.css",
-		"css-compile-min": "sass ./src/scss/index.scss ./dist/css/index.min.css --style=compressed",
-		"lint": "eslint --ext .js,.jsx src",
-		"test": "jest --runInBand",
-		"prod": "yarn js-compile && yarn css-compile && yarn css-compile-min",
-		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
-	},
-	"peerDependencies": {
-		"react": "^18.3.1 || ^19.0.0",
-		"react-dom": "^18.3.1 || ^19.0.0"
-	},
-	"dependencies": {
-		"prop-types": "^15.8.1"
-	},
-	"devDependencies": {
-		"@babel/cli": "^7.28.3",
-		"@babel/core": "^7.28.5",
-		"@babel/eslint-parser": "^7.28.5",
-		"@babel/preset-env": "^7.28.5",
-		"@babel/preset-react": "^7.28.5",
-		"@storybook/addon-essentials": "^7.6.20",
-		"@storybook/react": "^7.6.20",
-		"@storybook/react-webpack5": "^7.6.20",
-		"@storybook/test": "^7.6.20",
-		"babel-jest": "^30.2.0",
-		"babel-loader": "^10.0.0",
-		"babel-plugin-macros": "^3.1.0",
-		"css-loader": "^7.1.2",
-		"eslint": "^8.57.1",
-		"eslint-config-airbnb": "^19.0.4",
-		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-import": "^2.32.0",
-		"eslint-plugin-jsx-a11y": "^6.10.2",
-		"eslint-plugin-react": "^7.37.5",
-		"eslint-plugin-react-hooks": "^4.6.2",
-		"identity-obj-proxy": "^3.0.0",
-		"jest": "^30.2.0",
-		"prettier": "^3.6.2",
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1",
-		"sass": "^1.93.3",
-		"sass-loader": "^16.0.5",
-		"storybook": "^7.6.20",
-		"style-loader": "^4.0.0",
-		"webpack": "^5.102.1",
-		"webpack-cli": "^6.0.1"
-	},
-	"resolutions": {
-		"kind-of": "^6.0.3",
-		"lodash": "^4.17.21",
-		"minimatch": "^3.1.2",
-		"minimist": "^1.2.8",
-		"semver": "^7.7.3",
-		"tar": "^7.5.1"
-	},
-	"repository": {
-		"type": "git",
-		"url": ""
-	},
-	"author": "chris-creditdesign",
-	"description": "React components used to render static html for @NatureNews immersive articles",
-	"version": "0.0.1",
-	"license": "ISC"
+"name": "nature-immersive-components",
+"files": [
+"dist/*"
+],
+"main": "dist/index.js",
+"scripts": {
+"js-compile": "babel ./src --out-dir ./dist --ignore './src/*.test.js','./src/components/**/*.stories.jsx' --source-maps",
+"css-compile": "sass ./src/scss/index.scss ./dist/css/index.css",
+"css-compile-min": "sass ./src/scss/index.scss ./dist/css/index.min.css --style=compressed",
+"lint": "eslint src",
+"test": "jest --runInBand",
+"prod": "yarn js-compile && yarn css-compile && yarn css-compile-min",
+"storybook": "storybook dev -p 6006",
+"build-storybook": "storybook build"
+},
+"peerDependencies": {
+"react": "^18.3.1 || ^19.0.0",
+"react-dom": "^18.3.1 || ^19.0.0"
+},
+"dependencies": {
+"prop-types": "^15.8.1"
+},
+"devDependencies": {
+"@babel/cli": "^7.28.3",
+"@babel/core": "^7.28.5",
+"@babel/eslint-parser": "^7.28.6",
+"@babel/preset-env": "^7.28.5",
+"@babel/preset-react": "^7.28.5",
+"@eslint/eslintrc": "^3.3.5",
+"@storybook/addon-essentials": "^7.6.20",
+"@storybook/react": "^7.6.20",
+"@storybook/react-webpack5": "^7.6.20",
+"@storybook/test": "^7.6.20",
+"babel-jest": "^30.2.0",
+"babel-loader": "^10.0.0",
+"babel-plugin-macros": "^3.1.0",
+"css-loader": "^7.1.2",
+"eslint": "^9.39.4",
+"eslint-config-airbnb": "^19.0.4",
+"eslint-config-prettier": "^10.1.8",
+"eslint-plugin-import": "^2.32.0",
+"eslint-plugin-jsx-a11y": "^6.10.2",
+"eslint-plugin-react": "^7.37.5",
+"eslint-plugin-react-hooks": "^7.1.1",
+"globals": "^17.6.0",
+"identity-obj-proxy": "^3.0.0",
+"jest": "^30.2.0",
+"prettier": "^3.8.3",
+"react": "^18.3.1",
+"react-dom": "^18.3.1",
+"sass": "^1.99.0",
+"sass-loader": "^16.0.5",
+"storybook": "^7.6.20",
+"style-loader": "^4.0.0",
+"webpack": "^5.102.1",
+"webpack-cli": "^6.0.1"
+},
+"resolutions": {
+"kind-of": "^6.0.3",
+"lodash": "^4.17.21",
+"minimatch": "^3.1.2",
+"minimist": "^1.2.8",
+"semver": "^7.7.3",
+"tar": "^7.5.1"
+},
+"pnpm": {
+"peerDependencyRules": {
+"allowedVersions": {
+"eslint": "9",
+"eslint-plugin-react-hooks": "7"
+}
+}
+},
+"repository": {
+"type": "git",
+"url": ""
+},
+"author": "chris-creditdesign",
+"description": "React components used to render static html for @NatureNews immersive articles",
+"version": "0.0.1",
+"license": "ISC"
 }
