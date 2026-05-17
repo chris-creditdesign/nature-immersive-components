@@ -1,9 +1,12 @@
 /* eslint-disable */
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import Footer from "./index"
-import "./style.scss"
+import Footer from "./index";
+import "./style.scss";
 
+export default {
+  title: "Footer",
+  component: Footer,
+};
 
-storiesOf("Footer", module).add("default", () => <Footer />)
+export const Default = () => <Footer />;

@@ -1,9 +1,13 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import ImageFrame from "./index"
+import ImageFrame from "./index";
 
-storiesOf("ImageFrame", module).add("default", () => (
+export default {
+	title: "ImageFrame",
+	component: ImageFrame,
+};
+
+export const Default = () => (
 	<ImageFrame
 		frameNumerator={8}
 		frameDenominator={12}
@@ -12,4 +16,4 @@ storiesOf("ImageFrame", module).add("default", () => (
 		width={1200}
 		height={800}
 	/>
-))
+);

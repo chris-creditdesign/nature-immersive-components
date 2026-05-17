@@ -1,9 +1,13 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import YouTube from "./index"
+import YouTube from "./index";
 
-storiesOf("YouTube", module).add("default", () => (
+export default {
+	title: "YouTube",
+	component: YouTube,
+};
+
+export const Default = () => (
 	<YouTube
 		id="nature-video-promo"
 		placeHolderImgSrc="video/nature-video-promo.jpg"
@@ -11,4 +15,4 @@ storiesOf("YouTube", module).add("default", () => (
 		videoId="0ikMHETVJro"
 		autoPlay
 	/>
-))
+);

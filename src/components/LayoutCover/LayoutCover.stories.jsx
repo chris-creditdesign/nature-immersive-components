@@ -1,37 +1,44 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import LayoutCover from "./index"
+import LayoutCover from "./index";
 
-storiesOf("Layout components/LayoutCover", module)
-	.add("default", () => (
-		<LayoutCover>
-			<div className="centered test-content" />
-		</LayoutCover>
-	))
-	.add("With three items", () => (
-		<LayoutCover>
-			<div className="test-content" />
-			<div className="centered test-content" />
-			<div className="test-content" />
-		</LayoutCover>
-	))
-	.add("With top item", () => (
-		<LayoutCover>
-			<div className="test-content" />
-			<div className="centered test-content" />
-		</LayoutCover>
-	))
-	.add("With bottom", () => (
-		<LayoutCover>
-			<div className="centered test-content" />
-			<div className="test-content" />
-		</LayoutCover>
-	))
-	.add("With no space", () => (
-		<LayoutCover coverSpace="none">
-			<div className="test-content" />
-			<div className="centered test-content" />
-			<div className="test-content" />
-		</LayoutCover>
-	))
+export default {
+	title: "Layout components/LayoutCover",
+	component: LayoutCover,
+};
+
+export const Default = () => (
+	<LayoutCover>
+		<div className="centered test-content" />
+	</LayoutCover>
+);
+
+export const WithThreeItems = () => (
+	<LayoutCover>
+		<div className="test-content" />
+		<div className="centered test-content" />
+		<div className="test-content" />
+	</LayoutCover>
+);
+
+export const WithTopItem = () => (
+	<LayoutCover>
+		<div className="test-content" />
+		<div className="centered test-content" />
+	</LayoutCover>
+);
+
+export const WithBottom = () => (
+	<LayoutCover>
+		<div className="centered test-content" />
+		<div className="test-content" />
+	</LayoutCover>
+);
+
+export const WithNoSpace = () => (
+	<LayoutCover coverSpace="none">
+		<div className="test-content" />
+		<div className="centered test-content" />
+		<div className="test-content" />
+	</LayoutCover>
+);

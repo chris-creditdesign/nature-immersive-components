@@ -1,8 +1,7 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import MenuReveal from "./index"
-import "./style.scss"
+import MenuReveal from "./index";
+import "./style.scss";
 
 const menuLinks = [
 	{ text: "View animation", href: "#" },
@@ -14,12 +13,17 @@ const menuLinks = [
 	},
 	{ text: "Credits", href: "#" },
 	{ text: "Download data", href: "dat/data.zip" },
-]
+];
 
-storiesOf("MenuReveal", module).add("default", () => (
+export default {
+	title: "MenuReveal",
+	component: MenuReveal,
+};
+
+export const Default = () => (
 	<MenuReveal
 		menuLinks={menuLinks}
 		labelText="Label Text"
 		btnText="Button text"
 	/>
-))
+);

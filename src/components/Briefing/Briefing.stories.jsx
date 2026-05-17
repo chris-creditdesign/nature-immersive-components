@@ -1,6 +1,10 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import Briefing from "./index"
+import Briefing from "./index";
 
-storiesOf("Briefing", module).add("default", () => <Briefing />)
+export default {
+	title: "Briefing",
+	component: Briefing,
+};
+
+export const Default = () => <Briefing />;

@@ -1,16 +1,15 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import Menu from "./index"
-import "./style.scss"
+import Menu from "./index";
+import "./style.scss";
 
-import generateSocialURLs from "../../utils/generate-social-urls"
+import generateSocialURLs from "../../utils/generate-social-urls";
 
 const articleData = {
 	twitterHandle: "@nature",
 	title: "150 years of Nature",
 	description:
-		"Description description description description description description description description description",
+    "Description description description description description description description description description",
 	headline: "150 years of Nature",
 	stand: "",
 	author: "",
@@ -23,16 +22,16 @@ const articleData = {
 	altPdfBlurb: "",
 	publishedAt: 0,
 	publishedAtString: "",
-}
+};
 
-const { articleURL, doi, headline, stand } = articleData
+const { articleURL, doi, headline, stand } = articleData;
 
 const { facebookURL, twitterURL, emailURL } = generateSocialURLs(
 	doi,
 	articleURL,
 	headline,
-	stand
-)
+	stand,
+);
 
 const menuLinks = [
 	{ text: "View animation", href: "#" },
@@ -41,13 +40,18 @@ const menuLinks = [
 	{ text: "About Nature 150", href: "#" },
 	{ text: "Credits", href: "#" },
 	{ text: "Download data", href: "dat/data.zip" },
-]
+];
 
-storiesOf("Menu", module).add("default", () => (
+export default {
+	title: "Menu",
+	component: Menu,
+};
+
+export const Default = () => (
 	<Menu
 		facebookURL={facebookURL}
 		twitterURL={twitterURL}
 		emailURL={emailURL}
 		menuLinks={menuLinks}
 	/>
-))
+);

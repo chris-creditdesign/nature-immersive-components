@@ -1,9 +1,13 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import LayoutFrame from "./index"
+import LayoutFrame from "./index";
 
-storiesOf("Layout components/LayoutFrame", module).add("default", () => (
+export default {
+	title: "Layout components/LayoutFrame",
+	component: LayoutFrame,
+};
+
+export const Default = () => (
 	<LayoutFrame frameNumerator={8} frameDenominator={12}>
 		<img
 			src="img/image.jpg"
@@ -13,4 +17,4 @@ storiesOf("Layout components/LayoutFrame", module).add("default", () => (
 			loading="lazy"
 		/>
 	</LayoutFrame>
-))
+);

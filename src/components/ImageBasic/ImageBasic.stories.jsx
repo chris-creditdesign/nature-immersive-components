@@ -1,7 +1,6 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import ImageBasic from "./index"
+import ImageBasic from "./index";
 
 const imageData = {
 	altText: "This is the image alt text",
@@ -9,25 +8,30 @@ const imageData = {
 	srcURL: "img/image-small.jpg",
 	width: 1200,
 	height: 800,
-}
+};
 
-storiesOf("ImageBasic", module)
-	.add("default", () => (
-		<ImageBasic
-			altText={imageData.altText}
-			caption={imageData.caption}
-			srcURL={imageData.srcURL}
-			width={imageData.width}
-			height={imageData.height}
-		/>
-	))
-	.add("with space around caption", () => (
-		<ImageBasic
-			altText={imageData.altText}
-			caption={imageData.caption}
-			srcURL={imageData.srcURL}
-			width={imageData.width}
-			height={imageData.height}
-			captionSpace="var(--space)"
-		/>
-	))
+export default {
+	title: "ImageBasic",
+	component: ImageBasic,
+};
+
+export const Default = () => (
+	<ImageBasic
+		altText={imageData.altText}
+		caption={imageData.caption}
+		srcURL={imageData.srcURL}
+		width={imageData.width}
+		height={imageData.height}
+	/>
+);
+
+export const WithSpaceAroundCaption = () => (
+	<ImageBasic
+		altText={imageData.altText}
+		caption={imageData.caption}
+		srcURL={imageData.srcURL}
+		width={imageData.width}
+		height={imageData.height}
+		captionSpace="var(--space)"
+	/>
+);

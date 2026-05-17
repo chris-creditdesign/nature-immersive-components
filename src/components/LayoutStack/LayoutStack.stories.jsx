@@ -1,24 +1,28 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import LayoutStack from "./index"
+import LayoutStack from "./index";
 
-storiesOf("Layout components/LayoutStack", module)
-	.add("default", () => (
-		<LayoutStack>
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-		</LayoutStack>
-	))
-	.add("Width extra space", () => (
-		<LayoutStack stackSpace="var(--s3)">
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-		</LayoutStack>
-	))
+export default {
+	title: "Layout components/LayoutStack",
+	component: LayoutStack,
+};
+
+export const Default = () => (
+	<LayoutStack>
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+	</LayoutStack>
+);
+
+export const WidthExtraSpace = () => (
+	<LayoutStack stackSpace="var(--s3)">
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+	</LayoutStack>
+);

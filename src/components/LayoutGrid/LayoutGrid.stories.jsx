@@ -1,50 +1,56 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from "react";
 
-import LayoutGrid from "./index"
+import LayoutGrid from "./index";
 
-storiesOf("Layout components/LayoutGrid", module)
-	.add("default", () => (
-		<LayoutGrid className="aboveMin">
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-		</LayoutGrid>
-	))
-	.add("With extra space", () => (
-		<LayoutGrid className="aboveMin" gridSpace="var(--s3)">
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-		</LayoutGrid>
-	))
-	.add("With larger min with", () => (
-		<LayoutGrid className="aboveMin" minWidth="30rem">
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-		</LayoutGrid>
-	))
-	.add("With smaller min with", () => (
-		<LayoutGrid className="aboveMin" minWidth="10rem">
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-			<div className="test-content" />
-		</LayoutGrid>
-	))
+export default {
+	title: "Layout components/LayoutGrid",
+	component: LayoutGrid,
+};
+
+export const Default = () => (
+	<LayoutGrid className="aboveMin">
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+	</LayoutGrid>
+);
+
+export const WithExtraSpace = () => (
+	<LayoutGrid className="aboveMin" gridSpace="var(--s3)">
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+	</LayoutGrid>
+);
+
+export const WithLargerMinWith = () => (
+	<LayoutGrid className="aboveMin" minWidth="30rem">
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+	</LayoutGrid>
+);
+
+export const WithSmallerMinWith = () => (
+	<LayoutGrid className="aboveMin" minWidth="10rem">
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+		<div className="test-content" />
+	</LayoutGrid>
+);
