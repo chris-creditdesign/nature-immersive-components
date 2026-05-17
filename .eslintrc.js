@@ -1,39 +1,40 @@
 module.exports = {
 	env: {
-		"es6": true,
-		"browser": true
+		es2022: true,
+		browser: true,
+		jest: true,
 	},
-	extends: "wesbos",
-	plugins: [
-		"html",
-		"prettier",
-		"react-hooks"
-	],
+	extends: ["airbnb", "prettier"],
+	plugins: ["react-hooks"],
 	rules: {
 		semi: "off",
 		"no-tabs": "off",
 		"no-console": "warn",
 		indent: ["error", "tab"],
-		// "react/jsx-indent": ["error", "tab"],
 		"react/jsx-indent": "off",
-		// "react/jsx-indent-props": ["error", "tab"],
 		"react/jsx-indent-props": "off",
+		"react/function-component-definition": "off",
 		"react/no-danger": "off",
+		"react/require-default-props": "off",
+		"react/forbid-prop-types": "off",
+		"react/no-unescaped-entities": "off",
+		"react/jsx-curly-brace-presence": "off",
+		"react/self-closing-comp": "off",
+		"react/no-unknown-property": "off",
+		"import/no-extraneous-dependencies": "off",
+		"no-param-reassign": "off",
+		"no-restricted-syntax": "off",
+		"jsx-a11y/control-has-associated-label": "off",
+		"react/jsx-filename-extension": "off",
 		"comma-dangle": "off",
 		"quotes": [2, "double", { "avoidEscape": true }],
-		"prettier/prettier": [
-			"error",
-			{
-				trailingComma: "es5",
-				printWidth: 80,
-				tabWidth: 8,
-				useTabs: true,
-				semi: false,
-			}
-		]
 	},
-	parser: "babel-eslint",
+	parser: "@babel/eslint-parser",
 	parserOptions: {
-		"allowImportExportEverywhere": true
-	}
+		allowImportExportEverywhere: true,
+		requireConfigFile: false,
+		babelOptions: {
+			presets: ["@babel/preset-env", "@babel/preset-react"],
+		},
+	},
 }
