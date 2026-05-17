@@ -1,12 +1,12 @@
 # Nature Immersive Components
 
-> Collection of react components used to build Nature Immersive articles
+Collection of React components used to build Nature Immersive articles.
 
-Components can be used to render a static page and then hydraded to add progressive enhancement features.
+Components are designed for static render first, then optional progressive enhancement with vanilla JavaScript.
 
-To run jest snapshot tests of all stories
+## Scripts
 
-	yarn test
-
-em units for sizing inline elements.
-rem units for sizing block elements.
+- `yarn test` — run Jest tests
+- `yarn lint` — run ESLint
+- `yarn prod` — build JS + CSS into `dist/`
+- `yarn storybook` — run Storybook locally
